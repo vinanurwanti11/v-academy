@@ -42,7 +42,7 @@ const AbsensiSiswa: React.FC<Props> = ({ className, title }) => {
 
   const handleGetAbsenSiswa = async () => {
     const resListAbsenSiswa = await getAbsenSiswaForGuru()
-
+    
   }
 
   const handleGetPeringkat = async () => {
