@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { IsiMateri } from './components/IsiMateri';
-import { AccordionMateri } from './components/AccordionMateri';
 import { Footer } from './components/Footer';
 import { PaginationProvider, usePagination } from './context/materiProvider';
 import { TitleModulProvider } from './context/titleModulProvider';
@@ -143,7 +142,7 @@ const DetailMateri = () => {
                 pertanyaan={pertanyaan}
               />
             </div> */}
-            <Footer
+            {/* <Footer
               setIsLoading={setIsLoading}
               rangkuman={rangkuman}
               setResRangkuman={setResRangkuman}
@@ -151,7 +150,7 @@ const DetailMateri = () => {
               hasilSoal={hasilSoal}
               setPertanyaan={setPertanyaan}
               pertanyaan={pertanyaan}
-            />
+            /> */}
           </div>
         </ExampleProvider>
       </PaginationProvider>

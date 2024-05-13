@@ -87,8 +87,54 @@ const MateriPage = () => {
     const formattedDate = format(currentDate, 'dd MMMM yyyy', { locale: id });
 
     if (uuid) {
-      if (i && i > 1) {
-        if (detailMateri[i - 2] && detailMateri[i - 2].status !== "On Progress") {
+      if (i) {
+        if (detailMateri[i - 2]) {
+          if (detailMateri[i - 2] && detailMateri[i - 2].status !== "On Progress") {
+            console.log("masuk");
+            if (detailMateri[i - 1]) {
+              setDataMateri(materi)
+              setIsMateri(true)
+              navigate("/materi/details", { state: { materiParent: materi, idMateri: detailMateri[i - 1].idMateri } })
+            }
+            else {
+              setLoading(true)
+              try {
+                const body: DetailMateriTypeResponse = {
+                  name: nama,
+                  status: "On Progress",
+                  fullname: '-',
+                  step: 1,
+                  latihan: [],
+                  pertanyaan: [],
+                  rangkuman: '',
+                  tanggalMulai: formattedDate
+                }
+                const res = await createDetailMateriByUID(uuid, body)
+                if (res) {
+                  setLoading(false)
+                  setDataMateri(materi)
+                  setIsMateri(true)
+                  navigate("/materi/details", { state: { materiParent: materi, idMateri: res.name } })
+                }
+              } catch (error) {
+                console.error(error);
+                setLoading(false)
+              }
+            }
+          } else {
+            const swalSuccess = Swal.mixin({
+              customClass: {
+                confirmButton: 'btn btn-danger',
+              },
+              buttonsStyling: false
+            })
+            swalSuccess.fire({
+              title: `Mohon Maaf anda harus menyelesaikan terlebih dahulu modul sebelumnya`,
+              icon: 'error',
+              confirmButtonText: 'Dismiss',
+            })
+          }
+        } else if (i && i === 1) {
           if (detailMateri[i - 1]) {
             setDataMateri(materi)
             setIsMateri(true)
@@ -117,48 +163,6 @@ const MateriPage = () => {
               console.error(error);
               setLoading(false)
             }
-          }
-        } else {
-          const swalSuccess = Swal.mixin({
-            customClass: {
-              confirmButton: 'btn btn-danger',
-            },
-            buttonsStyling: false
-          })
-          swalSuccess.fire({
-            title: `Mohon Maaf anda harus menyelesaikan terlebih dahulu modul sebelumnya`,
-            icon: 'error',
-            confirmButtonText: 'Dismiss',
-          })
-        }
-      } else if (i && i === 1) {
-        if (detailMateri[i - 1]) {
-          setDataMateri(materi)
-          setIsMateri(true)
-          navigate("/materi/details", { state: { materiParent: materi, idMateri: detailMateri[i - 1].idMateri } })
-        } else {
-          setLoading(true)
-          try {
-            const body: DetailMateriTypeResponse = {
-              name: nama,
-              status: "On Progress",
-              fullname: '-',
-              step: 1,
-              latihan: [],
-              pertanyaan: [],
-              rangkuman: '',
-              tanggalMulai: formattedDate
-            }
-            const res = await createDetailMateriByUID(uuid, body)
-            if (res) {
-              setLoading(false)
-              setDataMateri(materi)
-              setIsMateri(true)
-              navigate("/materi/details", { state: { materiParent: materi, idMateri: res.name } })
-            }
-          } catch (error) {
-            console.error(error);
-            setLoading(false)
           }
         }
       }
@@ -196,14 +200,13 @@ const MateriPage = () => {
   }
 
   return (
-    <div className="d-flex row">
-      <h1 className='mb-10' style={{ fontSize: '30px' }}>Materi</h1>
+    <div className="d-flex row" style={{ justifyContent: `${isLoading ? "center" : ""}`, alignItems: `${isLoading ? "center" : ""}`, height: `${isLoading ? "100%" : ""}`, width: `${isLoading ? "100%" : ""}` }}>
       {
         isLoading ? (
           <div className='d-flex'
-            style={{ width: '100%', height: '100%', justifyContent: 'center', justifyItems: 'center' }}
+            style={{ width: '50%', height: '50%', justifyContent: 'center', justifyItems: 'center' }}
           >
-            <Lottie style={{ width: '55%', height: '55%' }} animationData={animLoading} />
+            <Lottie style={{ width: '50%', height: '50%' }} animationData={animLoading} />
           </div>
         ) :
           <>
@@ -211,9 +214,10 @@ const MateriPage = () => {
               profile?.type.toLowerCase() === "siswa" ?
 
                 <>
+                  <h1 className='mb-10' style={{ fontSize: '30px' }}>Materi</h1>
                   <div className="d-flex row" style={{ justifyContent: 'center', alignItems: 'center' }}>
                     <div className="card col-sm-4 p-0 rounded shadow-sm ms-20"
-                      onClick={() => handleNavigate("m-k-a", "Operator Logika, Relasional, dan Kesaman", 1)}
+                      onClick={() => handleNavigate("m-k-a", "Materi Percabangan If", 1)}
                       style={{ width: '25%', height: '236px', cursor: 'pointer' }}>
                       <div className="card-body p-0">
                         <div className='d-flex rounded-top ' style={{ backgroundColor: '#E108B1', height: '50%', justifyContent: 'center' }}>
@@ -231,8 +235,9 @@ const MateriPage = () => {
                         </div>
                       </div>
                     </div>
+
                     <div className="card col-sm-4 p-0 rounded shadow-sm ms-10 me-10"
-                      onClick={() => handleNavigate("m-k-b", "Struktur Percabangan If ", 2)}
+                      onClick={() => handleNavigate("m-k-b", "Materi Percabangan If - Else", 2)}
                       style={{ width: '25%', height: '236px', cursor: 'pointer' }}>
                       <div className="card-body p-0">
                         <div className='d-flex rounded-top ' style={{ backgroundColor: '#08E138', height: '50%', justifyContent: 'center' }}>
@@ -255,7 +260,7 @@ const MateriPage = () => {
                   <div className="d-flex row mt-10" style={{ justifyContent: 'center', alignItems: 'center' }}>
 
                     <div className="card col-sm-4 p-0 rounded shadow-sm ms-10 me-10"
-                      onClick={() => handleNavigate("m-k-c", "Struktur Percabangan If - Else dan If - Else If", 3)}
+                      onClick={() => handleNavigate("m-k-c", "Materi Percabangan Nested-If", 3)}
                       style={{ width: '25%', height: '236px', cursor: 'pointer' }}>
                       <div className="card-body p-0">
                         <div className='d-flex rounded-top ' style={{ backgroundColor: '#0893E1', height: '50%', justifyContent: 'center' }}>
@@ -276,7 +281,7 @@ const MateriPage = () => {
 
 
                     <div className="card col-sm-4 p-0 rounded shadow-sm"
-                      onClick={() => handleNavigate("m-k-d", "Struktur Percabangan Depend On (Case)", 4)}
+                      onClick={() => handleNavigate("m-k-d", "Materi Percabangan Switch-Case", 4)}
                       style={{ width: '25%', height: '236px', cursor: 'pointer' }}>
                       <div className="card-body p-0">
                         <div className='d-flex rounded-top ' style={{ backgroundColor: '#E1D808', height: '50%', justifyContent: 'center' }}>
@@ -298,9 +303,10 @@ const MateriPage = () => {
                 </>
                 :
                 <>
-                  <div className="d-flex row" style={{ justifyContent: 'center' }}>
-                    <div className="card col-sm-4 p-0 rounded shadow-sm"
-                      onClick={() => handleNavigate("m-k-a", "Operator Logika, Relasional, dan Kesaman", 1)}
+                  <h1 className='mb-10' style={{ fontSize: '30px' }}>Materi</h1>
+                  <div className="d-flex row" style={{ justifyContent: 'center', alignItems: 'center' }}>
+                    <div className="card col-sm-4 p-0 rounded shadow-sm ms-20"
+                      onClick={() => handleNavigate("m-k-a", "Materi Percabangan If", 1)}
                       style={{ width: '25%', height: '236px', cursor: 'pointer' }}>
                       <div className="card-body p-0">
                         <div className='d-flex rounded-top ' style={{ backgroundColor: '#E108B1', height: '50%', justifyContent: 'center' }}>
@@ -309,13 +315,14 @@ const MateriPage = () => {
                           </div>
                         </div>
                         <div className='p-5'>
-                          <h3>Operator Logika, Relasional, dan Kesaman</h3>
+                          <h3>Materi Percabangan If</h3>
                           <span className={`badge badge-light-info`}>Lihat Detail -{'>'}</span>
                         </div>
                       </div>
                     </div>
+
                     <div className="card col-sm-4 p-0 rounded shadow-sm ms-10 me-10"
-                      onClick={() => handleNavigate("m-k-b", "Struktur Percabangan If ", 2)}
+                      onClick={() => handleNavigate("m-k-b", "Materi Percabangan If - Else", 2)}
                       style={{ width: '25%', height: '236px', cursor: 'pointer' }}>
                       <div className="card-body p-0">
                         <div className='d-flex rounded-top ' style={{ backgroundColor: '#08E138', height: '50%', justifyContent: 'center' }}>
@@ -324,13 +331,17 @@ const MateriPage = () => {
                           </div>
                         </div>
                         <div className='p-5'>
-                          <h3>Struktur Percabangan If </h3>
+                          <h3>Materi Percabangan If - Else</h3>
                           <span className={`badge badge-light-info`}>Lihat Detail -{'>'}</span>
                         </div>
                       </div>
                     </div>
-                    <div className="card col-sm-4 p-0 border rounded shadow-sm"
-                      onClick={() => handleNavigate("m-k-c", "Struktur Percabangan If - Else dan If - Else If", 3)}
+                  </div>
+
+                  <div className="d-flex row mt-10" style={{ justifyContent: 'center', alignItems: 'center' }}>
+
+                    <div className="card col-sm-4 p-0 rounded shadow-sm ms-10 me-10"
+                      onClick={() => handleNavigate("m-k-c", "Materi Percabangan Nested-If", 3)}
                       style={{ width: '25%', height: '236px', cursor: 'pointer' }}>
                       <div className="card-body p-0">
                         <div className='d-flex rounded-top ' style={{ backgroundColor: '#0893E1', height: '50%', justifyContent: 'center' }}>
@@ -339,15 +350,15 @@ const MateriPage = () => {
                           </div>
                         </div>
                         <div className='p-5'>
-                          <h3>Struktur Percabangan If - Else dan If - Else If</h3>
+                          <h3>Materi Percabangan Nested-If</h3>
                           <span className={`badge badge-light-info`}>Lihat Detail -{'>'}</span>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="d-flex row mt-10" style={{ justifyContent: 'center' }}>
-                    <div className="card col-sm-4 p-0 rounded shadow-sm me-5"
-                      onClick={() => handleNavigate("m-k-d", "Struktur Percabangan Depend On (Case)", 4)}
+
+
+                    <div className="card col-sm-4 p-0 rounded shadow-sm"
+                      onClick={() => handleNavigate("m-k-d", "Materi Percabangan Switch-Case", 4)}
                       style={{ width: '25%', height: '236px', cursor: 'pointer' }}>
                       <div className="card-body p-0">
                         <div className='d-flex rounded-top ' style={{ backgroundColor: '#E1D808', height: '50%', justifyContent: 'center' }}>
@@ -356,22 +367,7 @@ const MateriPage = () => {
                           </div>
                         </div>
                         <div className='p-5'>
-                          <h3>Struktur Percabangan Depend On (Case) </h3>
-                          <span className={`badge badge-light-info`}>Lihat Detail -{'>'}</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="card col-sm-4 p-0 rounded shadow-sm ms-5"
-                      onClick={() => handleNavigate("m-k-e", "Struktur Percabangan If bersarang (Nested If) ", 5)}
-                      style={{ width: '25%', height: '236px', cursor: 'pointer' }}>
-                      <div className="card-body p-0">
-                        <div className='d-flex rounded-top ' style={{ backgroundColor: '#E10856', height: '50%', justifyContent: 'center' }}>
-                          <div className='me-5'>
-                            <img style={{ width: "120px" }} src={toAbsoluteUrl('/media/illustrations/light/SVG/__to add.svg')} alt='' />
-                          </div>
-                        </div>
-                        <div className='p-5'>
-                          <h3>Struktur Percabangan If bersarang (Nested If) </h3>
+                          <h3>Materi Percabangan Switch-Case</h3>
                           <span className={`badge badge-light-info`}>Lihat Detail -{'>'}</span>
                         </div>
                       </div>
@@ -400,7 +396,7 @@ const MateriPage = () => {
                               <th className='min-w-150px'>Nama</th>
                               <th className='min-w-140px'>Nomor Absen</th>
                               <th className='min-w-120px'>Progres Materi</th>
-                              <th className='min-w-120px'>Poin</th>
+                              {/* <th className='min-w-120px'>Poin</th> */}
                             </tr>
                           </thead>
                           {/* end::Table head */}
@@ -437,10 +433,10 @@ const MateriPage = () => {
                                           </td>
                                           <td>
                                             <span className='text-dark fw-bold d-block fs-4'>
-                                              {e.progressMateri}/5
+                                              {e.progressMateri}/4
                                             </span>
                                           </td>
-                                          <td className='text-end'>
+                                          {/* <td className='text-end'>
                                             <div className='d-flex flex-column w-100 me-2'>
                                               <div className='d-flex flex-stack mb-2'>
                                                 <span className='text-muted me-2 fs-4 fw-semibold'>{e.poin / 10}</span>
@@ -453,7 +449,7 @@ const MateriPage = () => {
                                                 ></div>
                                               </div>
                                             </div>
-                                          </td>
+                                          </td> */}
                                         </tr>
                                     }
                                   </>

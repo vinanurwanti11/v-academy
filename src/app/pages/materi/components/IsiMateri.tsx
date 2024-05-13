@@ -6,13 +6,14 @@ import { useTitleModul } from '../context/titleModulProvider'
 import { KTSVG, toAbsoluteUrl } from '../../../../_molekul/helpers'
 import Lottie from 'lottie-react'
 import animLoading from '../../../../_molekul/assets/loading/animLoading.json'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import clsx from 'clsx'
 import { getProfileSiswa } from '../../../api/Request/profile.siswa.api'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { CreateProfileSiswaType } from '../../../interface/profile.siswa.interface'
-import { getDetailMateriSiswaByID, getPertanyaan, sendPertanyaan, updatePertanyaan } from '../../../api/Request/materi.siswa.api'
+import { getDetailMateriSiswaByID, getPertanyaan, sendPertanyaan, updateFinishModul, updatePertanyaan } from '../../../api/Request/materi.siswa.api'
 import Swal from 'sweetalert2'
+import { getDetailPeringkatSiswaByUID, updateProgresByUD } from '../../../api/Request/peringkat.siswa.api'
 
 type Props = {
   className: string,
@@ -41,6 +42,7 @@ const IsiMateri: React.FC<Props> = ({
   setPertanyaan,
   pertanyaan }) => {
   const page = usePagination()
+  const navigate = useNavigate()
   const currentPageTitleModul = useTitleModul()
   const [materi, setMateri] = useState<DataMateri[]>(materiOperator)
   const [materiParent, setMateriParent] = useState<string>("")
@@ -94,21 +96,21 @@ const IsiMateri: React.FC<Props> = ({
       }
     }
 
-    if (detailMateri?.step === 1 && materiParent === "m-k-a") {
-      const swalSuccess = Swal.mixin({
-        customClass: {
-          confirmButton: 'btn btn-success',
-        },
-        buttonsStyling: false
-      })
-      const title = `Selamat datang di pembelajaran menggunakan Model Reciprocal Teaching, Jika kalian merasa kesulitan dalam memahami materi kalian bisa mengirimkan pertanyaan yang ada di halaman paling bawah di setiap materinya dan terkait pertanyaan kalian nantinya akan di bahas di forum kelompok kalian. <br/><br/><p style="font-size: 16px; text-align: center;">Semangat Balajar💪</p>`
-      swalSuccess.fire({
-        title: `Hallo, Selamat Datang!`,
-        html: `<p style="font-size: 16px; text-align: justify;">${title}</p>`,
-        icon: 'success',
-        confirmButtonText: 'Semangat!',
-      })
-    }
+    // if (detailMateri?.step === 1 && materiParent === "m-k-a") {
+    //   const swalSuccess = Swal.mixin({
+    //     customClass: {
+    //       confirmButton: 'btn btn-success',
+    //     },
+    //     buttonsStyling: false
+    //   })
+    //   const title = `Selamat datang di pembelajaran menggunakan Model Reciprocal Teaching, Jika kalian merasa kesulitan dalam memahami materi kalian bisa mengirimkan pertanyaan yang ada di halaman paling bawah di setiap materinya dan terkait pertanyaan kalian nantinya akan di bahas di forum kelompok kalian. <br/><br/><p style="font-size: 16px; text-align: center;">Semangat Balajar💪</p>`
+    //   swalSuccess.fire({
+    //     title: `Hallo, Selamat Datang!`,
+    //     html: `<p style="font-size: 16px; text-align: justify;">${title}</p>`,
+    //     icon: 'success',
+    //     confirmButtonText: 'Semangat!',
+    //   })
+    // }
   }, [materiParent, materi])
 
   useEffect(() => {
@@ -185,7 +187,7 @@ const IsiMateri: React.FC<Props> = ({
       buttonsStyling: false
     })
     swalWithBootstrapButtons.fire({
-      title: `Kirimkan Pertanyaan Untuk Kelompok kamu?`,
+      title: `Kirimkan Jawaban kamu?`,
       icon: 'info',
       showCancelButton: true,
       cancelButtonText: 'Batalkan',
@@ -194,13 +196,24 @@ const IsiMateri: React.FC<Props> = ({
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          if (list && profileSiswa) {
+          if (list && profileSiswa && uuid) {
             const resSendPertanyaan = await sendPertanyaan(profileSiswa?.kelompok, list)
+            const res = await updateFinishModul(uuid, idMateri, "Selesai")
+            const getIdPoin = await getDetailPeringkatSiswaByUID(uuid)
+            const la = Object.entries(getIdPoin)
+            let progressMateri = la[0][1].progressMateri
+            const resUpdateProgress = await updateProgresByUD(uuid, la[0][0], progressMateri + 1)
             if (resSendPertanyaan) {
               swalSuccess.fire({
-                title: `Pertanyaan Berhasil Dikirim`,
+                title: `Jawaban Berhasil Dikirim`,
                 icon: 'success',
                 confirmButtonText: 'Dismiss',
+              }).then(async (result) => {
+                if (result.isConfirmed) {
+                  navigate('/materi')
+                } else if (result.isDismissed) {
+                  navigate('/materi')
+                }
               })
             }
             setNewPertanyaan('')
@@ -232,19 +245,13 @@ const IsiMateri: React.FC<Props> = ({
                   detailMateri && detailMateri.status.toLowerCase() !== "selesai"
                     ?
                     <div>
-                      {/* <div className='mb-20 pt-20'>
-                        <h1 className='mb-5' style={{ fontSize: '30px' }}>Sumber Materi</h1>
-                        <span style={{ fontSize: '20px' }}>
-                          Sukamto, R. A. (2018). Buku Logika Algoritma dan Pemrograman Dasar. Modula.
-                          <br />
-                          Channel Youtube Rosa Ariani Sukamto : <a href='https://www.youtube.com/@RosaArianiSukamto' target='_blank'>https://www.youtube.com/@RosaArianiSukamto</a>
-                          <br />
-                          Jangan lupa di subscribe guys 🤗
-                        </span>
-                      </div> */}
-                      <h1 className='mb-5 mt-20' style={{ fontSize: '30px' }}>Form Pertanyaan</h1>
+                      <div style={{ justifyContent: "center", alignItems: "center", marginTop: "10px", marginBottom: "10px" }}>
+                        <iframe width="800" height="600" src="https://www.programiz.com/c-programming/online-compiler/" title="Compiler Online"></iframe>
+                      </div>
+
+                      <h1 className='mb-5 mt-20' style={{ fontSize: '30px' }}>Form Jawaban</h1>
                       <span style={{ fontSize: '20px' }}>
-                        Jika kalian merasa kesulitan dalam memahami materi yang kalian pelajari silahkan masukan pertanyaan di bawah ini yaa, terkait pertanyaan kalian nantinya akan di bahas di forum kelompok kalian
+                        Jika jawabannya sudah sesuai silahkan copy code dalam bahasa C yang sudah kamu kerjakan lalu klik button <strong>Jawab Pertanyaan</strong> dan paste kan jawaban kamu disana lalu kirim jawabannya!
                       </span>
                       <div className='d-flex mt-10' style={{ justifyContent: 'center' }}>
                         <button
@@ -256,7 +263,7 @@ const IsiMateri: React.FC<Props> = ({
                           data-bs-toggle='modal'
                           data-bs-target='#kt_modal_add_featuring'
                         >
-                          Tambahkan Pertanyaan
+                          Jawab Pertanyaan
                         </button>
                         <div
                           className='modal fade modal-lg'
@@ -267,16 +274,15 @@ const IsiMateri: React.FC<Props> = ({
                             <div className='modal-content'>
                               <div className='p-8'>
                                 <span className='fs-2 fw-bold text-gray-700'>
-                                  Form Pertanyaan
+                                  Form Jawaban
                                 </span>{' '}
                                 <br />
                                 <span className='text-gray-500'>
-                                  Masukkan pertanyaan kamu pada form dibawah ya!
+                                  Masukkan jawaban kamu pada form dibawah ya!
                                 </span>
                               </div>
                               <div className='ps-8 pe-8'>
-                                <input
-                                  type='text'
+                                <textarea
                                   className='form-control'
                                   placeholder='Apa itu algoritma dan pemrograman?'
                                   onChange={(e) => setNewPertanyaan(e.target.value)}
@@ -290,14 +296,14 @@ const IsiMateri: React.FC<Props> = ({
                                   <button
                                     type='button'
                                     data-bs-dismiss='modal'
-                                    className='btn btn-outline btn-outline-danger btn-active-light-danger w-200px me-4'
+                                    className='btn btn-outline btn-outline-primary btn-active-light-primary w-200px me-4'
                                   >
                                     Batalkan
                                   </button>
                                 </div>
                                 <div>
                                   <button
-                                    className='btn btn-danger w-200px'
+                                    className='btn btn-primary w-200px'
                                     data-bs-dismiss='modal'
                                     style={{ cursor: 'pointer' }}
                                     onClick={() => {
@@ -311,7 +317,7 @@ const IsiMateri: React.FC<Props> = ({
                                     }}
                                     disabled={newPertanyaan ? false : true}
                                   >
-                                    Kirim Pertanyaan
+                                    Kirim Jawaban
                                   </button>
                                 </div>
                               </div>
@@ -324,8 +330,6 @@ const IsiMateri: React.FC<Props> = ({
                     <></>
                 }
               </div>
-
-              {/* <PrettyPrintWrapper code={codeExample} language="javascript" /> */}
             </>
             :
             materi[currentPageTitleModul.currentPageTitleModul - 1].materi.isiMateri[page.currentPage - 1].type === "rangkuman" ?

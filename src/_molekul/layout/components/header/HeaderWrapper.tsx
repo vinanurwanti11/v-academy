@@ -67,7 +67,10 @@ export function HeaderWrapper() {
           <div className={clsx(`d-flex`)} style={{ justifyItems: 'center', alignItems: 'center' }}>
             <span
               className={`${location.pathname === '/dashboard' || `${location.pathname === '/evaluasi/soal'}` ? "text-primary" : ""}`}
-              style={{ textAlign: 'center', fontSize: '16px', fontWeight: 'bold' }}>{titleMateri ? titleMateri : ""}</span>
+              style={{ textAlign: 'center', fontSize: '16px', fontWeight: 'bold' }}>
+              {/* {titleMateri ? titleMateri : ""} */}
+              Materi
+            </span>
           </div>
           :
           <div className='d-flex' style={{ justifyItems: 'center', alignItems: 'center' }}>
@@ -94,23 +97,23 @@ export function HeaderWrapper() {
               </div>
 
               <div className='d-flex' style={{ height: '45px' }}>
-                <ul className={`${location.pathname === '/forum' ? "border rounded-pill border-primary border-2 h-10" : ""} nav nav-stretch fs-5 fw-bolder w-110px`} style={{ bottom: '0', backgroundColor: location.pathname === '/forum' ? '#4584AD' : '' }}>
+                <ul className={`${location.pathname === '/materi' ? "border rounded-pill border-primary border-2 h-10" : ""} nav nav-stretch fs-5 fw-bolder w-110px`} style={{ bottom: '0', backgroundColor: location.pathname === '/materi' ? '#4584AD' : '' }}>
                   <li className='nav-item ps-5'>
                     <span
                       className={`d-flex me-6`}
                       style={{ alignItems: 'center', cursor: 'pointer' }}
                       onClick={() => {
-                        navigation('/forum')
+                        navigation('/materi')
                       }}
                     >
                       <img
                         alt='Logo'
-                        src={`${location.pathname === '/forum' ? toAbsoluteUrl("/media/icons/duotune/general/ic_forum_active.svg") : toAbsoluteUrl("/media/icons/duotune/general/ic_forum.svg")}`}
+                        src={`${location.pathname === '/materi' ? toAbsoluteUrl("/media/icons/duotune/general/ic_forum_active.svg") : toAbsoluteUrl("/media/icons/duotune/general/ic_forum.svg")}`}
                         className='logo-default h-25px mb-2 me-2'
                       />
                       <span
-                        className={`${location.pathname === '/forum' ? "text-white" : ""}`}
-                        style={{ textAlign: 'center', fontSize: '16px', fontWeight: 'bold' }}>Forum</span>
+                        className={`${location.pathname === '/materi' ? "text-white" : ""}`}
+                        style={{ textAlign: 'center', fontSize: '16px', fontWeight: 'bold' }}>Materi</span>
                     </span>
                   </li>
                 </ul>

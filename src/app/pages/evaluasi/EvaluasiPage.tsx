@@ -63,7 +63,7 @@ const Evaluasi = () => {
         if (i === 0) {
           const res = await getEvaluasiByUUID("pretest", uid)
           console.log(res);
-          
+
           if (res !== null) {
             setStatus1(true)
           }
@@ -167,13 +167,13 @@ const Evaluasi = () => {
               profileSiswa?.type.toLowerCase() === "siswa"
                 ?
                 <>
-                  <h1 className='mb-10 ms-20' style={{ fontSize: '30px' }}>Evaluasi Harian</h1>
+                  {/* <h1 className='mb-10 ms-20' style={{ fontSize: '30px' }}>Evaluasi Harian</h1>
                   <div className="d-flex row" style={{ justifyContent: 'center' }}>
                     <div className="card col-sm-4 p-0 rounded shadow-sm"
-                      onClick={() =>
-                        handleNavigate('/evaluasi/lkpd', 'r.59bd020134faab4ae5fac989f158c6af?showControls', '1')
-                        // navigate('/evaluasi/lkpd', { state: { page: "r.59bd020134faab4ae5fac989f158c6af?showControls", ke: "1" } })}
-                      }
+                      // onClick={() =>
+                      //   // handleNavigate('/evaluasi/lkpd', 'r.59bd020134faab4ae5fac989f158c6af?showControls', '1')
+                      //   // navigate('/evaluasi/lkpd', { state: { page: "r.59bd020134faab4ae5fac989f158c6af?showControls", ke: "1" } })}
+                      // }
                       style={{ width: '30%', height: '200px', cursor: 'pointer' }}>
                       <div className="card-body p-0">
                         <div className='d-flex rounded-top ' style={{ backgroundColor: '#E108B1', height: '60%', justifyContent: 'center' }}>
@@ -183,7 +183,7 @@ const Evaluasi = () => {
                         </div>
                         <div className='p-5'>
                           <h3>Evaluasi Pertemuan 1</h3>
-                          {/* <span className='badge badge-light-success'>Selesai</span> */}
+                          <span className='badge badge-light-success'>Selesai</span>
                         </div>
                       </div>
                     </div>
@@ -201,9 +201,9 @@ const Evaluasi = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
-                  <div className='mt-20'>
+                  <div className=''>
                     <h1 className='mb-10 ms-20' style={{ fontSize: '30px' }}>Evaluasi Soal</h1>
                     <div className="d-flex row mt-10" style={{ justifyContent: 'center' }}>
                       <div className="card col-sm-4 p-0 rounded shadow-sm me-5" onClick={() => navigate('/evaluasi/soal', { state: { materiParent: "pretest" } })} style={{ width: '25%', height: '200px', cursor: 'pointer' }}>
@@ -281,7 +281,7 @@ const Evaluasi = () => {
                 </>
                 :
                 <>
-                  <h1 className='mb-10' style={{ fontSize: '30px' }}>Hasil Evaluasi Siswa</h1>
+                  {/* <h1 className='mb-10' style={{ fontSize: '30px' }}>Hasil Evaluasi Siswa</h1>
                   <div className="d-flex row" style={{ justifyContent: 'center' }}>
                     <div className="card col-sm-4 p-0 rounded shadow-sm"
                       onClick={() =>
@@ -316,10 +316,10 @@ const Evaluasi = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
 
-                  <div className='mt-20'>
+                  <div className=''>
                     <h1 className='mb-10' style={{ fontSize: '30px' }}>Evaluasi Soal</h1>
                     <div className="d-flex row mt-10" style={{ justifyContent: 'center' }}>
                       <div className="card col-sm-4 p-0 rounded shadow-sm me-5" onClick={() => navigate("/hasil/evaluasi", { state: { ke: 1, type: "pretest" } })} style={{ width: '25%', height: '200px', cursor: 'pointer' }}>

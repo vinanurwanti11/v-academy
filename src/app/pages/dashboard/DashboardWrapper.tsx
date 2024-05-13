@@ -115,23 +115,12 @@ const DashboardPage = () => {
                 <>
                   <div className='d-flex row mb-10'>
                     <span className='text-dark fw-bold mb-1 fs-1'>Hallo, {profileSiswa?.name}!</span>
-                    <span className='text-gray-700 fs-4 fw-semibold d-block'>Selamat datang di V Academy<br />
-                      {/* Tempat di Mana Bug Jadi Peliharaan dan Koding Jadi Komedi! */}
+                    <span className='text-gray-700 fs-4 fw-semibold d-block'>Selamat datang di V-Academy!
+                      <br />
+                      Di sini tempatnya belajar Algoritma dan Pemrograman materi Percabangan.
                     </span>
                   </div>
                   <div className='row g-5 g-xl-8'>
-                    <div className='col-xl-4' style={{ height: "50%" }}>
-                      <StatisticsWidget5
-                        className='card-xl-stretch mb-xl-4 shadow-sm'
-                        svgIcon='call'
-                        color='body-white'
-                        iconColor='primary'
-                        title={`${profileSiswa?.type.toLowerCase() === "siswa" ? 'Absensi' : 'Absensi Siswa'}`}
-                        description={`${profileSiswa?.type.toLowerCase() === "siswa" ? 'Hadir : 2, Alfa : 0, Izin : 0' : ""}`}
-                        titleColor='gray-900'
-                        descriptionColor='gray-400'
-                      />
-                    </div>
                     {/* <div className='col-xl-6'>
                       <StatisticsWidget5
                         className='card-xl-stretch mb-xl-4 shadow-sm'
@@ -154,6 +143,18 @@ const DashboardPage = () => {
                         color='body-white'
                         iconColor='primary'
                         title='Materi'
+                        description='Lihat Selengkapnya ->'
+                        titleColor='gray-900'
+                        descriptionColor='gray-400 text-hover-primary'
+                      />
+                    </div>
+                    <div className='col-xl-4' onClick={() => navigate('/forum')} style={{ height: "50%" }}>
+                      <StatisticsWidget5
+                        className='card-xl-stretch mb-xl-4 shadow-sm'
+                        svgIcon='call'
+                        color='body-white'
+                        iconColor='primary'
+                        title={`${profileSiswa?.type.toLowerCase() === "siswa" ? 'Diskusi' : 'Diskusi'}`}
                         description='Lihat Selengkapnya ->'
                         titleColor='gray-900'
                         descriptionColor='gray-400 text-hover-primary'
@@ -200,29 +201,24 @@ const DashboardPage = () => {
                 :
                 <>
                   <div className='d-flex row mb-10'>
-                    <span className='text-dark fw-bold mb-1 fs-1'>Hallo, {profileSiswa?.type.toLowerCase() === "siswa" ? `${profileSiswa?.name}` : `Pak ${profileSiswa?.name}`}!</span>
-                    <span className='text-gray-700 fs-4 fw-semibold d-block'>Selamat datang di Ajar Koding<br /> Tempat di Mana Bug Jadi Peliharaan dan Koding Jadi Komedi!</span>
+                    <span className='text-dark fw-bold mb-1 fs-1'>Hallo, {profileSiswa?.type.toLowerCase() === "siswa" ? `${profileSiswa?.name}` : `${profileSiswa?.name}`}!</span>
+                    <span className='text-gray-700 fs-4 fw-semibold d-block'>
+                      Selamat datang di V-Academy!
+                      <br />
+                      Di sini tempatnya belajar Algoritma dan Pemrograman materi Percabangan.
+                      {/* <br/> */}
+                      {/* Kira-kira apa sih percabangan itu? Buat code percabangan yang benar tuh gimana sih? 
+                      <br/>
+                      Yuk, simak dan pelajari materi di v-academy untuk memahami materi percabangan! */}
+                    </span>
                   </div>
                   <div className='row g-5 g-xl-8'>
                     <div className='col-xl-4'
-                      onClick={() => navigate('/absensi/siswa')}
-                    >
-                      <StatisticsWidget5
-                        className='card-xl-stretch mb-xl-8 shadow-sm'
-                        svgIcon='call'
-                        color='body-white'
-                        iconColor='primary'
-                        title={`${profileSiswa?.type.toLowerCase() === "siswa" ? 'Absensi' : 'Absensi Siswa'}`}
-                        description={`${profileSiswa?.type.toLowerCase() === "siswa" ? 'Hadir : 1, Alfa : 0, Izin : 0' : ""}`}
-                        titleColor='gray-900'
-                        descriptionColor='gray-400'
-                      />
-                    </div>
-                    <div className='col-xl-4'
                       onClick={() => navigate('/materi')}
+                      style={{ height: "50%" }}
                     >
                       <StatisticsWidget5
-                        className='card-xl-stretch mb-xl-8 shadow-sm'
+                        className='card-xl-stretch mb-xl-4 shadow-sm'
                         svgIcon='book-open'
                         color='body-white'
                         iconColor='primary'
@@ -232,11 +228,24 @@ const DashboardPage = () => {
                         descriptionColor='gray-400 text-hover-primary'
                       />
                     </div>
+                    <div className='col-xl-4' onClick={() => navigate('/forum')} style={{ height: "50%" }}>
+                      <StatisticsWidget5
+                        className='card-xl-stretch mb-xl-4 shadow-sm'
+                        svgIcon='call'
+                        color='body-white'
+                        iconColor='primary'
+                        title={`${profileSiswa?.type.toLowerCase() === "siswa" ? 'Diskusi' : 'Diskusi'}`}
+                        description='Lihat Selengkapnya ->'
+                        titleColor='gray-900'
+                        descriptionColor='gray-400 text-hover-primary'
+                      />
+                    </div>
                     <div className='col-xl-4'
                       onClick={() => navigate('/evaluasi')}
+                      style={{ height: "50%" }}
                     >
                       <StatisticsWidget5
-                        className='card-xl-stretch mb-xl-8 shadow-sm'
+                        className='card-xl-stretch mb-xl-4 shadow-sm'
                         svgIcon='question'
                         color='body-white'
                         iconColor='primary'
@@ -249,9 +258,9 @@ const DashboardPage = () => {
                   </div>
                   {/* end::Row */}
 
-                  <div className='col-xl-12'>
+                  {/* <div className='col-xl-12'>
                     <TablesWidget10 className='card-xxl-stretch mb-5 mb-xl-8 shadow-sm' title={'Papan Peringkat Siswa'} />
-                  </div>
+                  </div> */}
                 </>
             }
           </>

@@ -85,8 +85,8 @@ const ChatGroup: FC = () => {
         buttonsStyling: false
       })
       swalWithBootstrapButtons.fire({
-        title: `Yakin pertanyaan sudah terjawab?`,
-        icon: 'info',
+        title: `Yakin untuk hapus catatan?`,
+        icon: 'warning',
         showCancelButton: true,
         cancelButtonText: 'Belum deh',
         confirmButtonText: 'Yakin dong!',
@@ -105,7 +105,7 @@ const ChatGroup: FC = () => {
               handleAddPertanyaan(body)
               if (i + 1 === output.length && resDelete === null) {
                 swalSuccess.fire({
-                  title: `Pertanyaan Berhasil Terjawab, Kalian Keren 🏆`,
+                  title: `Catatan Berhasil Dihapus`,
                   icon: 'success',
                   confirmButtonText: 'Dismiss',
                 }).then(async (result) => {
@@ -216,7 +216,7 @@ const ChatGroup: FC = () => {
             <div className="card col-xl-4 rounded shadow-sm mb-1 me-5"
             // style={{ width: '25%', height: '100%', cursor: 'pointer' }}
             >
-              <span className='fw-bold p-3 ms-7 mt-2' style={{ fontSize: '20px' }}> List Pertanyaan {page === "ajarkoding" ? "Kelompok" : "Anggota Kelompok"} :</span>
+              <span className='fw-bold p-3 ms-7 mt-2' style={{ fontSize: '20px' }}> Selamat Datang di Room {page === "ajarkoding" ? "Kelompok" : "Kelompok"} :</span>
               <div className="card-body ms-1 mt-1 overflow-auto" style={{ maxHeight: '580px', maxWidth: '100%' }}>
                 {
                   pertanyaan.length !== 0 ? pertanyaan.map((e, i) => {
@@ -224,17 +224,17 @@ const ChatGroup: FC = () => {
                       <div className='border border-secondary border-1 rounded p-2 mb-3' key={i}>
                         <div className='d-flex flex-lg-row' style={{ justifyContent: 'space-between', marginBottom: '-20px' }}>
                           <div>
-                            <span className='text-gray-500' style={{ fontSize: '15px' }}>Dari {page === "ajarkoding" ? `Kelompok ${e.pertanyaan.fullname}` : e.pertanyaan.fullname}</span>
+                            <span className='text-gray-800 fw-bold' style={{ fontSize: '18px' }}>Catatan ({page === "ajarkoding" ? `Kelompok ${e.pertanyaan.fullname}` : e.pertanyaan.fullname})</span>
                           </div>
                           {
                             page !== "ajarkoding" ?
                               <div>
-                                <img
+                                {/* <img
                                   alt='Logo'
                                   src={toAbsoluteUrl('/media/icons/duotune/general/ic_checklist.svg')}
                                   className='logo-default h-15px mb-2 me-3 cursor-pointer'
                                   onClick={() => handleDeletePertanyaan(e.id)}
-                                />
+                                /> */}
                                 <img
                                   alt='Logo'
                                   src={toAbsoluteUrl('/media/icons/duotune/general/icon_x.svg')}
@@ -244,7 +244,8 @@ const ChatGroup: FC = () => {
                                       fullname: page,
                                       pertanyaan: e.pertanyaan.pertanyaan
                                     }
-                                    handleSendToRoomPertanyaan(body, e.id)
+                                    // handleSendToRoomPertanyaan(body, e.id)
+                                    handleDeletePertanyaan(e.id)
                                   }}
                                 />
                               </div>
@@ -254,12 +255,15 @@ const ChatGroup: FC = () => {
 
                         </div>
                         <br />
-                        <span style={{ fontSize: '20px' }} className='text-dark'>{e.pertanyaan.pertanyaan}</span>
+                        <br />
+                        <div style={{ maxHeight: "150px", overflowY: 'auto' }}>
+                          <span style={{ fontSize: '16px', fontFamily: 'monospace' }} className='text-dark'>{e.pertanyaan.pertanyaan}</span>
+                        </div>
                       </div>
                     )
                   }) :
                     <div className='border border-secondary border-1 rounded p-5 mb-3'>
-                      <span style={{ fontSize: '20px' }} className='text-dark'>Tidak ada pertanyaan!</span>
+                      <span style={{ fontSize: '20px' }} className='text-dark'>Tidak ada catatan!</span>
                     </div>
                 }
               </div>

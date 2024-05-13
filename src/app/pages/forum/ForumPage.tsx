@@ -83,7 +83,7 @@ const Forum = () => {
 
                         </div>
                         <div className='p-5'>
-                          <h3>Kelompok Kamu 🙌</h3>
+                          <h3>Diskusi Kelompok Kecil 🙌</h3>
                         </div>
                       </div>
                     </div>
