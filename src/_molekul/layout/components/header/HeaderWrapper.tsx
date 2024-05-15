@@ -33,11 +33,11 @@ export function HeaderWrapper() {
     <div
       id='kt_header'
       className='d-flex header align-items-stretch shadow-sm ps-20 pe-20'
-      style={{ justifyContent: 'space-between', alignItems: 'center' }}
+      style={{ alignItems: 'center' }}
     >
       {
         isLocation ?
-          <div className='d-flex header-logo flex-grow-1 flex-lg-grow-0' style={{ alignItems: 'center' }}
+          <div className='d-flex header-logo flex-grow-1 flex-lg-grow-0' style={{ alignItems: 'center', width: "10%" }}
             onClick={() => navigation('/materi')}
           >
             <div className='hover-overlay' style={{ cursor: 'pointer' }}>
@@ -50,7 +50,7 @@ export function HeaderWrapper() {
             </div>
           </div>
           :
-          <div className='d-flex header-logo me-5 me-md-10 flex-grow-1 flex-lg-grow-0' style={{ alignItems: 'center' }}>
+          <div className='d-flex header-logo me-5 me-md-10 flex-grow-1 flex-lg-grow-0' style={{ alignItems: 'center', maxWidth: "10%" }}>
             <Link to='/'>
               <img
                 alt='Logo'
@@ -64,7 +64,7 @@ export function HeaderWrapper() {
 
       {
         isLocation ?
-          <div className={clsx(`d-flex`)} style={{ justifyItems: 'center', alignItems: 'center' }}>
+          <div className={clsx(`d-flex`)} style={{ justifyItems: 'center', alignItems: 'center', width: "80%" }}>
             <span
               className={`${location.pathname === '/dashboard' || `${location.pathname === '/evaluasi/soal'}` ? "text-primary" : ""}`}
               style={{ textAlign: 'center', fontSize: '16px', fontWeight: 'bold' }}>
@@ -73,7 +73,7 @@ export function HeaderWrapper() {
             </span>
           </div>
           :
-          <div className='d-flex' style={{ justifyItems: 'center', alignItems: 'center' }}>
+          <div className='d-flex' style={{ justifyContent: 'center', alignItems: 'center', width: "80%" }}>
             <div className={clsx(`d-flex`)}>
               <div className='d-flex me-10' style={{ height: '45px' }}>
                 <ul className={`${location.pathname === '/dashboard' ? "border rounded-pill border-primary border-2 h-10" : ""} nav nav-stretch fs-5 fw-bolder w-110px`} style={{ bottom: '0', backgroundColor: location.pathname === '/dashboard' ? '#4584AD' : '' }}>
@@ -123,7 +123,7 @@ export function HeaderWrapper() {
       }
 
 
-      <div className={clsx(`d-flex`)} style={{ justifyItems: 'center', alignItems: 'center' }}>
+      <div className={clsx(`d-flex`)} style={{ justifyItems: 'center', alignItems: 'center', width: "10%" }}>
         <Topbar />
       </div>
       {/* end::Brand */}

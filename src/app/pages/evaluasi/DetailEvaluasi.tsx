@@ -63,8 +63,8 @@ const DetailEvaluasi = () => {
         const res = await getEvaluasiByUUID(materiParent, uid)
         const ha = Object.entries(res);
         // if (res) {
-          setFinalHasilSoal(ha[0][1].hasilSoal)
-          setLoading(false)
+        setFinalHasilSoal(ha[0][1].hasilSoal)
+        setLoading(false)
         // }
       }
     } catch (error) {
@@ -84,38 +84,40 @@ const DetailEvaluasi = () => {
           </div>
         ) :
           <>
-            <div id="materi" className={`${materiParent === "preLogic" || materiParent === "postLogic" || materiParent === "penilaianMedia" ? "col-xl-10 card-header" : "col-xl-10 card-header"}`}>
-              {/* <h1>Tujuan Pembelajaran</h1> */}
-              <Soal
-                hasilSoal={hasilSoal}
-                setHasilSoal={setHasilSoal}
-                finalHasilSoal={finalHasilSoal}
-                setFinalHasilSoal={setFinalHasilSoal}
-                loading={loading}
-                setLoading={setLoading}
-                className='card-xxl-stretch mb-xl-3' />
-            </div>
-            {
-              // materiParent === "preLogic" || materiParent === "postLogic" || materiParent === "penilaianMedia" ?
-              //   // <div id="progress" className='card shadow-sm col-xxl-2 position-fixed mb-xl-3 border border-secondary border-2 rounded'
-              //   //   style={{ right: '30px', maxHeight: '25%', height: '15%' }}>
-              //   //   {/* begin::Header */}
-              //   //   <div className='d-flex border-0 mb-5 mt-5' style={{ justifyContent: 'center', alignItems: 'center' }}>
-              //   //     <span className='fw-bolder text-dark'></span>
-              //   //   </div>
-              //   //   {/* end::Header */}
-              //   // </div>
-              //   <></>
-              //   :
-              <div id="progress" className='col-xxl-2 position-fixed mb-xl-3 border border-secondary border-2 rounded'
-                style={{ right: '30px', maxHeight: '20%', height: '15%' }}>
-                {/* begin::Header */}
-                <div className='d-flex border-0 mb-5 mt-5' style={{ justifyContent: 'center', alignItems: 'center' }}>
-                  <span className='fw-bolder text-dark' style={{ fontSize: '4rem', textAlign: 'center' }}>{page.currentPage}/{materi[0].materi.isiMateri.length}</span>
-                </div>
-                {/* end::Header */}
+            <div style={{ justifyContent: "space-between" }} className='d-flex row'>
+              <div style={{ maxWidth: "85%" }} id="materi" className={`${materiParent === "preLogic" || materiParent === "postLogic" || materiParent === "penilaianMedia" ? "col-xl-10 card-header" : "col-xl-10 card-header"}`}>
+                {/* <h1>Tujuan Pembelajaran</h1> */}
+                <Soal
+                  hasilSoal={hasilSoal}
+                  setHasilSoal={setHasilSoal}
+                  finalHasilSoal={finalHasilSoal}
+                  setFinalHasilSoal={setFinalHasilSoal}
+                  loading={loading}
+                  setLoading={setLoading}
+                  className='card-xxl-stretch mb-xl-3' />
               </div>
-            }
+              {
+                // materiParent === "preLogic" || materiParent === "postLogic" || materiParent === "penilaianMedia" ?
+                //   // <div id="progress" className='card shadow-sm col-xxl-2 position-fixed mb-xl-3 border border-secondary border-2 rounded'
+                //   //   style={{ right: '30px', maxHeight: '25%', height: '15%' }}>
+                //   //   {/* begin::Header */}
+                //   //   <div className='d-flex border-0 mb-5 mt-5' style={{ justifyContent: 'center', alignItems: 'center' }}>
+                //   //     <span className='fw-bolder text-dark'></span>
+                //   //   </div>
+                //   //   {/* end::Header */}
+                //   // </div>
+                //   <></>
+                //   :
+                <div id="progress" className='position-fixed mb-xl-3 border border-secondary border-2 rounded'
+                  style={{ right: '30px', maxHeight: '15%', height: '15%', maxWidth: "15%" }}>
+                  {/* begin::Header */}
+                  <div className='d-flex border-0 mb-5 mt-5' style={{ justifyContent: 'center', alignItems: 'center' }}>
+                    <span className='fw-bolder text-dark display-1' style={{ textAlign: 'center' }}>{page.currentPage}/{materi[0].materi.isiMateri.length}</span>
+                  </div>
+                  {/* end::Header */}
+                </div>
+              }
+            </div>
             {
               // materiParent === "preLogic" || materiParent === "postLogic" || materiParent === "penilaianMedia" ?
               //   <div className='d-flex pe-10 mt-10' style={{ justifyContent: 'end' }}>
