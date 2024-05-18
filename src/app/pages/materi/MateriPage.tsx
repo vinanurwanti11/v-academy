@@ -45,6 +45,9 @@ const MateriPage = () => {
     })
   }, [uuid, detailMateri])
 
+  console.log(profile);
+
+
 
   const handleGetMateri = async (uid: string | undefined) => {
     setLoading(true)
@@ -86,55 +89,9 @@ const MateriPage = () => {
     const currentDate = new Date();
     const formattedDate = format(currentDate, 'dd MMMM yyyy', { locale: id });
 
-    if (uuid) {
-      if (i) {
-        if (detailMateri[i - 2]) {
-          if (detailMateri[i - 2] && detailMateri[i - 2].status !== "On Progress") {
-            console.log("masuk");
-            if (detailMateri[i - 1]) {
-              setDataMateri(materi)
-              setIsMateri(true)
-              navigate("/materi/details", { state: { materiParent: materi, idMateri: detailMateri[i - 1].idMateri } })
-            }
-            else {
-              setLoading(true)
-              try {
-                const body: DetailMateriTypeResponse = {
-                  name: nama,
-                  status: "On Progress",
-                  fullname: '-',
-                  step: 1,
-                  latihan: [],
-                  pertanyaan: [],
-                  rangkuman: '',
-                  tanggalMulai: formattedDate
-                }
-                const res = await createDetailMateriByUID(uuid, body)
-                if (res) {
-                  setLoading(false)
-                  setDataMateri(materi)
-                  setIsMateri(true)
-                  navigate("/materi/details", { state: { materiParent: materi, idMateri: res.name } })
-                }
-              } catch (error) {
-                console.error(error);
-                setLoading(false)
-              }
-            }
-          } else {
-            const swalSuccess = Swal.mixin({
-              customClass: {
-                confirmButton: 'btn btn-danger',
-              },
-              buttonsStyling: false
-            })
-            swalSuccess.fire({
-              title: `Mohon Maaf anda harus menyelesaikan terlebih dahulu modul sebelumnya`,
-              icon: 'error',
-              confirmButtonText: 'Dismiss',
-            })
-          }
-        } else if (i && i === 1) {
+    if (profile?.type.toLowerCase() === "siswa" && uuid) {
+      if (i && i > 1) {
+        if (detailMateri[i - 2] && detailMateri[i - 2].status !== "On Progress") {
           if (detailMateri[i - 1]) {
             setDataMateri(materi)
             setIsMateri(true)
@@ -164,10 +121,59 @@ const MateriPage = () => {
               setLoading(false)
             }
           }
+        } else {
+          const swalSuccess = Swal.mixin({
+            customClass: {
+              confirmButton: 'btn btn-danger',
+            },
+            buttonsStyling: false
+          })
+          swalSuccess.fire({
+            title: `Mohon Maaf anda harus menyelesaikan terlebih dahulu modul sebelumnya`,
+            icon: 'error',
+            confirmButtonText: 'Dismiss',
+          })
         }
+      } else if (i && i === 1) {
+        if (detailMateri[i - 1]) {
+          setDataMateri(materi)
+          setIsMateri(true)
+          navigate("/materi/details", { state: { materiParent: materi, idMateri: detailMateri[i - 1].idMateri } })
+        } else {
+          setLoading(true)
+          try {
+            const body: DetailMateriTypeResponse = {
+              name: nama,
+              status: "On Progress",
+              fullname: '-',
+              step: 1,
+              latihan: [],
+              pertanyaan: [],
+              rangkuman: '',
+              tanggalMulai: formattedDate
+            }
+            const res = await createDetailMateriByUID(uuid, body)
+            if (res) {
+              setLoading(false)
+              setDataMateri(materi)
+              setIsMateri(true)
+              navigate("/materi/details", { state: { materiParent: materi, idMateri: res.name } })
+            }
+          } catch (error) {
+            console.error(error);
+            setLoading(false)
+          }
+        }
+      }
+    } else {
+      if (i) {
+        setDataMateri(materi)
+        setIsMateri(true)
+        navigate("/materi/details", { state: { materiParent: materi } })
       }
     }
   }
+
 
   const handleGetProfile = async (uid: string | undefined) => {
     if (uid) {
@@ -212,7 +218,6 @@ const MateriPage = () => {
           <>
             {
               profile?.type.toLowerCase() === "siswa" ?
-
                 <>
                   <h1 className='mb-10' style={{ fontSize: '30px' }}>Materi</h1>
                   <div className="d-flex row" style={{ justifyContent: 'center', alignItems: 'center' }}>

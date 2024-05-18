@@ -65,12 +65,11 @@ export function HeaderWrapper() {
       {
         isLocation ?
           <div className={clsx(`d-flex`)} style={{ justifyItems: 'center', alignItems: 'center', width: "80%" }}>
-            <span
+            {/* <span
               className={`${location.pathname === '/dashboard' || `${location.pathname === '/evaluasi/soal'}` ? "text-primary" : ""}`}
-              style={{ textAlign: 'center', fontSize: '16px', fontWeight: 'bold' }}>
-              {/* {titleMateri ? titleMateri : ""} */}
+              style={{ textAlign: 'center', fontSize: '16px', fontWeight: 'bold', alignSelf: 'center' }}>
               Materi
-            </span>
+            </span> */}
           </div>
           :
           <div className='d-flex' style={{ justifyContent: 'center', alignItems: 'center', width: "80%" }}>
