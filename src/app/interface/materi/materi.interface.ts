@@ -92,8 +92,10 @@ export const materiOperator: DataMateri[] = [
                 <iframe width="800" height="500" src="https://www.youtube.com/embed/VkcM4M4FKf4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
 
+              <h1 style="font-size: 30px; align-self:start; margin-top:20px">Latihan Soal</h1>
+
               <span style="font-size: 20px; text-align: justify; align-self:start">
-              setelah memahami materi dan menonton ilustrasi tersebut, yuk coba jawab pertanyaan di bawah ini:
+              Setelah memahami materi dan menonton ilustrasi tersebut, yuk coba jawab pertanyaan di bawah ini:
               </span>
 
               <span style="font-size: 20px; text-align: justify; align-self:start; margin-top:10px">
@@ -168,8 +170,10 @@ export const materiIfThen: DataMateri[] = [
                 <iframe width="800" height="500" src="https://www.youtube.com/embed/RAwrY-RoV7Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
 
+              <h1 style="font-size: 30px; align-self:start; margin-top:20px">Latihan Soal</h1>
+
               <span style="font-size: 20px; text-align: justify; align-self:start">
-              setelah memahami materi dan menonton ilustrasi tersebut, yuk coba jawab pertanyaan di bawah ini:
+              Setelah memahami materi dan menonton ilustrasi tersebut, yuk coba jawab pertanyaan di bawah ini:
               </span>
 
               <span style="font-size: 20px; text-align: justify; align-self:start; margin-top:10px">
@@ -249,8 +253,10 @@ export const materiIfElse: DataMateri[] = [
                 <iframe width="800" height="500" src="https://www.youtube.com/embed/yClNpWBY_B4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
 
+              <h1 style="font-size: 30px; align-self:start; margin-top:20px">Latihan Soal</h1>
+
               <span style="font-size: 20px; text-align: justify; align-self:start">
-              setelah memahami materi dan menonton ilustrasi tersebut, yuk coba jawab pertanyaan di bawah ini:
+              Setelah memahami materi dan menonton ilustrasi tersebut, yuk coba jawab pertanyaan di bawah ini:
               </span>
 
               <span style="font-size: 20px; text-align: justify; align-self:start; margin-top:10px">
@@ -333,8 +339,10 @@ export const materiCase: DataMateri[] = [
                 <iframe width="800" height="500" src="https://www.youtube.com/embed/nsZIBO5GQaE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
 
+              <h1 style="font-size: 30px; align-self:start; margin-top:20px">Latihan Soal</h1>
+
               <span style="font-size: 20px; text-align: justify; align-self:start">
-              setelah memahami materi dan menonton ilustrasi tersebut, yuk coba jawab pertanyaan di bawah ini:
+              Setelah memahami materi dan menonton ilustrasi tersebut, yuk coba jawab pertanyaan di bawah ini:
               </span>
 
               <span style="font-size: 20px; text-align: justify; align-self:start; margin-top:10px">
