@@ -271,7 +271,7 @@ const ChatGroup: FC = () => {
             <div className="card col-xl-8 rounded shadow-sm p-2"
             // style={{ width: '25%', height: '180px', cursor: 'pointer' }}
             >
-              <iframe width="100%" height="620" src={`https://dzik.my.id:9001/p/${page === "ajarkoding" ? `${page}` : `kel${page}`}`} title="Forum Diskusi" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; camera https://villageharmony.fun:9001; microphone https://villageharmony.fun:9001" allowFullScreen></iframe>
+              <iframe width="100%" height="620" src={`https://dzik.my.id:9001/p/${page === "ajarkoding" ? `${page}` : `kel${page}`}`} title="Forum Diskusi" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; camera https://dzik.my.id:9001; microphone https://dzik.my.id:9001" allowFullScreen></iframe>
             </div>
           </div >
 
