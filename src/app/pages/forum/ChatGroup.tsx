@@ -1,17 +1,21 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { getAuth, onAuthStateChanged, reload } from 'firebase/auth'
 import React, { FC, useEffect, useState } from 'react'
-import { deletePertanyaan, getPertanyaan, sendPertanyaanToRoom } from '../../api/Request/materi.siswa.api'
+import { deletePertanyaan, getPertanyaan, isEvaluasi, sendPertanyaanToRoom } from '../../api/Request/materi.siswa.api'
 import { PertanyaanResponse, PertanyaanType, PertanyaanTypeResponse } from '../../interface/materi/materi.interface'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import Lottie from 'lottie-react'
 import animLoading from '../../../_molekul/assets/loading/animLoading.json'
 import { toAbsoluteUrl } from '../../../_molekul/helpers'
 import Swal from 'sweetalert2'
+import { getProfileSiswa } from '../../api/Request/profile.siswa.api'
+import { CreateProfileSiswaType } from '../../interface/profile.siswa.interface'
 
 const ChatGroup: FC = () => {
   const auth = getAuth()
+  const navigate = useNavigate()
   const [uuid, setUuid] = useState<string>()
+  const [profile, setProfile] = useState<CreateProfileSiswaType>()
   const [pertanyaan, setPertanyaan] = useState<PertanyaanResponse[]>([])
   // @ts-ignore
   const location = useLocation<data>()
@@ -20,13 +24,12 @@ const ChatGroup: FC = () => {
 
   useEffect(() => {
     setLoading(true)
-    console.log(page);
-
     // @ts-ignore
     setPage(location.state.page)
     handleGetPertanyaan(page)
     onAuthStateChanged(auth, e => {
       setUuid(e?.uid)
+      handleGetProfile(e?.uid)
     })
   }, [pertanyaan, page])
 
@@ -66,6 +69,14 @@ const ChatGroup: FC = () => {
       if (!found) {
         pertanyaan.push(key)
       }
+    }
+  }
+
+  const handleGetProfile = async (uid: string | undefined) => {
+    if (uid) {
+      const getIdPoin = await getProfileSiswa(uid)
+      const la = Object.entries(getIdPoin)
+      setProfile(la[0][1])
     }
   }
 
@@ -201,7 +212,6 @@ const ChatGroup: FC = () => {
     })
   }
 
-
   return (
     <>
       {
@@ -216,12 +226,12 @@ const ChatGroup: FC = () => {
             <div className="card col-xl-4 rounded shadow-sm mb-1 me-5"
             // style={{ width: '25%', height: '100%', cursor: 'pointer' }}
             >
-              <span className='fw-bold p-3 ms-7 mt-2' style={{ fontSize: '20px' }}> Selamat Datang di Room {page === "ajarkoding" ? "Kelompok" : "Kelompok"} :</span>
-              <div className="card-body ms-1 mt-1 overflow-auto" style={{ maxHeight: '580px', maxWidth: '100%' }}>
+              <span className='fw-bold ms-7 mt-2' style={{ fontSize: '20px' }}> Selamat Datang di Room {page === "ajarkoding" ? "Utama" : "Kelompok"} :</span>
+              <div className="d-flex flex-column card-body ms-1 mt-1 overflow-auto" style={{ maxHeight: '580px', maxWidth: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
                 {
                   pertanyaan.length !== 0 ? pertanyaan.map((e, i) => {
                     return (
-                      <div className='border border-secondary border-1 rounded p-2 mb-3' key={i}>
+                      <div className='border border-secondary border-1 rounded p-2 mb-3' key={i} style={{ width: "100%" }}>
                         <div className='d-flex flex-lg-row' style={{ justifyContent: 'space-between', marginBottom: '-20px' }}>
                           <div>
                             <span className='text-gray-800 fw-bold' style={{ fontSize: '18px' }}>Catatan ({page === "ajarkoding" ? `Kelompok ${e.pertanyaan.fullname}` : e.pertanyaan.fullname})</span>
@@ -262,10 +272,36 @@ const ChatGroup: FC = () => {
                       </div>
                     )
                   }) :
-                    <div className='border border-secondary border-1 rounded p-5 mb-3'>
+                    <div className='border border-secondary border-1 rounded p-5 mb-3' style={{ width: "100%" }}>
                       <span style={{ fontSize: '20px' }} className='text-dark'>Tidak ada catatan!</span>
                     </div>
                 }
+                {
+                  page !== "ajarkoding" ?
+                    <>
+                      {
+                        profile?.type.toLowerCase() === "siswa" ?
+                          <div
+                            className='d-flex border border-secondary border-1 rounded p-2'
+                            style={{ alignItems: 'center', justifyContent: 'center', backgroundColor: '#4584AD', cursor: 'pointer', width: 250, marginBottom: -20 }}
+                            onClick={() => navigate('/evaluasi/lkpd', { state: { page: "r.0e7760b9b82d6338a9bf3c774f56384f", ke: '2' } })}
+                          >
+                            <span style={{ fontSize: '16px', alignSelf: 'center' }} className='text-white fw-bold'>Masukkan Catatan</span>
+                          </div>
+                          :
+                          <div
+                            className='d-flex border border-secondary border-1 rounded p-2'
+                            style={{ alignItems: 'center', justifyContent: 'center', backgroundColor: '#4584AD', cursor: 'pointer', width: 250, marginBottom: -20 }}
+                            onClick={() => navigate("/hasil/evaluasi", { state: { ke: "1", type: "lkpd" } })}
+                          >
+                            <span style={{ fontSize: '16px', alignSelf: 'center' }} className='text-white fw-bold'>Lihat Catatan Siswa</span>
+                          </div>
+                      }
+                    </>
+                    :
+                    null
+                }
+
               </div>
             </div>
             <div className="card col-xl-8 rounded shadow-sm p-2"

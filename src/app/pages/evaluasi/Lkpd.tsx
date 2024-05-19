@@ -47,6 +47,9 @@ const Lkpd: FC = () => {
     window.open(url, '_blank');
   }
 
+  console.log(page);
+
+
   return (
     <div className='d-flex flex-column flex-lg-row rounded pt-2' style={{ justifyContent: 'center', alignContent: 'center' }}>
       <div className="card col-xl-4 rounded shadow-sm mb-1 me-5"
@@ -55,16 +58,7 @@ const Lkpd: FC = () => {
         <span className='fw-bold p-3 ms-7 mt-2' style={{ fontSize: '20px' }}> Catatan :</span>
         <div className="card-body ms-1 mt-1 overflow-auto" style={{ maxHeight: '580px', maxWidth: '100%' }}>
           <div className=''>
-            <ul>
-              <li>
-                <span style={{ fontSize: '20px' }} className='text-dark'>Untuk menjawab soal evaluasi kalian bisa mengerjakan <span className='text-primary cursor-pointer' onClick={() => handleNavigate()} >disini</span>.</span>
-              </li>
-              <br />
-              <li>
-                <span style={{ fontSize: '20px' }} className='text-dark'>Untuk membuat programnya kalian bisa mengerjakan <a href='https://onlinegdb.com/TDCX-d16T' target='_blank'>disini</a>, setelah selesai kalian bisa copy codenya dan paste pada file pengerjaan soal evaluasi</span>
-              </li>
-            </ul>
-
+            <span style={{ fontSize: '20px', textAlign: "justify" }} className='text-dark'>Setelah berdiskusi dengan teman kelompok, masukkan jawaban menggunakan kata-kata sendiri di sini ya!</span>
           </div>
         </div>
       </div>
@@ -72,7 +66,7 @@ const Lkpd: FC = () => {
       <div className="card col-xl-8 rounded shadow-sm p-2"
       // style={{ width: '25%', height: '180px', cursor: 'pointer' }}
       >
-        <iframe width="100%" height="620" src={`https://villageharmony.fun:9001/p/${page}`} title="Forum Diskusi" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; camera https://villageharmony.fun:9001; microphone https://villageharmony.fun:9001" allowFullScreen></iframe>
+        <iframe width="100%" height="620" src={`https://dzik.my.id:9001/p/${noAbsen}`} title="Forum Diskusi" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; camera https://dzik.my.id:9001; microphone https://dzik.my.id:9001" allowFullScreen></iframe>
       </div>
     </div >
   )

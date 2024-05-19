@@ -129,7 +129,7 @@ const HasilSiswa = () => {
                     return (
                       <tr>
                         {
-                          e.type !== "guru" && (
+                          e.type.toLowerCase() !== "guru" && (
                             <>
                               <td key={i}>
                                 <div className='d-flex align-items-center'
@@ -156,7 +156,7 @@ const HasilSiswa = () => {
                               </td>
                               <td>
                                 <span className='text-dark fw-bold d-block fs-4'>
-                                  <span className='badge badge-light-success'>Selesai</span>
+                                  <span className='badge badge-light-success'>Catatan</span>
                                 </span>
                               </td>
                             </>

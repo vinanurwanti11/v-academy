@@ -45,10 +45,6 @@ const MateriPage = () => {
     })
   }, [uuid, detailMateri])
 
-  console.log(profile);
-
-
-
   const handleGetMateri = async (uid: string | undefined) => {
     setLoading(true)
     try {
