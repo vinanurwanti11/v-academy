@@ -223,88 +223,94 @@ const ChatGroup: FC = () => {
           </div>
         ) : (
           <div className='d-flex flex-column flex-lg-row rounded pt-2' style={{ justifyContent: 'center', alignContent: 'center' }}>
-            <div className="card col-xl-4 rounded shadow-sm mb-1 me-5"
-            // style={{ width: '25%', height: '100%', cursor: 'pointer' }}
-            >
-              <span className='fw-bold ms-7 mt-2' style={{ fontSize: '20px' }}> Selamat Datang di Room {page === "ajarkoding" ? "Utama" : "Kelompok"} :</span>
-              <div className="d-flex flex-column card-body ms-1 mt-1 overflow-auto" style={{ maxHeight: '580px', maxWidth: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
-                {
-                  pertanyaan.length !== 0 ? pertanyaan.map((e, i) => {
-                    return (
-                      <div className='border border-secondary border-1 rounded p-2 mb-3' key={i} style={{ width: "100%" }}>
-                        <div className='d-flex flex-lg-row' style={{ justifyContent: 'space-between', marginBottom: '-20px' }}>
-                          <div>
-                            <span className='text-gray-800 fw-bold' style={{ fontSize: '18px' }}>Catatan ({page === "ajarkoding" ? `Kelompok ${e.pertanyaan.fullname}` : e.pertanyaan.fullname})</span>
-                          </div>
-                          {
-                            page !== "ajarkoding" ?
+            {
+              page !== "ajarkoding" ?
+                <div className="card col-xl-4 rounded shadow-sm mb-1 me-5"
+                // style={{ width: '25%', height: '100%', cursor: 'pointer' }}
+                >
+                  <span className='fw-bold ms-7 mt-2' style={{ fontSize: '20px' }}> Selamat Datang di Room {page === "ajarkoding" ? "Utama" : "Kelompok"} :</span>
+                  <div className="d-flex flex-column card-body ms-1 mt-1 overflow-auto" style={{ maxHeight: '580px', maxWidth: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
+                    {
+                      pertanyaan.length !== 0 ? pertanyaan.map((e, i) => {
+                        return (
+                          <div className='border border-secondary border-1 rounded p-2 mb-3' key={i} style={{ width: "100%" }}>
+                            <div className='d-flex flex-lg-row' style={{ justifyContent: 'space-between', marginBottom: '-20px' }}>
                               <div>
-                                {/* <img
+                                <span className='text-gray-800 fw-bold' style={{ fontSize: '18px' }}>Catatan ({page === "ajarkoding" ? `Kelompok ${e.pertanyaan.fullname}` : e.pertanyaan.fullname})</span>
+                              </div>
+                              {
+                                page !== "ajarkoding" ?
+                                  <div>
+                                    {/* <img
                                   alt='Logo'
                                   src={toAbsoluteUrl('/media/icons/duotune/general/ic_checklist.svg')}
                                   className='logo-default h-15px mb-2 me-3 cursor-pointer'
                                   onClick={() => handleDeletePertanyaan(e.id)}
                                 /> */}
-                                <img
-                                  alt='Logo'
-                                  src={toAbsoluteUrl('/media/icons/duotune/general/icon_x.svg')}
-                                  className='logo-default h-15px mb-2 cursor-pointer'
-                                  onClick={() => {
-                                    const body: PertanyaanType = {
-                                      fullname: page,
-                                      pertanyaan: e.pertanyaan.pertanyaan
-                                    }
-                                    // handleSendToRoomPertanyaan(body, e.id)
-                                    handleDeletePertanyaan(e.id)
-                                  }}
-                                />
+                                    <img
+                                      alt='Logo'
+                                      src={toAbsoluteUrl('/media/icons/duotune/general/icon_x.svg')}
+                                      className='logo-default h-15px mb-2 cursor-pointer'
+                                      onClick={() => {
+                                        const body: PertanyaanType = {
+                                          fullname: page,
+                                          pertanyaan: e.pertanyaan.pertanyaan
+                                        }
+                                        // handleSendToRoomPertanyaan(body, e.id)
+                                        handleDeletePertanyaan(e.id)
+                                      }}
+                                    />
+                                  </div>
+                                  :
+                                  <></>
+                              }
+
+                            </div>
+                            <br />
+                            <br />
+                            <div style={{ maxHeight: "150px", overflowY: 'auto' }}>
+                              <span style={{ fontSize: '16px', fontFamily: 'monospace' }} className='text-dark'>{e.pertanyaan.pertanyaan}</span>
+                            </div>
+                          </div>
+                        )
+                      }) :
+                        <div className='border border-secondary border-1 rounded p-5 mb-3' style={{ width: "100%" }}>
+                          <span style={{ fontSize: '20px' }} className='text-dark'>Tidak ada catatan!</span>
+                        </div>
+                    }
+                    {
+                      page !== "ajarkoding" ?
+                        <>
+                          {
+                            profile?.type.toLowerCase() === "siswa" ?
+                              <div
+                                className='d-flex border border-secondary border-1 rounded p-2'
+                                style={{ alignItems: 'center', justifyContent: 'center', backgroundColor: '#4584AD', cursor: 'pointer', width: 250, marginBottom: -20 }}
+                                onClick={() => navigate('/evaluasi/lkpd', { state: { page: "r.0e7760b9b82d6338a9bf3c774f56384f", ke: '2' } })}
+                              >
+                                <span style={{ fontSize: '16px', alignSelf: 'center' }} className='text-white fw-bold'>Masukkan Catatan</span>
                               </div>
                               :
-                              <></>
+                              <div
+                                className='d-flex border border-secondary border-1 rounded p-2'
+                                style={{ alignItems: 'center', justifyContent: 'center', backgroundColor: '#4584AD', cursor: 'pointer', width: 250, marginBottom: -20 }}
+                                onClick={() => navigate("/hasil/evaluasi", { state: { ke: "1", type: "lkpd" } })}
+                              >
+                                <span style={{ fontSize: '16px', alignSelf: 'center' }} className='text-white fw-bold'>Lihat Catatan Siswa</span>
+                              </div>
                           }
+                        </>
+                        :
+                        null
+                    }
 
-                        </div>
-                        <br />
-                        <br />
-                        <div style={{ maxHeight: "150px", overflowY: 'auto' }}>
-                          <span style={{ fontSize: '16px', fontFamily: 'monospace' }} className='text-dark'>{e.pertanyaan.pertanyaan}</span>
-                        </div>
-                      </div>
-                    )
-                  }) :
-                    <div className='border border-secondary border-1 rounded p-5 mb-3' style={{ width: "100%" }}>
-                      <span style={{ fontSize: '20px' }} className='text-dark'>Tidak ada catatan!</span>
-                    </div>
-                }
-                {
-                  page !== "ajarkoding" ?
-                    <>
-                      {
-                        profile?.type.toLowerCase() === "siswa" ?
-                          <div
-                            className='d-flex border border-secondary border-1 rounded p-2'
-                            style={{ alignItems: 'center', justifyContent: 'center', backgroundColor: '#4584AD', cursor: 'pointer', width: 250, marginBottom: -20 }}
-                            onClick={() => navigate('/evaluasi/lkpd', { state: { page: "r.0e7760b9b82d6338a9bf3c774f56384f", ke: '2' } })}
-                          >
-                            <span style={{ fontSize: '16px', alignSelf: 'center' }} className='text-white fw-bold'>Masukkan Catatan</span>
-                          </div>
-                          :
-                          <div
-                            className='d-flex border border-secondary border-1 rounded p-2'
-                            style={{ alignItems: 'center', justifyContent: 'center', backgroundColor: '#4584AD', cursor: 'pointer', width: 250, marginBottom: -20 }}
-                            onClick={() => navigate("/hasil/evaluasi", { state: { ke: "1", type: "lkpd" } })}
-                          >
-                            <span style={{ fontSize: '16px', alignSelf: 'center' }} className='text-white fw-bold'>Lihat Catatan Siswa</span>
-                          </div>
-                      }
-                    </>
-                    :
-                    null
-                }
+                  </div>
+                </div>
+                :
+                null
+            }
 
-              </div>
-            </div>
-            <div className="card col-xl-8 rounded shadow-sm p-2"
+            <div className={`card ${page === "ajarkoding" ? "col-xl-12" : "col-xl-8"} rounded shadow-sm p-2`}
             // style={{ width: '25%', height: '180px', cursor: 'pointer' }}
             >
               <iframe width="100%" height="620" src={`https://dzik.my.id:9001/p/${page === "ajarkoding" ? `${page}` : `kel${page}`}`} title="Forum Diskusi" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; camera https://dzik.my.id:9001; microphone https://dzik.my.id:9001" allowFullScreen></iframe>
