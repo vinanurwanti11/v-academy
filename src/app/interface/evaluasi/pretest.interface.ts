@@ -59,7 +59,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Program tersebut hanya menentukan apakah suatu bilangan adalah bilangan bulat atau bukan.
+                a.	Program tersebut hanya menentukan apakah suatu bilangan adalah bilangan ganjil positif. Karena siswa tersebut hanya ingin membuat program yang mengetahui apakah suatu bilangan termasuk ke dalam bilangan ganjil positif atau bukan.
                 </span>
               </div>           
             </div>
@@ -68,7 +68,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Program tersebut akan menampilkan pesan bahwa bilangan tersebut adalah bilangan genap jika bilangan tersebut habis dibagi 2.
+                b.	Program tersebut akan menampilkan pesan bahwa bilangan tersebut adalah bilangan ganjil negatif.  Karena siswa tersebut hanya ingin mengatahui apakah suatu bilangan termasuk bilangan ganjil negatif atau bukan.
                 </span>
               </div>        
             </div>
@@ -77,7 +77,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Program tersebut hanya akan menampilkan pesan bahwa bilangan tersebut adalah bilangan ganjil.
+                c.	Program tersebut hanya akan menampilkan pesan bahwa bilangan tersebut adalah bilangan ganjil. Karena program yang dibuat oleh siswa tersebut adalah program untuk menentukan suatu bilangan termasuk ke dalam bilangan ganjil atau bukan.
                 </span>
               </div>           
             </div>
@@ -86,7 +86,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Program tersebut tidak valid karena tidak memungkinkan untuk menentukan apakah suatu bilangan adalah bilangan ganjil.
+                d.	Program tersebut tidak valid karena tidak memungkinkan untuk menentukan apakah suatu bilangan adalah bilangan ganjil. Karena dalam sebuah program tidak bisa menentukan apakalah bilangan tersebut bilangan ganjil atau bukan.
                 </span>
               </div>
             </div>
@@ -95,7 +95,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Program tersebut akan menampilkan pesan bahwa bilangan tersebut adalah bilangan genap jika bilangan tersebut habis dibagi 2
+                e.	Program tidak dapat dibuat, karena tidak ada kondisi yang bisa menyatakan bahwa suatu program termasuk ke dalam bilangan ganjil atau bukan.
                 </span>
               </div>
             </div>
@@ -115,16 +115,21 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Manakah dari pernyataan berikut yang benar tentang program di bawah?
+                Perhatikan pseudocode berikut:
                 </span>
               </div>  
               <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                 <img
                   alt="Logo"
-                  src="/media/pretest/2.png"
-                  style="height: 70%; width: 70%;"
+                  src="/media/pretest/3pre.png"
+                  style="height: 50%; width: 50%;"
                 />
-              </div>          
+              </div>
+              <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                <span style="font-size: 20px; text-align: justify;">
+                Susunan dari pseudocode di atas tidak sesuai, manakah susunan yang paling tepat…
+                </span>
+              </div>            
             </div>
             `,
           pilihanSoal: [
@@ -132,7 +137,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Program tersebut hanya menangani bilangan positif.
+                a.	1-4-3-2-5
                 </span>
               </div>           
             </div>
@@ -141,7 +146,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Program tersebut hanya menangani bilangan negatif.
+                b.	1-2-3-5-4
                 </span>
               </div>        
             </div>
@@ -150,7 +155,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Program tersebut hanya menangani angka nol.
+                c.	2-3-5-4-1
                 </span>
               </div>           
             </div>
@@ -159,7 +164,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Program tersebut menangani bilangan positif, negatif, dan nol.
+                d.	4-3-1-5-2
                 </span>
               </div>
             </div>
@@ -168,13 +173,13 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Program tersebut tidak menangani angka nol.
+                e.	2-4-1-3-5
                 </span>
               </div>
             </div>
             `
           ],
-          kunjawSoal: 3,
+          kunjawSoal: 0,
           UrlYoutube: "",
           type: "soal"
         },
@@ -187,15 +192,20 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Di bawah ini merupakan kode Pascal untuk pengelompokan umur. Manakah pernyataan berikut yang benar mengenai program ini?
+                Perhatikan program berikut:
                 </span>
               </div>
               <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                 <img
                   alt="Logo"
-                  src="/media/pretest/3.png"
-                  style="height: 70%; width: 70%;"
+                  src="/media/pretest/pre3.png"
+                  style="height: 50%; width: 50%;"
                 />
+              </div>
+              <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                <span style="font-size: 20px; text-align: justify;">
+                Jika diinputkan jumlah produk yang dibeli sebanyak 6, maka output dari program tersebut adalah…
+                </span>
               </div>
             </div>
             `,
@@ -204,7 +214,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Program ini akan memberikan output "Anda termasuk dalam kelompok Dewasa Muda." jika umur yang dimasukkan adalah 25.
+                a.	Anda mendapatkan diskon
                 </span>
               </div>           
             </div>
@@ -213,7 +223,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Program ini hanya dapat mengelompokkan umur hingga 25 tahun.
+                b.	Membeli produk < 10
                 </span>
               </div>        
             </div>
@@ -222,7 +232,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Program ini tidak valid karena penggunaan kata kunci "end" yang tidak tepat.
+                c.	Membeli produk = 6
                 </span>
               </div>           
             </div>
@@ -231,7 +241,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Jika umur yang dimasukkan adalah -5, program akan memberikan output "Anda termasuk dalam kelompok Balita."
+                d.	Tidak terjadi apa-apa
                 </span>
               </div>
             </div>
@@ -240,7 +250,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Program ini hanya akan memberikan output "Anda termasuk dalam kelompok Dewasa."
+                e.	Selamat anda mendapat diskon
                 </span>
               </div>
             </div>
@@ -259,7 +269,19 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Dalam bahasa Pascal, apakah switch case dapat digunakan untuk memeriksa beberapa kondisi secara bersamaan?
+                Perhatikan code berikut:
+                </span>
+              </div>
+              <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
+                <img
+                  alt="Logo"
+                  src="/media/pretest/pre4.png"
+                  style="height: 20%; width: 20%;"
+                />
+              </div>
+              <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                <span style="font-size: 20px; text-align: justify;">
+                Apabila program tersebut dijalankan, maka akan menggalami erorr. Mengapa?
                 </span>
               </div>
             </div>
@@ -269,7 +291,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Ya, switch case dapat digunakan untuk memeriksa beberapa kondisi secara bersamaan.
+                a.	Penempatan tanda “{“ seharusnya disimpan setelah if sebelum kondisi
                 </span>
               </div>           
             </div>
@@ -278,7 +300,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Tidak, switch case hanya dapat digunakan untuk memeriksa satu kondisi tunggal.
+                b.	Setelah tanda “{“ dan “}” harus menggunkan tanda “;”
                 </span>
               </div>        
             </div>
@@ -287,7 +309,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Hanya jika menggunakan ekstensi pihak ketiga dalam bahasa Pascal.
+                c.	Setelah printf (“A”) harus menggunakan tanda “;”
                 </span>
               </div>           
             </div>
@@ -296,7 +318,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Tergantung pada versi dari kompiler Pascal yang digunakan.
+                d.	Terjadi kesalahan penulisan kondisi
                 </span>
               </div>
             </div>
@@ -305,13 +327,13 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Tidak ada jawaban yang benar.
+                e.	“if” harus ditulis dengan huruf kapital
                 </span>
               </div>
             </div>
             `
           ],
-          kunjawSoal: 1,
+          kunjawSoal: 2,
           UrlYoutube: "",
           type: "soal"
         },
@@ -324,7 +346,9 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Program di bawah ini adalah implementasi dari struktur percabangan if-else pada Pascal. Manakah di antara mereka yang tidak benar?
+                Perhatikan pernyataan berikut: <br/>
+                “Suatu laboratorium memiliki sensor yang akan berbunyi apabila suhu di laboratorium tersebut mencapai lebih dari 100°C yang menandakan tanda bahaya.” <br/>
+                Berdasarkan pernyataan di atas, penulisan kode percabangan if yang tepat adalah…
                 </span>
               </div>
             </div>
@@ -335,8 +359,8 @@ export const soalPretest: DataMateri[] = [
               <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                 <img
                   alt="Logo"
-                  src="/media/pretest/4.png"
-                  style="height: 70%; width: 70%;"
+                  src="/media/pretest/7a.png"
+                  style="height: 30%; width: 30%;"
                 />
               </div>
             </div>
@@ -346,8 +370,8 @@ export const soalPretest: DataMateri[] = [
               <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                 <img
                   alt="Logo"
-                  src="/media/pretest/5.png"
-                  style="height: 70%; width: 70%;"
+                  src="/media/pretest/7b.png"
+                  style="height: 30%; width: 30%;"
                 />
               </div>
             </div>
@@ -357,8 +381,8 @@ export const soalPretest: DataMateri[] = [
               <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                 <img
                   alt="Logo"
-                  src="/media/pretest/6.png"
-                  style="height: 70%; width: 70%;"
+                  src="/media/pretest/7c.png"
+                  style="height: 30%; width: 30%;"
                 />
               </div>
             </div>
@@ -368,8 +392,8 @@ export const soalPretest: DataMateri[] = [
               <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                 <img
                   alt="Logo"
-                  src="/media/pretest/7.png"
-                  style="height: 70%; width: 70%;"
+                  src="/media/pretest/7d.png"
+                  style="height: 30%; width: 30%;"
                 />
               </div>
             </div>
@@ -379,14 +403,14 @@ export const soalPretest: DataMateri[] = [
               <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                 <img
                   alt="Logo"
-                  src="/media/pretest/8.png"
-                  style="height: 70%; width: 70%;"
+                  src="/media/pretest/7e.png"
+                  style="height: 30%; width: 30%;"
                 />
               </div>
             </div>
             `
           ],
-          kunjawSoal: 4,
+          kunjawSoal: 3,
           UrlYoutube: "",
           type: "soal"
         },
@@ -399,7 +423,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Dalam bahasa Pascal, manakah cara yang lebih efisien untuk menuliskan kondisi untuk dua pilihan yang saling eksklusif (misalnya, A atau B, tetapi tidak keduanya)?
+                Seorang siswa diharuskan untuk menentukan jenis diskon yang akan diterima berdasarkan total pembelian di toko buku. Jika total pembelian mencapai Rp100.000 atau lebih, maka siswa akan mendapatkan diskon sebesar 10%. Jika total pembelian kurang dari Rp100.000, maka siswa tidak mendapatkan diskon. Berdasarkan narasi tersebut, jenis percabangan yang paling tepat digunakan adalah...
                 </span>
               </div>
             </div>
@@ -409,7 +433,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                if (x > 0) or (x < 10) then
+                a.	If, karena hanya satu kondisi yang dicari yaitu menentukan apakah siswa yang membeli buku mendapatkan diskon atau tidak.
                 </span>
               </div>        
             </div>
@@ -418,7 +442,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                if (x >= 0) and (x <= 10) then
+                b.	If-else, karena diperlukan beberapa kondisi untuk mengecek apakah total pembeliannya mencapai batas syarat mendapatkan diskon jika pembelian mencapai Rp100.000 atau lebih, dan kondisi jika pembelian kurang dari Rp100.000 maka tidak mendapatkan diskon.
                 </span>
               </div>        
             </div>
@@ -427,7 +451,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                if (x > 0) and (x < 10) then
+                c.	Nested-if, karena untuk menentukan pembeli mendapatkan diskon atau tidak diperlukan pengecekan secara bertingkat.c.	Nested-if, karena untuk menentukan pembeli mendapatkan diskon atau tidak diperlukan pengecekan secara bertingkat.
                 </span>
               </div>        
             </div>
@@ -436,7 +460,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                if (x >= 0) or (x <= 10) then
+                d.	Switch-case, karena diberlukan banyak sekali kondisi  untuk menentukan apakah suatu pelanggan mendapatkan diskon atau tidak.
                 </span>
               </div>        
             </div>
@@ -445,13 +469,13 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Tidak ada jawaban yang benar
+                e.	For, karena dibutuhkan perulangan untuk mengecek apakah suatu pembeli mendapatkan diskon atau tidak.
                 </span>
               </div>        
             </div>
             `
           ],
-          kunjawSoal: 3,
+          kunjawSoal: 1,
           UrlYoutube: "",
           type: "soal"
         },
@@ -464,10 +488,21 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Budi diminta untuk membuat aplikasi menentukan huruf vokal (a, i, u, e, o). <br/>
-                Berdasarkan ketentuan tersebut, dapat dimplementasikan ke dalam percabangan ...
+                Perhatikan program berikut:
                 </span>
               </div>
+              <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
+              <img
+                alt="Logo"
+                src="/media/pretest/pre9.png"
+                style="height: 50%; width: 50%;"
+              />
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+              <span style="font-size: 20px; text-align: justify;">
+              Berdasarkan program di atas, jika inputan = 8, maka output yang dihasilkan adalah…
+              </span>
+            </div>
             </div>
             `,
           pilihanSoal: [
@@ -475,7 +510,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                While
+                a.	Angka 8 adalah bilangan positif.
                 </span>
               </div>        
             </div>
@@ -484,7 +519,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                If-Then-Else
+                b.	Angka 8 adalah bilangan negatif.
                 </span>
               </div>        
             </div>
@@ -493,7 +528,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Switch Case 
+                c.	Angka 8 adalah nol. 
                 </span>
               </div>        
             </div>
@@ -502,7 +537,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                If-Then
+                d.	Tidak ada output yang dihasilkan.
                 </span>
               </div>        
             </div>
@@ -511,7 +546,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                For
+                e.	Error karena sintaks program salah.
                 </span>
               </div>        
             </div>
@@ -530,72 +565,71 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Perhatikan narasi berikut : <br/>
-                “Pak Rahmat ingin membuat program penentuan remedial dengan ketentuan nilai dibawah KKM yaitu 78 dan pada layar dicetak "Remedial". Jika nilai lebih dari atau sama dengan78 maka tidak perlu remedial dan pada layar dicetak nilai yang diinputkan.”
-                <br/>
-                Berdasarkan narasi di atas, algoritma pseudocode percabangan If-Else yang tepat adalah...
+                Perhatikan pseudocode berikut:
                 </span>
               </div>
+              <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
+              <img
+                alt="Logo"
+                src="/media/pretest/pre11.png"
+                style="height: 50%; width: 50%;"
+              />
+            </div>
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+              <span style="font-size: 20px; text-align: justify;">
+              Berdasarkan program di atas, jika inputan = 8, maka output yang dihasilkan adalah…
+              </span>
+            </div>
             </div>
             `,
           pilihanSoal: [
             `
             <div style="font-family: Arial, sans-serif;">
-              <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                <img
-                  alt="Logo"
-                  src="/media/pretest/9.png"
-                  style="height: 70%; width: 70%;"
-                />
-              </div>
+              <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                <span style="font-size: 20px; text-align: justify;">
+                a.	1-2-3-4-5-6
+                </span>
+              </div>        
             </div>
             `,
             `
             <div style="font-family: Arial, sans-serif;">
-              <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                <img
-                  alt="Logo"
-                  src="/media/pretest/10.png"
-                  style="height: 70%; width: 70%;"
-                />
-              </div>
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+              <span style="font-size: 20px; text-align: justify;">
+              b.	2-1-3-6-4-5
+              </span>
+            </div>        
+          </div>
+            `,
+            `
+            <div style="font-family: Arial, sans-serif;">
+              <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                <span style="font-size: 20px; text-align: justify;">
+                c.	3-2-4-1-5-6
+                </span>
+              </div>        
             </div>
             `,
             `
             <div style="font-family: Arial, sans-serif;">
-              <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                <img
-                  alt="Logo"
-                  src="/media/pretest/11.png"
-                  style="height: 70%; width: 70%;"
-                />
-              </div>
+              <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                <span style="font-size: 20px; text-align: justify;">
+                d.	4-1-2-3-6-5
+                </span>
+              </div>        
             </div>
             `,
             `
             <div style="font-family: Arial, sans-serif;">
-              <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                <img
-                  alt="Logo"
-                  src="/media/pretest/12.png"
-                  style="height: 70%; width: 70%;"
-                />
-              </div>
-            </div>
-            `,
-            `
-            <div style="font-family: Arial, sans-serif;">
-              <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                <img
-                  alt="Logo"
-                  src="/media/pretest/13.png"
-                  style="height: 70%; width: 70%;"
-                />
-              </div>
+              <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                <span style="font-size: 20px; text-align: justify;">
+                e.	6-1-3-2-4-5
+                </span>
+              </div>        
             </div>
             `
           ],
-          kunjawSoal: 0,
+          kunjawSoal: 1,
           UrlYoutube: "",
           type: "soal"
         },
@@ -614,13 +648,13 @@ export const soalPretest: DataMateri[] = [
               <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                 <img
                   alt="Logo"
-                  src="/media/pretest/14.png"
-                  style="height: 70%; width: 70%;"
+                  src="/media/pretest/pre9.png"
+                  style="height: 50%; width: 50%;"
                 />
               </div>
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                <br/> Berdasarkan algoritma di atas jika menerima masukan kata “biru”, output yang dihasilkan adalah…
+                <br/> Terdapat kesalahan pada program di atas, pada line berapakah kesalahan tersebut?
                 </span>
               </div>
             </div>
@@ -630,7 +664,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Berhenti
+                a.	Posisi Line 1 dan Line 2 terbalik
                 </span>
               </div>        
             </div>
@@ -639,7 +673,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Jalan
+                b.	Posisi Line 1 dan Line 3 terbalik
                 </span>
               </div>        
             </div>
@@ -648,7 +682,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Hati-Hati
+                c.	Posisi Line 2 dan Line 3 terbalik
                 </span>
               </div>        
             </div>
@@ -657,7 +691,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Lampu Bitu Jalan
+                d.	Posisi Line 2 dan Line 4 terbalik
                 </span>
               </div>        
             </div>
@@ -666,13 +700,13 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Status lampu tidak valid
+                e.	Posisi Line 3 dan Line 4 terbalik
                 </span>
               </div>        
             </div>
             `
           ],
-          kunjawSoal: 4,
+          kunjawSoal: 1,
           UrlYoutube: "",
           type: "soal"
         },
@@ -685,71 +719,71 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Rudi diminta untuk membuat program untuk menentukan apakah sebuah bilangan bulat merupakan bilangan positif, negatif, atau nol.
-                <br/>
-                Berdasarkan narasi di atas, percabangan If-Else dengan pascal yang tepat adalah…
+                Perhatikan program berikut:
+                </span>
+              </div>
+              <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
+                <img
+                  alt="Logo"
+                  src="/media/pretest/pre10.png"
+                  style="height: 70%; width: 70%;"
+                />
+              </div>
+              <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                <span style="font-size: 20px; text-align: justify;">
+                Jika pada program berikut kita menginputkan tahun 2024, maka output dari program tersebut adalah…
                 </span>
               </div>
             </div>
             `,
           pilihanSoal: [
             `
-            <div style="font-family: Arial, sans-serif;">
-              <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                <img
-                  alt="Logo"
-                  src="/media/pretest/15.png"
-                  style="height: 70%; width: 70%;"
-                />
-              </div>
-            </div>
+           <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+              <span style="font-size: 20px; text-align: justify;">
+              a.	Tahun kabisat
+              </span>
+            </div>        
+           </div>
             `,
             `
-            <div style="font-family: Arial, sans-serif;">
-              <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                <img
-                  alt="Logo"
-                  src="/media/pretest/16.png"
-                  style="height: 70%; width: 70%;"
-                />
-              </div>
-            </div>
+           <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+              <span style="font-size: 20px; text-align: justify;">
+              b.	Bukan tahun kabisat
+              </span>
+            </div>        
+           </div>
             `,
             `
-            <div style="font-family: Arial, sans-serif;">
-              <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                <img
-                  alt="Logo"
-                  src="/media/pretest/17.png"
-                  style="height: 70%; width: 70%;"
-                />
-              </div>
-            </div>
+           <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+              <span style="font-size: 20px; text-align: justify;">
+              c.	2024 adalah tahun kabisat.
+              </span>
+            </div>        
+           </div>
             `,
             `
-            <div style="font-family: Arial, sans-serif;">
-              <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                <img
-                  alt="Logo"
-                  src="/media/pretest/18.png"
-                  style="height: 70%; width: 70%;"
-                />
-              </div>
-            </div>
+           <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+              <span style="font-size: 20px; text-align: justify;">
+              d.	2024 bukan tahun kabisat.
+              </span>
+            </div>        
+           </div>
             `,
             `
-            <div style="font-family: Arial, sans-serif;">
-              <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                <img
-                  alt="Logo"
-                  src="/media/pretest/19.png"
-                  style="height: 70%; width: 70%;"
-                />
-              </div>
-            </div>
+           <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+              <span style="font-size: 20px; text-align: justify;">
+              e.	Program error
+              </span>
+            </div>        
+           </div>
             `
           ],
-          kunjawSoal: 1,
+          kunjawSoal: 2,
           UrlYoutube: "",
           type: "soal"
         },
@@ -762,7 +796,8 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Menampilkan perhitungan empat persegi panjang, memilih menu, dan melakukan proses perhitungan, dapat diimplementasikan ke dalam percabangan…
+                Pada suatu sore yang cerah, Ali sedang merencanakan untuk pergi bermain ke luar rumah. Dia ingin memutuskan aktivitas apa yang ingin dia lakukan terlebih dahulu. Setelah mempertimbangkan beberapa pilihan, dia menyadari bahwa cuaca akan menjadi faktor penentu utama. <br/>
+                Jenis percabangan yang paling tepat digunakan oleh Ali dalam membuat keputusan berdasarkan cuaca adalah...
                 </span>
               </div>
             </div>
@@ -772,7 +807,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Percabangan If
+                a.	If, karena Ali hanya perlu mengecek apakah cuaca cerah.
                 </span>
               </div>        
             </div>
@@ -781,7 +816,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Percabangan Switch Case
+                b.	If-else, karena Ali perlu menentukan kegiatan apa yang ingin dilakukan, dan apakah cuaca cerah atau tidak.
                 </span>
               </div>        
             </div>
@@ -790,7 +825,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Percabangan Nested-If
+                c.	Nested-if, karena Ali perlu membuat keputusan yang bergantung pada beberapa kondisi yang bertingkat atau terkait satu sama lain.
                 </span>
               </div>        
             </div>
@@ -799,7 +834,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Percangan If-Else
+                d.	Switch-case, karena Ali membutuhkan beberapa kondisi untuk menentukan kegiatan apa yang inggin Ali lakukan.
                 </span>
               </div>        
             </div>
@@ -808,13 +843,13 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Percabangan satu kondisi
+                e.	For, karena Ali membutuhkan perulangan untuk menentukan cuaca dan kegiatan apa yang akan ia lakukan.
                 </span>
               </div>        
             </div>
             `
           ],
-          kunjawSoal: 1,
+          kunjawSoal: 2,
           UrlYoutube: "",
           type: "soal"
         },
@@ -827,19 +862,19 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Perhatikan pseudocode berikut: <br/>
+                Perhatikan program berikut: <br/>
                 </span>
               </div>
               <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                 <img
                   alt="Logo"
-                  src="/media/pretest/20.png"
-                  style="height: 70%; width: 70%;"
+                  src="/media/pretest/pre26.png"
+                  style="height: 30%; width: 30%;"
                 />
               </div>
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                <br/>Berdasarkan algoritma di atasm jika diinputkan menu bernilai 3, maka output yang dihasilkan adalah…
+                <br/>Apabila kita menginputkan nilai x=15 dan y=3, maka hasil output dari program tersebut adalah…
                 </span>
               </div>
             </div>
@@ -849,7 +884,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Pilihan tidak valid
+                a.	Hasil : A
                 </span>
               </div>        
             </div>
@@ -858,7 +893,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Menu bernilai 3
+                b.	Hasil : B
                 </span>
               </div>        
             </div>
@@ -867,7 +902,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Luas persegi panjang: 3
+                c.	Hasil : C
                 </span>
               </div>        
             </div>
@@ -876,7 +911,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Luas persegi: 3
+                d.	Error
                 </span>
               </div>        
             </div>
@@ -885,13 +920,13 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Tidak terjadi apa-apa
+                e.	Tidak ada output
                 </span>
               </div>        
             </div>
             `
           ],
-          kunjawSoal: 0,
+          kunjawSoal: 1,
           UrlYoutube: "",
           type: "soal"
         },
@@ -910,13 +945,13 @@ export const soalPretest: DataMateri[] = [
               <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                 <img
                   alt="Logo"
-                  src="/media/pretest/21.png"
-                  style="height: 70%; width: 70%;"
+                  src="/media/pretest/pre13.png"
+                  style="height: 50%; width: 50%;"
                 />
               </div>
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                <br/>Jika diinputkan nilai a = 5, maka apakah output yang dihasilkan dari program tersebut…
+                <br/>Di bawah ini susunan pseudocode yang tepat adalah…
                 </span>
               </div>
             </div>
@@ -926,7 +961,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                3
+                a.	1-4-6-5-3-2
                 </span>
               </div>        
             </div>
@@ -935,7 +970,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                7
+                b.	1-3-2-5-6-2
                 </span>
               </div>        
             </div>
@@ -944,7 +979,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                5
+                c.	2-3-1-5-6-4
                 </span>
               </div>        
             </div>
@@ -953,7 +988,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                0
+                d.	3-2-4-1-5-6
                 </span>
               </div>        
             </div>
@@ -962,13 +997,13 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                -3
+                e.	4-2-1-5-3-6
                 </span>
               </div>        
             </div>
             `
           ],
-          kunjawSoal: 1,
+          kunjawSoal: 0,
           UrlYoutube: "",
           type: "soal"
         },
@@ -981,19 +1016,19 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Perhatikan pseuducode berikut: <br/>
+                Perhatikan code berikut: <br/>
                 </span>
               </div>
               <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                 <img
                   alt="Logo"
-                  src="/media/pretest/22.png"
-                  style="height: 70%; width: 70%;"
+                  src="/media/pretest/pre14.png"
+                  style="height: 30%; width: 30%;"
                 />
               </div>
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                <br/>Apa output yang dihasilkan jika pililih menu 1 dan nilai = 75
+                <br/>Apabila program tersebut dijalankan, maka akan menggalami erorr. Mengapa?
                 </span>
               </div>
             </div>
@@ -1003,7 +1038,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Selamat Anda lulus!
+                a.	Terlalu banyak menggunakan tanda “{}”
                 </span>
               </div>        
             </div>
@@ -1012,7 +1047,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Anda harus mengerjakan remedial.                
+                b.	Seharusnya  penulisan “else” menjadi “else if”                
                 </span>
               </div>        
             </div>
@@ -1021,7 +1056,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Anda belum mengerjakan ujian.
+                c.	Penulisan kondisi seharusnya menggunakan tanda “( )”
                 </span>
               </div>        
             </div>
@@ -1030,7 +1065,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Tidak ada output
+                d.	Tidak perlu menggunakan tanda “;”
                 </span>
               </div>        
             </div>
@@ -1039,13 +1074,13 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Program error
+                e.	Penulisan grade ‘A’, seharusnya menjadi grade “A”
                 </span>
               </div>        
             </div>
             `
           ],
-          kunjawSoal: 1,
+          kunjawSoal: 2,
           UrlYoutube: "",
           type: "soal"
         },
@@ -1058,19 +1093,19 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Perhatikan pseuducode berikut: <br/>
+                Perhatikan progran berikut: <br/>
                 </span>
               </div>
               <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                 <img
                   alt="Logo"
-                  src="/media/pretest/23.png"
-                  style="height: 70%; width: 70%;"
+                  src="/media/pretest/pre15.png"
+                  style="height: 50%; width: 50%;"
                 />
               </div>
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                <br/>Dalam program di atas, jika input menu 2 dan jenis_tiket = Reguler, maka output harga dari program tersebut adalah…
+                <br/>Dari program di atas, dapat disimpulkan bahwa…
                 </span>
               </div>
             </div>
@@ -1080,7 +1115,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                100000
+                a.	Program memeriksa apakah suatu bilangan negatif atau tidak.
                 </span>
               </div>        
             </div>
@@ -1089,7 +1124,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                50000
+                b.	Program memeriksa apakah suatu bilangan ganjil atau genap.
                 </span>
               </div>        
             </div>
@@ -1098,7 +1133,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                0
+                c.	Program memeriksa apakah suatu bilangan positif genap, positif ganjil atau bilangan negatif.
                 </span>
               </div>        
             </div>
@@ -1107,7 +1142,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Tidak menghasilkan output
+                d.	Program memeriksa apakah suatu bilangan genap atau non-positif.
                 </span>
               </div>        
             </div>
@@ -1116,13 +1151,13 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Program error
+                e.	Program memeriksa apakah suatu bilangan positif dan genap.
                 </span>
               </div>        
             </div>
             `
           ],
-          kunjawSoal: 1,
+          kunjawSoal: 2,
           UrlYoutube: "",
           type: "soal"
         },
@@ -1135,19 +1170,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Perhatikan flowchart berikut! <br/>
-                </span>
-              </div>
-              <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                <img
-                  alt="Logo"
-                  src="/media/pretest/24.png"
-                  style="height: 70%; width: 70%;"
-                />
-              </div>
-              <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                <span style="font-size: 20px; text-align: justify;">
-                <br/>Jika input a = 25, maka apa output yang dihasilkan oleh program tersebut 
+                Dalam bahasa C, apakah switch case dapat digunakan untuk mengevaluasi beberapa kondisi secara bersamaan?
                 </span>
               </div>
             </div>
@@ -1157,7 +1180,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                250
+                a.	Ya, karena switch case paling tepat digunakan saat terdapat banyak sekali kondisi yang diperlukan.
                 </span>
               </div>        
             </div>
@@ -1166,7 +1189,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                10
+                b.	Tidak, karena switch case hanya dapat digunakan untuk mengevaluasi satu kondisi tunggal.
                 </span>
               </div>        
             </div>
@@ -1175,7 +1198,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                0
+                c.	Tidak, karena hanya jika menggunakan ekstensi pihak ketiga dalam bahasa C.
                 </span>
               </div>        
             </div>
@@ -1184,7 +1207,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                100 
+                d.	Ya, karena tergantung pada versi dari kompiler yang digunakan. 
                 </span>
               </div>        
             </div>
@@ -1193,13 +1216,13 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                25
+                e.	Ya, karena switch case lebih efektif jika digunakan untuk mengecek kondisi secara bersamaa.
                 </span>
               </div>        
             </div>
             `
           ],
-          kunjawSoal: 0,
+          kunjawSoal: 1,
           UrlYoutube: "",
           type: "soal"
         },
@@ -1218,13 +1241,13 @@ export const soalPretest: DataMateri[] = [
               <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                 <img
                   alt="Logo"
-                  src="/media/pretest/26.png"
+                  src="/media/pretest/pre17.png"
                   style="height: 70%; width: 70%;"
                 />
               </div>
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                <br/>Dari kode program diatas, jika ingin  membeli roti coklat sebanyak 5 buah, maka output dari program tersebut adalah… 
+                <br/>Inputan dan output yang tepat pada program tersebut adalah…
                 </span>
               </div>
             </div>
@@ -1234,7 +1257,8 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                30000
+                a.	Input = Selasa <br/>
+                    Output = Batik
                 </span>
               </div>        
             </div>
@@ -1243,7 +1267,8 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                25000
+                b.	Input = Senin <br/>
+                    Output = Seragam Sekolah
                 </span>
               </div>        
             </div>
@@ -1252,31 +1277,37 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                45000
+                c.	Input = Rabu <br/>
+                    Output = Pakaian: Seragam sekolah
                 </span>
               </div>        
             </div>
             `,
             `
+
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                50000
+                d.	Input = Jumat <br/>
+                    Output = Pakaian: Batik
                 </span>
               </div>        
             </div>
             `,
             `
+
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                55000
+                e.	Input = Kamis <br/>
+                    Output = Hari kamis menggunakan pakaian seragam olahraga
                 </span>
               </div>        
             </div>
             `
+
           ],
-          kunjawSoal: 4,
+          kunjawSoal: 2,
           UrlYoutube: "",
           type: "soal"
         },
@@ -1295,13 +1326,13 @@ export const soalPretest: DataMateri[] = [
               <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                 <img
                   alt="Logo"
-                  src="/media/pretest/27.png"
-                  style="height: 70%; width: 70%;"
+                  src="/media/pretest/pre18.png"
+                  style="height: 50%; width: 50%;"
                 />
               </div>
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                <br/>Dari program di atas, jika jumlahBeli = 3 maka output dari program tersebut adalah…
+                <br/>Jika kita menginputkan angka 3 pada program tersebut, maka outputnya adalah…
                 </span>
               </div>
             </div>
@@ -1311,7 +1342,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Diskon: 70%
+                a.	Anda memilih Pensil.
                 </span>
               </div>        
             </div>
@@ -1320,7 +1351,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Diskon: 20%
+                b.	Anda memilih Pulpen.
                 </span>
               </div>        
             </div>
@@ -1329,7 +1360,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Diskon: 10%
+                c.	Pilihan tidak valid.
                 </span>
               </div>        
             </div>
@@ -1338,7 +1369,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Diskon: 15%
+                d.	Pensil
                 </span>
               </div>        
             </div>
@@ -1347,7 +1378,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Diskon: 25%
+                e.	Pulpen 
                 </span>
               </div>        
             </div>
@@ -1372,13 +1403,13 @@ export const soalPretest: DataMateri[] = [
               <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                 <img
                   alt="Logo"
-                  src="/media/pretest/28.png"
-                  style="height: 70%; width: 70%;"
+                  src="/media/pretest/pre19.png"
+                  style="height: 50%; width: 50%;"
                 />
               </div>
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                <br/>Jika sebuah sekolah dengan jumlah siswa 55 orang akan berkemah dan akan menggunakan program di atas untuk menghitung berapa jumlah tenda yang dibutuhkan, maka output yang tepat dari program tersebut  adalah…
+                <br/>Terdapat kesalahan output pada program di atas. Kesalahan tersebut terletak pada line…
                 </span>
               </div>
             </div>
@@ -1388,7 +1419,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                tenda : 5
+                a.	Line 13 seharusnya di Line 1
                 </span>
               </div>        
             </div>
@@ -1397,7 +1428,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                tenda : 8
+                b.	Line 13 seharusnya di Line 8
                 </span>
               </div>        
             </div>
@@ -1406,7 +1437,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Jumlah tenda yang dibutuhkan: 5
+                c.	Line 10 seharusnya di Line 9
                 </span>
               </div>        
             </div>
@@ -1415,7 +1446,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Jumlah tenda yang dibutuhkan: 7
+                d.	Line 6 seharusnya di Line 2
                 </span>
               </div>        
             </div>
@@ -1424,13 +1455,13 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Tidak ada output
+                e.	Line 2 seharusnya di Line 1
                 </span>
               </div>        
             </div>
             `
           ],
-          kunjawSoal: 4,
+          kunjawSoal: 0,
           UrlYoutube: "",
           type: "soal"
         },
@@ -1443,19 +1474,19 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Perhatikan pseuducode berikut: <br/>
+                Perhatikan code berikut: <br/>
                 </span>
               </div>
               <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                 <img
                   alt="Logo"
-                  src="/media/pretest/29.png"
-                  style="height: 70%; width: 70%;"
+                  src="/media/pretest/pre20.png"
+                  style="height: 50%; width: 50%;"
                 />
               </div>
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                <br/>Apabila nilai variabel membeliProduk = 8, maka output yang dihasilkan adalah ...
+                <br/>Apabila program tersebut dijalankan, maka akan menggalami erorr. Mengapa?
                 </span>
               </div>
             </div>
@@ -1465,7 +1496,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Tidak terjadi apa – ара
+                a.	Kata “switch” dan “case” tertukar posisi
                 </span>
               </div>        
             </div>
@@ -1474,7 +1505,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Dicetak “Anda mendapatkan diskon”
+                b.	Line pertama seharusnya “swich case” bukan “swich” saja
                 </span>
               </div>        
             </div>
@@ -1483,7 +1514,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Dicetak "membeli Produk <10"
+                c.	Tidak perlu menggunakan tanda “{}”
                 </span>
               </div>        
             </div>
@@ -1492,7 +1523,7 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Dicetak “WRITE “Anda mendapatkan diskon””
+                d.	Akhir dari setiap case di tutup oleh “break”
                 </span>
               </div>        
             </div>
@@ -1501,13 +1532,13 @@ export const soalPretest: DataMateri[] = [
             <div style="font-family: Arial, sans-serif;">
               <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                 <span style="font-size: 20px; text-align: justify;">
-                Dicetak “membeliProduk =8”
+                e.	Tidak perlu menambahkan “default”
                 </span>
               </div>        
             </div>
             `
           ],
-          kunjawSoal: 0,
+          kunjawSoal: 3,
           UrlYoutube: "",
           type: "soal"
         }

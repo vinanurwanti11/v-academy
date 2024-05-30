@@ -48,10 +48,9 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Seorang siswa sedang belajar matematika dan dia ingin membuat program sederhana untuk menentukan apakah suatu bilangan adalah bilangan negatif. Pernyataan manakah yang benar tentang program yang akan dia buat?<br/>
+                  Seorang siswa sedang belajar matematika dan dia ingin membuat program sederhana untuk menentukan apakah suatu bilangan adalah bilangan bulat. Pernyataan manakah yang benar tentang program yang akan dia buat?
                   </span>
                 </div>
-                       
               </div>
               `,
           pilihanSoal: [
@@ -59,7 +58,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Program tersebut hanya menentukan apakah suatu bilangan adalah bilangan bulat atau bukan.
+                  a.	Program tersebut hanya menentukan apakah suatu bilangan adalah bilangan bulat negatif. Karena program tersebut ingin menentukan apakah suatu bilangan termasuk bilangan bulat negatif atau bukan.
                   </span>
                 </div>           
               </div>
@@ -68,7 +67,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Program tersebut akan menampilkan pesan bahwa bilangan tersebut adalah bilangan positif jika bilangan tersebut lebih besar dari 0.
+                  b.	Program tersebut akan menampilkan pesan bahwa bilangan tersebut adalah bilangan bulat positif jika bilangan bulat tersebut lebih besar dari 0. Karena program yang ingin dibuat adalah program yang menentukan bilangan bulat positif saja.
                   </span>
                 </div>        
               </div>
@@ -77,7 +76,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Program tersebut hanya akan menampilkan pesan bahwa bilangan tersebut adalah bilangan negatif.
+                  c.	Program tersebut hanya akan menampilkan pesan bahwa bilangan tersebut adalah bilangan bulat. Karena program yang dibuat bertujuan untuk menentukan bilangan bulat.
                   </span>
                 </div>           
               </div>
@@ -86,7 +85,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Program tersebut tidak valid karena tidak memungkinkan untuk menentukan apakah suatu bilangan adalah bilangan negatif.
+                  d.	Program tersebut tidak valid karena tidak memungkinkan untuk menentukan apakah suatu bilangan adalah bilangan bulat. Karena program tidak bisa dibuat untuk menentukan apakah suatu bilangan termasuk bilangan bulat atau bukan.
                   </span>
                 </div>
               </div>
@@ -95,7 +94,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Program tersebut akan menampilkan pesan bahwa bilangan tersebut adalah bilangan positif jika bilangan tersebut lebih besar dari 0.
+                  e.	Program tidak dapat dibuat, karena tidak ada kondisi yang bisa menyatakan bahwa suatu program termasuk ke dalam bilangan bulat atau bukan.
                   </span>
                 </div>
               </div>
@@ -122,13 +121,13 @@ export const soalPosttest: DataMateri[] = [
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/2.png"
-                    style="height: 70%; width: 70%;"
+                    src="/media/posttest/po2.png"
+                    style="height: 50%; width: 50%;"
                   />
                 </div>   
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Dalam bahasa Pascal, apakah pernyataan berikut valid untuk switch case?
+                  <br/>Output dari program di atas adalah…
                   </span>
                 </div>         
               </div>
@@ -138,7 +137,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Ya, pernyataan di atas valid dan tidak akan menimbulkan kesalahan saat kompilasi.
+                  a.	Nilai x lebih besar dari 10
                   </span>
                 </div>           
               </div>
@@ -147,7 +146,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Tidak, pernyataan tersebut tidak valid karena mencampur tipe data karakter dan bilangan bulat dalam satu switch case.
+                  b.	Nilai x tidak lebih besar dari 10
                   </span>
                 </div>        
               </div>
@@ -156,7 +155,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Tidak, karena sintaks switch case harus menggunakan kata kunci case of bukan hanya case.
+                  c.	Tidak ada output yang ditampilkan
                   </span>
                 </div>           
               </div>
@@ -165,7 +164,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Tergantung pada nilai variabel nilai.
+                  d.	Terjadi kesalahan saat kompilasi
                   </span>
                 </div>
               </div>
@@ -174,13 +173,13 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Tidak ada jawaban yang benar.
+                  e.	Tidak dapat ditentukan
                   </span>
                 </div>
               </div>
               `
           ],
-          kunjawSoal: 1,
+          kunjawSoal: 0,
           UrlYoutube: "",
           type: "soal"
         },
@@ -195,19 +194,19 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan program berikut!<br/>
+                  Perhatikan pseudocode berikut!<br/>
                   </span>
                 </div>
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/3.png"
-                    style="height: 70%; width: 70%;"
+                    src="/media/posttest/po3.png"
+                    style="height: 50%; width: 50%;"
                   />
                 </div>
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Kesimpulan apa yang dapat ditarik berdasarkan kode di atas?
+                  <br/>Susunan pseudocode yang tepat adalah…
                   </span>
                 </div>         
               </div>
@@ -217,7 +216,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Program memeriksa apakah seorang siswa memenuhi syarat untuk kursus apa pun atau tidak.
+                  a.	1-2-4-3-5
                   </span>
                 </div>           
               </div>
@@ -226,7 +225,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Program memeriksa apakah seorang siswa memenuhi syarat untuk kursus lanjutan.                  
+                  b.	2-1-5-4-3
                   </span>
                 </div>        
               </div>
@@ -235,7 +234,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Program memeriksa apakah siswa berusia 18 tahun atau belum.
+                  c.	3-4-1-2-5
                   </span>
                 </div>           
               </div>
@@ -244,7 +243,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Program memeriksa apakah nilai seorang siswa adalah A, B, atau C.
+                  d.	4-2-3-5-1
                   </span>
                 </div>
               </div>
@@ -253,13 +252,13 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Program memeriksa apakah seorang siswa memenuhi syarat untuk kursus reguler.
+                  e.	3-1-2-4-5
                   </span>
                 </div>
               </div>
               `
           ],
-          kunjawSoal: 1,
+          kunjawSoal: 2,
           UrlYoutube: "",
           type: "soal"
         },
@@ -274,19 +273,19 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Dalam bahasa Pascal, berikut adalah potongan kode yang hendak mengevaluasi nilai dari variabel "x" dan "y"<br/>
+                  Perhatikan program berikut:<br/>
                   </span>
                 </div>
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/4.png"
-                    style="height: 70%; width: 70%;"
+                    src="/media/posttest/4po.png"
+                    style="height: 40%; width: 40%;"
                   />
                 </div>
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Apa hasil yang tepat untuk variabel "hasil" jika x = 5 dan y = -3?
+                  <br/>Saat program di atas dijalankan, maka program tersebut tidak akan menampilkan apa-apa. Mengapa?
                   </span>
                 </div>  
               </div>
@@ -296,7 +295,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  'Kuadran I'
+                  a.	Karena variabel x tidak diinisialisasi dengan nilai yang memenuhi kondisi if.
                   </span>
                 </div>           
               </div>
@@ -305,7 +304,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  'Kuadran II'
+                  b.	Karena terdapat tanda kurung kurawal yang kurang di dalam blok if.
                   </span>
                 </div>        
               </div>
@@ -314,7 +313,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  'Kuadran III'
+                  c.	Karena variabel x tidak dideklarasikan sebelum digunakan.
                   </span>
                 </div>           
               </div>
@@ -323,7 +322,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  'Kuadran IV'
+                  d.	Karena kondisi if tidak dapat menangani nilai x yang kurang dari 10.
                   </span>
                 </div>
               </div>
@@ -332,7 +331,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Error
+                  e.	Karena tidak ada kesalahan, program akan berjalan dengan baik.
                   </span>
                 </div>
               </div>
@@ -353,71 +352,71 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Diberikan potongan kode berikut dalam bahasa Pascal:<br/>
+                  Seorang polisi ingin membuah program untuk mendeteksi kecepatan dari sebuah kendaraan. Jika kecepatan mencapai 60 km/jam atau lebih, maka akan muncul peringatan bahwa kecepatan sudah melewati batas maksimal.<br/>
+                  Program if yang paling tepat terhadap narasi di atas adalah…
                   </span>
                 </div>
-                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                  <img
-                    alt="Logo"
-                    src="/media/posttest/5.png"
-                    style="height: 70%; width: 70%;"
-                  />
-                </div>
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  <br/>Hasil dari program diatas adalah?
-                  </span>
-                </div>  
               </div>
               `,
           pilihanSoal: [
             `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Balita
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Anak-anak
-                  </span>
-                </div>        
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Remaja
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Dewasa
-                  </span>
-                </div>
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Lansia
-                  </span>
-                </div>
-              </div>
-              `
+            <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
+              <img
+                alt="Logo"
+                src="/media/posttest/7a.png"
+                style="height: 70%; width: 70%;"
+              />
+            </div>           
+          </div>
+          `,
+        `
+          <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
+              <img
+                alt="Logo"
+                src="/media/posttest/7b.png"
+                style="height: 70%; width: 70%;"
+              />
+            </div>           
+          </div>
+          `,
+        `
+          <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
+              <img
+                alt="Logo"
+                src="/media/posttest/7c.png"
+                style="height: 70%; width: 70%;"
+              />
+            </div>           
+          </div>
+          `,
+        `
+          <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
+              <img
+                alt="Logo"
+                src="/media/posttest/7d.png"
+                style="height: 70%; width: 70%;"
+              />
+            </div>           
+          </div>
+          `,
+        `
+          <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
+              <img
+                alt="Logo"
+                src="/media/posttest/7ee.png"
+                style="height: 70%; width: 70%;"
+              />
+            </div>           
+          </div>
+          `
+          
           ],
-          kunjawSoal: 4,
+          kunjawSoal: 1,
           UrlYoutube: "",
           type: "soal"
         },
@@ -432,70 +431,59 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  "Budi diminta pergi ke warung untuk membeli gula dengan harga Rp. 6.500 dengan membawa uang sebesar Rp. 10.000. Ibu berpesan jika uang yang Budi bawa memiliki sisa setelah membeli gula, maka uang tersebut boleh Budi ditabungkan."<br/>
-                  <br/>Berdasarkan pernyataan di atas, code yang tepat adalah... 
+                  Permasalahan berikut yang dapat dimplementasi kedalam percabangan if-else, kecuali...
                   </span>
                 </div>
               </div>
               `,
           pilihanSoal: [
             `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                  <img
-                    alt="Logo"
-                    src="/media/posttest/6.png"
-                    style="height: 70%; width: 70%;"
-                  />
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                  <img
-                    alt="Logo"
-                    src="/media/posttest/7.png"
-                    style="height: 70%; width: 70%;"
-                  />
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                  <img
-                    alt="Logo"
-                    src="/media/posttest/8.png"
-                    style="height: 70%; width: 70%;"
-                  />
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                  <img
-                    alt="Logo"
-                    src="/media/posttest/9.png"
-                    style="height: 70%; width: 70%;"
-                  />
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                  <img
-                    alt="Logo"
-                    src="/media/posttest/10.png"
-                    style="height: 70%; width: 70%;"
-                  />
-                </div>           
-              </div>
-              `
+          <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+              <span style="font-size: 20px; text-align: justify;">
+              a.	Menentukan remedial atau tidaknya siswa dalam ujian, karena untuk menentukan remedial atau tidaknya siswa membutuhkan beberapa kali pengecekan kondisi.
+              </span>
+            </div>           
+          </div>
+          `,
+        `
+          <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+              <span style="font-size: 20px; text-align: justify;">
+              b.	Menentukan keterlambatan absensi masuk, karena ada kebutuhan untuk menentukan dua kemungkinan kondisi: keterlambatan dan ketepatan waktu.
+              </span>
+            </div>        
+          </div>
+          `,
+        `
+          <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+              <span style="font-size: 20px; text-align: justify;">
+              c.	Menentukan status kelulusan berdasarkan rata-rata nilai ujian, karena kondisi kelulusan memiliki dua kemungkinan, lulus atau tidak lulus berdasarkan rata-rata nilai ujian.
+              </span>
+            </div>           
+          </div>
+          `,
+        `
+          <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+              <span style="font-size: 20px; text-align: justify;">
+              d.	Menentukan besarnya tunjangan keluarga berdasarkan status pernikahan, karena terdapat beberapa kemungkinan status pernikahan yang berbeda.
+              </span>
+            </div>
+          </div>
+          `,
+        `
+          <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+              <span style="font-size: 20px; text-align: justify;">
+              e.	Menentukan jenis bunga yang sesuai dengan bulan kelahiran, karena diperlukan kondisi yang sangat banyak untuk menentukan jenis bungan yang sesuai dengan bulan.
+              </span>
+            </div>
+          </div>
+          `
           ],
-          kunjawSoal: 1,
+          kunjawSoal: 4,
           UrlYoutube: "",
           type: "soal"
         },
@@ -510,19 +498,19 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan flowchart berikut!<br/>
+                  Perhatikan program berikut:<br/>
                   </span>
                 </div>
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/11.png"
+                    src="/media/posttest/po7.png"
                     style="height: 70%; width: 70%;"
                   />
                 </div>  
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Apa yang akan terjadi saat flowchart tersebut dijalankan 
+                  <br/>Susunan  yang paling tepat untuk program di atas adalah..
                   </span>
                 </div>
               </div>
@@ -532,7 +520,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  kondisi akan selalu benardan aksi diialankan
+                  a.	3-1-4-2
                   </span>
                 </div>           
               </div>
@@ -541,7 +529,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  kondisi akan selalu salah dan aksi dijalankan
+                  b.	3-4-2-1
                   </span>
                 </div>           
               </div>
@@ -550,7 +538,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  kondisi akan selalu benar dan aksi tidak dijalankan
+                  c.	2-3-1-4
                   </span>
                 </div>           
               </div>
@@ -559,7 +547,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  kondisi akan selalu salah dan aksi tidak dijalankan
+                  d.	2-4-1-3
                   </span>
                 </div>           
               </div>
@@ -568,13 +556,13 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  kondisi akan selalu benardan aksi selalu dijalankan
+                  e.	1-3-2-4
                   </span>
                 </div>           
               </div>
               `
           ],
-          kunjawSoal: 4,
+          kunjawSoal: 0,
           UrlYoutube: "",
           type: "soal"
         },
@@ -589,19 +577,19 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan pseuducode berikut:<br/>
+                  Perhatikan program berikut:<br/>
                   </span>
                 </div>
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/12.png"
-                    style="height: 70%; width: 70%;"
+                    src="/media/posttest/po88.png"
+                    style="height: 40%; width: 40%;"
                   />
                 </div>  
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Berdasarkan algoritma di atas jika diinputkan nilai a = 3, nilai b = 5 dan nilai c = 2, output yang dihasilkan adalah… 
+                  <br/>Jika kita menginputkan jumlah uang Rp. 150.000 dan menginput total belanja = Rp. 20.000, maka output dari program tersebut adalah…
                   </span>
                 </div>
               </div>
@@ -611,7 +599,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  3 5 2
+                  a.	20000
                   </span>
                 </div>           
               </div>
@@ -620,7 +608,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  5 2 3
+                  b.	80000
                   </span>
                 </div>           
               </div>
@@ -629,7 +617,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  4 1 0
+                  c.	100000
                   </span>
                 </div>           
               </div>
@@ -638,7 +626,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  2 3 5
+                  d.	130000
                   </span>
                 </div>           
               </div>
@@ -647,13 +635,13 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  2 8 1
+                  e.	150000
                   </span>
                 </div>           
               </div>
               `
           ],
-          kunjawSoal: 0,
+          kunjawSoal: 3,
           UrlYoutube: "",
           type: "soal"
         },
@@ -668,19 +656,19 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan pseudocode berikut:<br/>
+                  Perhatikan program berikut:<br/>
                   </span>
                 </div>
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/13.png"
-                    style="height: 70%; width: 70%;"
+                    src="/media/posttest/po19.png"
+                    style="height: 60%; width: 60%;"
                   />
                 </div>  
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Berdasarkan algoritma di atas, jika diinputkan kategori mobil nomor 3 dan jumlah hari penyewaan mobil selama 2 hari, maka output yang dihasilkan adalah…
+                  <br/>Pada program di atas terdapat kesalahan, pada line berapakah kesalahan tersebut?
                   </span>
                 </div>
               </div>
@@ -690,7 +678,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  1025000
+                  a.	Posisi Line 1 terbalik dengan di Line 3
                   </span>
                 </div>           
               </div>
@@ -699,7 +687,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  1000000
+                  b.	Posisi Line 3 terbalik dengan di Line 5
                   </span>
                 </div>           
               </div>
@@ -708,7 +696,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  25000
+                  c.	Posisi Line 5 terbalik dengan di Line 1
                   </span>
                 </div>           
               </div>
@@ -717,7 +705,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  500000
+                  d.	Posisi Line 2 terbalik dengan di Line 4
                   </span>
                 </div>           
               </div>
@@ -726,13 +714,13 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  515000
+                  e.	Posisi Line 6 terbalik dengan di Line 3
                   </span>
                 </div>           
               </div>
               `
           ],
-          kunjawSoal: 0,
+          kunjawSoal: 1,
           UrlYoutube: "",
           type: "soal"
         },
@@ -747,19 +735,19 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan pseudocode berikut:<br/>
+                  Perhatikan program berikut:<br/>
                   </span>
                 </div>
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/14.png"
-                    style="height: 70%; width: 70%;"
+                    src="/media/posttest/po23.png"
+                    style="height: 40%; width: 40%;"
                   />
                 </div>  
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Jika diinputkan p = 4 dan q = 7, maka apakah output yang dihasilkan dari program tersebut…
+                  <br/>Pernyataan yang sesuai dengan program di atas adalah…
                   </span>
                 </div>
               </div>
@@ -769,7 +757,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  4
+                  a.	program yang menentukan tingkat kesulitan soal perdasarkan nilai
                   </span>
                 </div>           
               </div>
@@ -778,7 +766,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  7
+                  b.	program yang menentukan nilai soal perdasarkan tingkat kesulitan
                   </span>
                 </div>           
               </div>
@@ -787,7 +775,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  3
+                  c.	program untuk menentukan nilai
                   </span>
                 </div>           
               </div>
@@ -796,7 +784,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  -3
+                  d.	program untuk menentukan tingkat kesulitan
                   </span>
                 </div>           
               </div>
@@ -805,13 +793,13 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  11
+                  e.	program untuk menentukan nilai soal dan juga tingkat kesulitannya
                   </span>
                 </div>           
               </div>
               `
           ],
-          kunjawSoal: 0,
+          kunjawSoal: 1,
           UrlYoutube: "",
           type: "soal"
         },
@@ -826,19 +814,10 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan pseudocode berikut:<br/>
-                  </span>
-                </div>
-                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                  <img
-                    alt="Logo"
-                    src="/media/posttest/15.png"
-                    style="height: 70%; width: 70%;"
-                  />
-                </div>  
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  <br/>Jika diinputkan nilai a = 4 dan b = 10, maka hasil output dari algoritma tersebut adalah…
+                  Seorang pelatih atletik memiliki persyaratan berikut untuk siswa yang ingin bergabung dengan tim atletiknya: <br/>
+                  •	Siswa harus memiliki tinggi badan minimal 160 cm. <br/>
+                  •	Jika tinggi badan siswa kurang dari 160 cm, maka siswa harus memiliki berat badan minimal 50 kg. <br/>
+                  Berdasarkan persyaratan di atas, jenis percabangan yang tepat untuk digunakan dalam program pengecekan kelayakan siswa adalah...
                   </span>
                 </div>
               </div>
@@ -848,7 +827,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  18 dan 16
+                  a.	If, karena hanya diperkukan satu kali pengecekan yaitu siswa yang memiliki tinggi badan 160 cm.
                   </span>
                 </div>           
               </div>
@@ -857,7 +836,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  14 dan 6
+                  b.	If-Else, karena diperlukan pengcekan untuk mengukur tinggi badan dan berat badan siswa.
                   </span>
                 </div>           
               </div>
@@ -866,7 +845,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  14 dan -6
+                  c.	Nested-If, karena pada kasus tersebut diperlukan pengecekan kondisi bertingkat.
                   </span>
                 </div>           
               </div>
@@ -875,7 +854,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  18 dan 4
+                  d.	Switch-Case, karena diperlukan banyak kondisi untuk menentukan siswa yang memenuhi syarat masuk tim atletik.
                   </span>
                 </div>           
               </div>
@@ -884,13 +863,13 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  14 dan 16
+                  e.	For, karena diperlukan perulangan pada kasus tersebut.
                   </span>
                 </div>           
               </div>
               `
           ],
-          kunjawSoal: 0,
+          kunjawSoal: 1,
           UrlYoutube: "",
           type: "soal"
         },
@@ -905,19 +884,19 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan pseudocode berikut:<br/>
+                  Perhatikan program berikut!<br/>
                   </span>
                 </div>
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/16.png"
+                    src="/media/posttest/po26.png"
                     style="height: 70%; width: 70%;"
                   />
                 </div>  
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Jika diinputkan jumlah uang = 200000 dan total = 50000, maka output yang dihasilkan adalah…
+                  <br/>Dari program di atas, jika kita menginputkan nilai ujian = 80 dan nilai praktek = 65, maka output dari program tersebut adalah…
                   </span>
                 </div>
               </div>
@@ -927,7 +906,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  175000
+                  a.	Selamat! Anda memenuhi syarat untuk kursus lanjutan.
                   </span>
                 </div>           
               </div>
@@ -936,7 +915,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  150000
+                  b.	Maaf, Anda belum memenuhi syarat untuk kursus lanjutan.
                   </span>
                 </div>           
               </div>
@@ -945,7 +924,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  110000
+                  c.	Tidak ada output
                   </span>
                 </div>           
               </div>
@@ -954,7 +933,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  100000
+                  d.	Program error
                   </span>
                 </div>           
               </div>
@@ -963,7 +942,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  125000
+                  e.	Nilai ujian = 80 dan Nilai praktek = 65
                   </span>
                 </div>           
               </div>
@@ -984,19 +963,19 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan program berikut!<br/>
+                  Perhatikan pseuducode berikut:<br/>
                   </span>
                 </div>
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/17.png"
-                    style="height: 70%; width: 70%;"
+                    src="/media/posttest/po27.png"
+                    style="height: 50%; width: 50%;"
                   />
                 </div>  
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Jika input a adalah -2 maka output yang dihasilkan adalah... 
+                  <br/>Pseudocode di atas belum memiliki susunan yang tepat. Susunan pseudocode yang tepat adalah...
                   </span>
                 </div>
               </div>
@@ -1006,7 +985,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  -2
+                  a.	1-2-3-4-5-6
                   </span>
                 </div>           
               </div>
@@ -1015,7 +994,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  4
+                  b.	1-3-2-5-4-6
                   </span>
                 </div>           
               </div>
@@ -1024,7 +1003,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  0
+                  c.	1-4-2-3-5-6
                   </span>
                 </div>           
               </div>
@@ -1033,7 +1012,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  -4
+                  d.	2-4-3-1-5-6
                   </span>
                 </div>           
               </div>
@@ -1042,13 +1021,13 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  2
+                  e.	3-1-5-4-6-2
                   </span>
                 </div>           
               </div>
               `
           ],
-          kunjawSoal: 4,
+          kunjawSoal: 2,
           UrlYoutube: "",
           type: "soal"
         },
@@ -1063,19 +1042,19 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan pseuducode berikut:<br/>
+                  Perhatikan pseudocode berikut:<br/>
                   </span>
                 </div>
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/18.png"
-                    style="height: 70%; width: 70%;"
+                    src="/media/posttest/po30.png"
+                    style="height: 50%; width: 50%;"
                   />
                 </div>  
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Berdasarkan pseudocode di atas manakah pernyataan yang benar di bawah ini…
+                  <br/>Terdapat kesalahan pada pseudocode di atas, kesalahan tersebut terdapat pada line…
                   </span>
                 </div>
               </div>
@@ -1085,7 +1064,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Tidak mendapat beasiswa apabila peringkat 10
+                  a.	Posisi Line 1 dan Line 3 terbalik
                   </span>
                 </div>           
               </div>
@@ -1094,7 +1073,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Apabila peringkat 10 maka mendapatkan beasiswa sampai tamat sekolah
+                  b.	Posisi Line 2 dan Line 1 terbalik
                   </span>
                 </div>           
               </div>
@@ -1103,7 +1082,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Apabila peringkat 5 maka mendapatkan beasiswa selama 2 semester
+                  c.	Posisi Line 4 dan Line 6 terbalik
                   </span>
                 </div>           
               </div>
@@ -1112,7 +1091,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Apabila peringkat 5 dan apabila pengasilan 1500000 maka mendapatkan beasiswa sampai tamat sekolah
+                  d.	Posisi Line 5 dan Line 7 terbalik
                   </span>
                 </div>           
               </div>
@@ -1121,13 +1100,13 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Apabila peringkat 5 dan apabila pengasilan 1500000 maka tidak mendapatkan beasiswa
+                  e.	Posisi Line 7 dan Line 4 terbalik 
                   </span>
                 </div>           
               </div>
               `
           ],
-          kunjawSoal: 4,
+          kunjawSoal: 3,
           UrlYoutube: "",
           type: "soal"
         },
@@ -1142,19 +1121,19 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan Program berikut:<br/>
+                  Perhatikan program berikut!<br/>
                   </span>
                 </div>
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/19.png"
-                    style="height: 70%; width: 70%;"
+                    src="/media/posttest/po31.png"
+                    style="height: 50%; width: 50%;"
                   />
                 </div>  
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Jika diinputkan tinggi badan 160cm dan berat badan 70kg, maka output dari program tersebut adalah…
+                  <br/>Pernyataan yang sesuai dengan program di atas adalah…
                   </span>
                 </div>
               </div>
@@ -1164,7 +1143,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Obesitas
+                  a.	Tidak mendapat beasiswa apabila peringkat 10
                   </span>
                 </div>           
               </div>
@@ -1173,7 +1152,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Gemuk
+                  b.	Apabila peringkat 10 maka mendapatkan beasiswa sampai tamat sekolah
                   </span>
                 </div>           
               </div>
@@ -1182,7 +1161,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Normal
+                  c.	Apabila peringkat 5 maka mendapatkan beasiswa selama 2 semester
                   </span>
                 </div>           
               </div>
@@ -1191,7 +1170,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Kurus
+                  d.	Apabila peringkat 5 dan apabila pengasilan 1500000 maka mendapatkan beasiswa sampai tamat sekolah
                   </span>
                 </div>           
               </div>
@@ -1200,13 +1179,13 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Cukup 
+                  e.	Apabila peringkat 5 dan apabila pengasilan 1500000 maka tidak mendapatkan beasiswa 
                   </span>
                 </div>           
               </div>
               `
           ],
-          kunjawSoal: 1,
+          kunjawSoal: 3,
           UrlYoutube: "",
           type: "soal"
         },
@@ -1221,19 +1200,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan program berikut!<br/>
-                  </span>
-                </div>
-                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                  <img
-                    alt="Logo"
-                    src="/media/posttest/20.png"
-                    style="height: 70%; width: 70%;"
-                  />
-                </div>  
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  <br/>Jika kita menginputkan suhu -8 derajat celcius, maka output dari program tersebut adalah…
+                  Dalam pengembangan perangkat lunak, kapan switch case paling tepat digunakan?<br/>
                   </span>
                 </div>
               </div>
@@ -1243,7 +1210,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Suhu di bawah titik beku air
+                  a.	Ketika hanya ada satu pilihan yang harus dievaluasi, karena switch case memungkinkan untuk memeriksa satu kondisi secara langsung.
                   </span>
                 </div>           
               </div>
@@ -1252,7 +1219,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Suhu membeku air
+                  b.	Ketika ada banyak pilihan dan setiap pilihan harus dievaluasi secara terpisah berdasarkan nilai variabel tertentu, karena switch case memungkinkan penanganan banyak kondisi dengan lebih bersih dan terstruktur dibandingkan dengan if-else.
                   </span>
                 </div>           
               </div>
@@ -1261,7 +1228,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Suhu dalam kisaran normal
+                  c.	Ketika hanya ada dua pilihan, karena switch case kurang efisien dan lebih rumit dibandingkan dengan if-else untuk hanya dua kondisi.
                   </span>
                 </div>           
               </div>
@@ -1270,7 +1237,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Suhu mendidih air
+                  d.	Ketika hanya ada beberapa pilihan yang mungkin, tetapi setiap pilihan harus mengevaluasi beberapa kondisi secara bersamaan, karena switch case tidak mendukung evaluasi beberapa kondisi secara bersamaan dengan baik.
                   </span>
                 </div>           
               </div>
@@ -1279,97 +1246,18 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Suhu di atas titik didih air 
+                  e.	Tidak ada situasi di mana switch case cocok digunakan, karena pernyataan ini tidak benar, switch case sangat berguna dalam situasi tertentu.
                   </span>
                 </div>           
               </div>
               `
           ],
-          kunjawSoal: 0,
+          kunjawSoal: 1,
           UrlYoutube: "",
           type: "soal"
         },
         {
           judulMateri: "17",
-          isiMateri: `
-                Pernahkah kalian ingin pergi ke sebuah tempat tertentu dengan menggunakan moda transportasi? Keputusan menggunakan sebuah moda transportasi untuk bepergian biasanya tergantung pada sebuah keadaan tertentu.Misalnya, apabila kondisi hujan, maka kalian akan lebih memilih menggunakan mobil daripada menggunakan sepeda motor, namun apabila cuaca sedang cerah dan jarak yang ditempuh adalah dekat, maka kalian akan memilih menggunakan sepeda motor.  
-                Komputer merupakan alat yang membantu banyak aktivitas manusia.Pada dasarnya, komputer menjalankan perintah dari manusia.Perintah - perintah tersebut dituangkan secara tertulis dalam sebuah aturan tertentu yang disebut sebagai kode program yang bertujuan untuk mengatur bagaimana komputer harus bertindak untuk menyelesaikan sebuah permasalahan tertentu.Hal ini termasuk juga dalam proses pengambilan keputusan, seperti halnya dalam contoh pemilihan moda transportasi di atas.  
-                `,
-          Image: "",
-          soal: `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan program berikut!<br/>
-                  </span>
-                </div>
-                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                  <img
-                    alt="Logo"
-                    src="/media/posttest/21.png"
-                    style="height: 70%; width: 70%;"
-                  />
-                </div>  
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  <br/>Jika diinputkan jam mulai pukul 3.45 dan jam selesai 7.15, apakah output dari program di atas…
-                  </span>
-                </div>
-              </div>
-              `,
-          pilihanSoal: [
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Biaya penggunaan warnet: Rp 30000
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Biaya penggunaan warnet: Rp 35000
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Biaya penggunaan warnet: Rp 15000
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Biaya penggunaan warnet: Rp 10500
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Tidak ada output
-                  </span>
-                </div>           
-              </div>
-              `
-          ],
-          kunjawSoal: 3,
-          UrlYoutube: "",
-          type: "soal"
-        },
-        {
-          judulMateri: "18",
           isiMateri: `
                 Pernahkah kalian ingin pergi ke sebuah tempat tertentu dengan menggunakan moda transportasi? Keputusan menggunakan sebuah moda transportasi untuk bepergian biasanya tergantung pada sebuah keadaan tertentu.Misalnya, apabila kondisi hujan, maka kalian akan lebih memilih menggunakan mobil daripada menggunakan sepeda motor, namun apabila cuaca sedang cerah dan jarak yang ditempuh adalah dekat, maka kalian akan memilih menggunakan sepeda motor.  
                 Komputer merupakan alat yang membantu banyak aktivitas manusia.Pada dasarnya, komputer menjalankan perintah dari manusia.Perintah - perintah tersebut dituangkan secara tertulis dalam sebuah aturan tertentu yang disebut sebagai kode program yang bertujuan untuk mengatur bagaimana komputer harus bertindak untuk menyelesaikan sebuah permasalahan tertentu.Hal ini termasuk juga dalam proses pengambilan keputusan, seperti halnya dalam contoh pemilihan moda transportasi di atas.  
@@ -1385,13 +1273,13 @@ export const soalPosttest: DataMateri[] = [
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/22.png"
-                    style="height: 70%; width: 70%;"
+                    src="/media/posttest/po37.png"
+                    style="height: 40%; width: 40%;"
                   />
                 </div>  
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Pernyataan yang sesuai dengan program di atas, kecuali…
+                  <br/>Dari program di atas, maka output yang tepat adalah…
                   </span>
                 </div>
               </div>
@@ -1401,7 +1289,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Jika mempunyai pakaian sebanyak 43 buah maka dibutuhkan sebanyak 3 lemari
+                  a.	Excellent!
                   </span>
                 </div>           
               </div>
@@ -1410,7 +1298,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Jika mempunyai pakaian sebanyak 29 buah maka dibutuhkan sebanyak 2 lemari
+                  b.	Good!
                   </span>
                 </div>           
               </div>
@@ -1419,7 +1307,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Jika mempunyai pakaian sebanyak 58 buah maka dibutuhkan sebanyak 3 lemari
+                  c.	Fair!
                   </span>
                 </div>           
               </div>
@@ -1428,7 +1316,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Jika mempunyai pakaian sebanyak 76 buah maka dibutuhkan sebanyak 3 lemari
+                  d.	Needs Improvement!
                   </span>
                 </div>           
               </div>
@@ -1437,13 +1325,92 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Jika mempunyai pakaian sebanyak 87 
+                  e.	Invalid Grade!
                   </span>
                 </div>           
               </div>
               `
           ],
-          kunjawSoal: 3,
+          kunjawSoal: 1,
+          UrlYoutube: "",
+          type: "soal"
+        },
+        {
+          judulMateri: "18",
+          isiMateri: `
+                Pernahkah kalian ingin pergi ke sebuah tempat tertentu dengan menggunakan moda transportasi? Keputusan menggunakan sebuah moda transportasi untuk bepergian biasanya tergantung pada sebuah keadaan tertentu.Misalnya, apabila kondisi hujan, maka kalian akan lebih memilih menggunakan mobil daripada menggunakan sepeda motor, namun apabila cuaca sedang cerah dan jarak yang ditempuh adalah dekat, maka kalian akan memilih menggunakan sepeda motor.  
+                Komputer merupakan alat yang membantu banyak aktivitas manusia.Pada dasarnya, komputer menjalankan perintah dari manusia.Perintah - perintah tersebut dituangkan secara tertulis dalam sebuah aturan tertentu yang disebut sebagai kode program yang bertujuan untuk mengatur bagaimana komputer harus bertindak untuk menyelesaikan sebuah permasalahan tertentu.Hal ini termasuk juga dalam proses pengambilan keputusan, seperti halnya dalam contoh pemilihan moda transportasi di atas.  
+                `,
+          Image: "",
+          soal: `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  Perhatikan program berikut!<br/>
+                  </span>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
+                  <img
+                    alt="Logo"
+                    src="/media/posttest/po38.png"
+                    style="height: 50%; width: 50%;"
+                  />
+                </div>  
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  <br/>Jika kita menginputkan operator = ‘-‘, menginputkan angka 5 dan 7, maka output dari program tersebut adalah…
+                  </span>
+                </div>
+              </div>
+              `,
+          pilihanSoal: [
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  a.	Hasil penjumlahan: 12.00
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  b.	Hasil pengurangan: -2.00
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  c.	Hasil perkalian: 5
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  d.	Tidak ada output
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  e.	Program error
+                  </span>
+                </div>           
+              </div>
+              `
+          ],
+          kunjawSoal: 1,
           UrlYoutube: "",
           type: "soal"
         },
@@ -1458,75 +1425,76 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan algoritma berikut!<br/>
-                  </span>
-                </div>
+                  Perhatikan program berikut:
+                </div> 
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/23.png"
-                    style="height: 70%; width: 70%;"
+                    src="/media/posttest/po39.png"
+                    style="height: 40%; width: 40%;"
                   />
                 </div>  
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Apakah output yang akan dihasilkan dari algoritma di atas…
+                  <br/>Program di atas merupakan program diskon di sebuah restoran. Syarat untuk mendapatkan promo tersebut yaitu:
+                  <br/>-	Jika membeli makanan (m), mendapat diskon 10%
+                  <br/>-	Jika membeli minuman (d), mendapat diskon 5%
+                  <br/>-	Jika membeli dessert (s), mendapat diskon 8%
+                  <br/>-	Jika membeli paket makan dan minum (p), mendapat diskon 15%
+                  <br/>-	Jika membeli paket komplit (k), mendapat diskon 25%.
+                  Pada program di atas terdapat ketidak sesuaian dengan syarat yang diberikan. Pada line berapakah yang tidak sesuai?
                   </span>
                 </div>
               </div>
               `,
           pilihanSoal: [
             `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Jumlah mobil untuk laki-laki: 3<br/>
-                  Jumlah mobil untuk perempuan: 4
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Jumlah mobil untuk laki-laki: 4
-                  <br/>Jumlah mobil untuk perempuan: 3
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Mobil laki-laki = 4
-                  <br/>Mobil perempuan = 4
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Mobil laki-laki = 4
-                  <br/>Mobil perempuan = 2
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Tidak ada output
-                  </span>
-                </div>           
-              </div>
-              `
+            <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+              <span style="font-size: 20px; text-align: justify;">
+              a.	Posisi Line 1 terbalik dengan Line 2
+              </span>
+            </div>           
+          </div>
+          `,
+        `
+          <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+              <span style="font-size: 20px; text-align: justify;">
+              b.	Posisi Line 2 terbalik dengan Line 5
+              </span>
+            </div>           
+          </div>
+          `,
+        `
+          <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+              <span style="font-size: 20px; text-align: justify;">
+              c.	Posisi Line 5 terbalik dengan Line 11
+              </span>
+            </div>           
+          </div>
+          `,
+        `
+          <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+              <span style="font-size: 20px; text-align: justify;">
+              d.	Posisi Line 8 terbalik dengan Line 11
+              </span>
+            </div>           
+          </div>
+          `,
+        `
+          <div style="font-family: Arial, sans-serif;">
+            <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+              <span style="font-size: 20px; text-align: justify;">
+              e.	Posisi Line 14 terbalik dengan Line 5
+              </span>
+            </div>           
+          </div>
+          `
           ],
-          kunjawSoal: 1,
+          kunjawSoal: 2,
           UrlYoutube: "",
           type: "soal"
         },
@@ -1541,29 +1509,19 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Seorang pemilik café ingin membuat sebuah program menggunakan case untuk harga setelah diskon dari produk yang dijual. Program tersebut harus sesuai dengan ketentuan:<br/>
+                  Perhatikan percabangan switch-case berikut:<br/>
                   </span>
-                  <ul>
-                    <li>
-                      jika pelanggan membeli makanan maka mendapatkan diskon sebesar 10%
-                    </li>
-                    <li>
-                      jika pelanggan membeli minuman maka mendapatkan diskon sebesar 5%
-                    </li>
-                    <li>
-                      jika pelanggan membeli dessert maka mendapatkan diskon sebesar 8%
-                    </li>
-                    <li>
-                      jika pelanggan membeli paket makanan dan minuman maka mendapatkan diskon sebesar 15%
-                    </li>
-                    <li>
-                      jika pelanggan membeli paket komplit diskon sebesar 25%
-                    </li>
-                  </ul>
-                </div> 
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
+                  <img
+                    alt="Logo"
+                    src="/media/posttest/po40.png"
+                    style="height: 50%; width: 50%;"
+                  />
+                </div>  
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>manakah dari program berikut yang sesuai dengan ketentuan di atas…
+                  <br/>Apakah code di atas sesuai dengan percabangan switch-case…
                   </span>
                 </div>
               </div>
@@ -1571,61 +1529,51 @@ export const soalPosttest: DataMateri[] = [
           pilihanSoal: [
             `
               <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                  <img
-                    alt="Logo"
-                    src="/media/posttest/24.png"
-                    style="height: 70%; width: 70%;"
-                  />
-                </div>            
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  a.	Ya, pernyataan di atas valid dan tidak akan menimbulkan kesalahan saat kompilasi.
+                  </span>
+                </div>           
               </div>
               `,
             `
               <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                  <img
-                    alt="Logo"
-                    src="/media/posttest/25.png"
-                    style="height: 70%; width: 70%;"
-                  />
-                </div>            
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  b.	Tidak, pernyataan tersebut tidak valid karena mencampur tipe data karakter dan bilangan bulat dalam satu switch case.
+                  </span>
+                </div>           
               </div>
               `,
             `
               <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                  <img
-                    alt="Logo"
-                    src="/media/posttest/26.png"
-                    style="height: 70%; width: 70%;"
-                  />
-                </div>            
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  c.	Tidak, karena sintaks switch case harus menggunakan kata kunci case of bukan hanya case.
+                  </span>
+                </div>           
               </div>
               `,
             `
               <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                  <img
-                    alt="Logo"
-                    src="/media/posttest/27.png"
-                    style="height: 70%; width: 70%;"
-                  />
-                </div>            
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  d.	Mungkin, karena tergantung pada nilai variabel nilai.
+                  </span>
+                </div>           
               </div>
               `,
             `
               <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                  <img
-                    alt="Logo"
-                    src="/media/posttest/28.png"
-                    style="height: 70%; width: 70%;"
-                  />
-                </div>            
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  e.	Ya, karena program di atas sudah menuliskan program dengan baik sesuai ketentuan.
+                  </span>
+                </div>           
               </div>
               `
           ],
-          kunjawSoal: 0,
+          kunjawSoal: 1,
           UrlYoutube: "",
           type: "soal"
         },
