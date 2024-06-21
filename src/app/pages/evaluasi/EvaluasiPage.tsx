@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { toAbsoluteUrl } from '../../../_molekul/helpers'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
@@ -19,7 +19,9 @@ const Evaluasi = () => {
   const [loading, setLoading] = useState<boolean>(false)
   const [listPeringkat, setListPeringkat] = useState<CreateProfileSiswaType[]>([])
   const [status1, setStatus1] = useState<boolean>(false)
+  const [poinPretest, setPoinPretest] = useState<number>(0)
   const [status2, setStatus2] = useState<boolean>(false)
+  const [poinPosttest, setPoinPosttest] = useState<number>(0)
   const [status3, setStatus3] = useState<boolean>(false)
   const [status4, setStatus4] = useState<boolean>(false)
   const [status5, setStatus5] = useState<boolean>(false)
@@ -62,15 +64,17 @@ const Evaluasi = () => {
       for (let i = 0; i < 5; i++) {
         if (i === 0) {
           const res = await getEvaluasiByUUID("pretest", uid)
-          console.log(res);
-
           if (res !== null) {
             setStatus1(true)
+            const ha = Object.entries(res);
+            setPoinPretest(ha[0][1].poin)
           }
         } else if (i === 1) {
           const res = await getEvaluasiByUUID("posttest", uid)
           if (res !== null) {
             setStatus2(true)
+            const ha = Object.entries(res);
+            setPoinPosttest(ha[0][1].poin)
           }
         } else if (i === 2) {
           const res = await getEvaluasiByUUID("preLogic", uid)
@@ -223,11 +227,12 @@ const Evaluasi = () => {
                     <h1 className='mb-10 ms-20' style={{ fontSize: '30px' }}>Evaluasi Soal</h1>
                     <div className="d-flex row mt-10" style={{ justifyContent: 'center' }}>
                       <div className="card col-sm-4 p-0 rounded shadow-sm me-5" onClick={() => {
-                        // if (!status1) {
-                        navigate('/evaluasi/soal', { state: { materiParent: "pretest" } })
-                        // } else {
-                        //   warningAlert()
-                        // }
+                        if (!status1) {
+                          navigate('/evaluasi/soal', { state: { materiParent: "pretest" } })
+                        } else {
+                          navigate('/hasil/evaluasi/page', { state: { materiParent: "pretest" } })
+                          localStorage.setItem('hasReloaded', 'false')
+                        }
                       }} style={{ width: '25%', height: '200px', cursor: 'pointer' }}>
                         <div className="card-body p-0">
                           <div className='d-flex rounded-top ' style={{ backgroundColor: '#E1D808', height: '60%', justifyContent: 'center' }}>
@@ -237,17 +242,26 @@ const Evaluasi = () => {
                           </div>
                           <div className='p-5'>
                             <h3>Pre-Test</h3>
-                            <span className={`badge ${status1 ? "badge-light-success" : "badge-light-danger"}`}>{status1 ? "Selesai" : "Belum Mulai"}</span>
+                            {
+                              poinPretest ?
+                                <div className='d-flex flex-row' style={{ justifyContent: 'space-between' }}>
+                                  <span className={`badge ${status1 ? "badge-light-success" : "badge-light-danger"}`}>{status1 ? "Selesai" : "Belum Mulai"}</span>
+                                  <h3>Poin : <span className='badge-light-success'>{poinPretest}/20</span></h3>
+                                </div>
+                                :
+                                <span className={`badge ${status1 ? "badge-light-success" : "badge-light-danger"}`}>{status1 ? "Selesai" : "Belum Mulai"}</span>
+                            }
                           </div>
                         </div>
                       </div>
 
                       <div className="card col-sm-4 p-0 border rounded shadow-sm" onClick={() => {
-                        // if (!status2) {
-                        navigate('/evaluasi/soal', { state: { materiParent: "posttest" } })
-                        // } else {
-                        //   warningAlert()
-                        // }
+                        if (!status2) {
+                          navigate('/evaluasi/soal', { state: { materiParent: "posttest" } })
+                        } else {
+                          navigate('/hasil/evaluasi/page', { state: { materiParent: "posttest" } })
+                          localStorage.setItem('hasReloaded', 'false')
+                        }
                       }} style={{ width: '25%', height: '200px', cursor: 'pointer' }}>
                         <div className="card-body p-0">
                           <div className='d-flex rounded-top ' style={{ backgroundColor: '#0893E1', height: '60%', justifyContent: 'center' }}>
@@ -257,17 +271,26 @@ const Evaluasi = () => {
                           </div>
                           <div className='p-5'>
                             <h3>Post-Test</h3>
-                            <span className={`badge ${status2 ? "badge-light-success" : "badge-light-danger"}`}>{status2 ? "Selesai" : "Belum Mulai"}</span>
+                            {
+                              poinPosttest ?
+                                <div className='d-flex flex-row' style={{ justifyContent: 'space-between' }}>
+                                  <span className={`badge ${status2 ? "badge-light-success" : "badge-light-danger"}`}>{status2 ? "Selesai" : "Belum Mulai"}</span>
+                                  <h3>Poin : <span className='badge-light-success'>{poinPosttest}/20</span></h3>
+                                </div>
+                                :
+                                <span className={`badge ${status2 ? "badge-light-success" : "badge-light-danger"}`}>{status2 ? "Selesai" : "Belum Mulai"}</span>
+                            }
                           </div>
                         </div>
                       </div>
 
                       <div className="card col-sm-4 p-0 rounded shadow-sm ms-5" onClick={() => {
-                        // if (!status3) {
-                        navigate('/evaluasi/soal', { state: { materiParent: "preLogic" } })
-                        // } else {
-                        //   warningAlert()
-                        // }
+                        if (!status3) {
+                          navigate('/evaluasi/soal', { state: { materiParent: "preLogic" } })
+                        } else {
+                          navigate('/hasil/evaluasi/page', { state: { materiParent: "preLogic" } })
+                          localStorage.setItem('hasReloaded', 'false')
+                        }
                       }} style={{ width: '25%', height: '200px', cursor: 'pointer' }}>
                         <div className="card-body p-0">
                           <div className='d-flex rounded-top ' style={{ backgroundColor: '#E10856', height: '60%', justifyContent: 'center' }}>
@@ -285,11 +308,12 @@ const Evaluasi = () => {
 
                     <div className="d-flex row mt-10" style={{ justifyContent: 'center' }}>
                       <div className="card col-sm-4 p-0 rounded shadow-sm me-5" onClick={() => {
-                        // if (!status4) {
-                        navigate('/evaluasi/soal', { state: { materiParent: "postLogic" } })
-                        // } else {
-                        //   warningAlert()
-                        // }
+                        if (!status4) {
+                          navigate('/evaluasi/soal', { state: { materiParent: "postLogic" } })
+                        } else {
+                          navigate('/hasil/evaluasi/page', { state: { materiParent: "postLogic" } })
+                          localStorage.setItem('hasReloaded', 'false')
+                        }
                       }} style={{ width: '25%', height: '200px', cursor: 'pointer' }}>
                         <div className="card-body p-0">
                           <div className='d-flex rounded-top ' style={{ backgroundColor: '#E108B1', height: '60%', justifyContent: 'center' }}>
@@ -304,11 +328,12 @@ const Evaluasi = () => {
                         </div>
                       </div>
                       <div className="card col-sm-4 p-0 rounded shadow-sm ms-5" onClick={() => {
-                        // if (!status5) {
-                        navigate('/evaluasi/soal', { state: { materiParent: "penilaianMedia" } })
-                        // } else {
-                        //   warningAlert()
-                        // }
+                        if (!status5) {
+                          navigate('/evaluasi/soal', { state: { materiParent: "penilaianMedia" } })
+                        } else {
+                          navigate('/hasil/evaluasi/page', { state: { materiParent: "penilaianMedia" } })
+                          localStorage.setItem('hasReloaded', 'false')
+                        }
                       }} style={{ width: '25%', height: '200px', cursor: 'pointer' }}>
                         <div className="card-body p-0">
                           <div className='d-flex rounded-top ' style={{ backgroundColor: '#08E138', height: '60%', justifyContent: 'center' }}>

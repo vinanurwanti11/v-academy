@@ -28,4 +28,15 @@ export interface ProfileSiswaType {
   uid: string
 }
 
+export interface HasilEvaluasiSiswaType {
+  uuid: string
+  name: string
+  nomor_absen: string
+  email: string
+  imageProfile: string
+  type: string
+  kelompok: string
+  poin: number
+}
+
 
