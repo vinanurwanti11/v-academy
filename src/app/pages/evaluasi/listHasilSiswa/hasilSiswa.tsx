@@ -49,7 +49,6 @@ const HasilSiswa = () => {
               kelompok: profileSiswaObject[0][1].kelompok,
               poin: Object.entries(hasilEvaluasiObject[i][1])[0][1].poin,
               uuid: hasilEvaluasiObject[i][0]
-
             }
             listHasilEvaluasi.push(bodyForListEvaluasi)
           }
