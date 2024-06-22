@@ -48,73 +48,6 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Seorang siswa sedang belajar matematika dan dia ingin membuat program sederhana untuk menentukan apakah suatu bilangan adalah bilangan bulat. Pernyataan manakah yang benar tentang program yang akan dia buat?
-                  </span>
-                </div>
-              </div>
-              `,
-          pilihanSoal: [
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  a.	Program tersebut hanya menentukan apakah suatu bilangan adalah bilangan bulat negatif. Karena program tersebut ingin menentukan apakah suatu bilangan termasuk bilangan bulat negatif atau bukan.
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  b.	Program tersebut akan menampilkan pesan bahwa bilangan tersebut adalah bilangan bulat positif jika bilangan bulat tersebut lebih besar dari 0. Karena program yang ingin dibuat adalah program yang menentukan bilangan bulat positif saja.
-                  </span>
-                </div>        
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  c.	Program tersebut hanya akan menampilkan pesan bahwa bilangan tersebut adalah bilangan bulat. Karena program yang dibuat bertujuan untuk menentukan bilangan bulat.
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  d.	Program tersebut tidak valid karena tidak memungkinkan untuk menentukan apakah suatu bilangan adalah bilangan bulat. Karena program tidak bisa dibuat untuk menentukan apakah suatu bilangan termasuk bilangan bulat atau bukan.
-                  </span>
-                </div>
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  e.	Program tidak dapat dibuat, karena tidak ada kondisi yang bisa menyatakan bahwa suatu program termasuk ke dalam bilangan bulat atau bukan.
-                  </span>
-                </div>
-              </div>
-              `
-          ],
-          kunjawSoal: 2,
-          UrlYoutube: "",
-          type: "soal"
-        },
-        {
-          judulMateri: "2",
-          isiMateri: `
-                Pernahkah kalian ingin pergi ke sebuah tempat tertentu dengan menggunakan moda transportasi? Keputusan menggunakan sebuah moda transportasi untuk bepergian biasanya tergantung pada sebuah keadaan tertentu.Misalnya, apabila kondisi hujan, maka kalian akan lebih memilih menggunakan mobil daripada menggunakan sepeda motor, namun apabila cuaca sedang cerah dan jarak yang ditempuh adalah dekat, maka kalian akan memilih menggunakan sepeda motor.  
-                Komputer merupakan alat yang membantu banyak aktivitas manusia.Pada dasarnya, komputer menjalankan perintah dari manusia.Perintah - perintah tersebut dituangkan secara tertulis dalam sebuah aturan tertentu yang disebut sebagai kode program yang bertujuan untuk mengatur bagaimana komputer harus bertindak untuk menyelesaikan sebuah permasalahan tertentu.Hal ini termasuk juga dalam proses pengambilan keputusan, seperti halnya dalam contoh pemilihan moda transportasi di atas.  
-                `,
-          Image: "",
-          soal: `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
                   Perhatikan program berikut!<br/>
                   </span>
                 </div>
@@ -184,6 +117,73 @@ export const soalPosttest: DataMateri[] = [
           type: "soal"
         },
         {
+          judulMateri: "2",
+          isiMateri: `
+                Pernahkah kalian ingin pergi ke sebuah tempat tertentu dengan menggunakan moda transportasi? Keputusan menggunakan sebuah moda transportasi untuk bepergian biasanya tergantung pada sebuah keadaan tertentu.Misalnya, apabila kondisi hujan, maka kalian akan lebih memilih menggunakan mobil daripada menggunakan sepeda motor, namun apabila cuaca sedang cerah dan jarak yang ditempuh adalah dekat, maka kalian akan memilih menggunakan sepeda motor.  
+                Komputer merupakan alat yang membantu banyak aktivitas manusia.Pada dasarnya, komputer menjalankan perintah dari manusia.Perintah - perintah tersebut dituangkan secara tertulis dalam sebuah aturan tertentu yang disebut sebagai kode program yang bertujuan untuk mengatur bagaimana komputer harus bertindak untuk menyelesaikan sebuah permasalahan tertentu.Hal ini termasuk juga dalam proses pengambilan keputusan, seperti halnya dalam contoh pemilihan moda transportasi di atas.  
+                `,
+          Image: "",
+          soal: `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  Permasalahan berikut yang dapat dimplementasi kedalam percabangan if-else, kecuali...<br/>
+                  </span>
+                </div>        
+              </div>
+              `,
+          pilihanSoal: [
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  a.	Menentukan remedial atau tidaknya siswa dalam ujian, karena untuk menentukan remedial atau tidaknya siswa membutuhkan beberapa kali pengecekan kondisi.
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  b.	Menentukan keterlambatan absensi masuk, karena ada kebutuhan untuk menentukan dua kemungkinan kondisi: keterlambatan dan ketepatan waktu.
+                  </span>
+                </div>        
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  c.	Menentukan status kelulusan berdasarkan rata-rata nilai ujian, karena kondisi kelulusan memiliki dua kemungkinan, lulus atau tidak lulus berdasarkan rata-rata nilai ujian.
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  d.	Menentukan besarnya tunjangan keluarga berdasarkan status pernikahan, karena terdapat beberapa kemungkinan status pernikahan yang berbeda.
+                  </span>
+                </div>
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  e.	Menentukan jenis bunga yang sesuai dengan bulan kelahiran, karena diperlukan kondisi yang sangat banyak untuk menentukan jenis bungan yang sesuai dengan bulan.
+                  </span>
+                </div>
+              </div>
+              `
+          ],
+          kunjawSoal: 4,
+          UrlYoutube: "",
+          type: "soal"
+        },
+        {
           judulMateri: "3",
           isiMateri: `
                 Pernahkah kalian ingin pergi ke sebuah tempat tertentu dengan menggunakan moda transportasi? Keputusan menggunakan sebuah moda transportasi untuk bepergian biasanya tergantung pada sebuah keadaan tertentu.Misalnya, apabila kondisi hujan, maka kalian akan lebih memilih menggunakan mobil daripada menggunakan sepeda motor, namun apabila cuaca sedang cerah dan jarak yang ditempuh adalah dekat, maka kalian akan memilih menggunakan sepeda motor.  
@@ -194,19 +194,19 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan pseudocode berikut!<br/>
+                  Perhatikan program berikut!<br/>
                   </span>
                 </div>
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/po3.png"
-                    style="height: 50%; width: 50%;"
+                    src="/media/posttest/3webpo.png"
+                    style="height: 40%; width: 40%;"
                   />
                 </div>
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Susunan pseudocode yang tepat adalah…
+                  <br/>Jika kita menginputkan jumlah uang Rp. 150.000 dan menginput total belanja = Rp. 20.000, maka output dari program tersebut adalah…
                   </span>
                 </div>         
               </div>
@@ -216,7 +216,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  a.	1-2-4-3-5
+                  a.	20000
                   </span>
                 </div>           
               </div>
@@ -225,7 +225,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  b.	2-1-5-4-3
+                  b.	80000
                   </span>
                 </div>        
               </div>
@@ -234,7 +234,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  c.	3-4-1-2-5
+                  c.	100000
                   </span>
                 </div>           
               </div>
@@ -243,7 +243,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  d.	4-2-3-5-1
+                  d.	130000
                   </span>
                 </div>
               </div>
@@ -252,13 +252,13 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  e.	3-1-2-4-5
+                  e.	150000
                   </span>
                 </div>
               </div>
               `
           ],
-          kunjawSoal: 2,
+          kunjawSoal: 3,
           UrlYoutube: "",
           type: "soal"
         },
@@ -279,13 +279,13 @@ export const soalPosttest: DataMateri[] = [
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/4po.png"
+                    src="/media/posttest/4webpo.png"
                     style="height: 40%; width: 40%;"
                   />
                 </div>
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Saat program di atas dijalankan, maka program tersebut tidak akan menampilkan apa-apa. Mengapa?
+                  Jika menginputkan suhu -5 derajat celcius, maka output dari program tersebut adalah…
                   </span>
                 </div>  
               </div>
@@ -295,7 +295,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  a.	Karena variabel x tidak diinisialisasi dengan nilai yang memenuhi kondisi if.
+                  a.	Suhu titik beku air.
                   </span>
                 </div>           
               </div>
@@ -304,7 +304,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  b.	Karena terdapat tanda kurung kurawal yang kurang di dalam blok if.
+                  b.	Suhu membeku air.
                   </span>
                 </div>        
               </div>
@@ -313,7 +313,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  c.	Karena variabel x tidak dideklarasikan sebelum digunakan.
+                  c.	Suhu normal.
                   </span>
                 </div>           
               </div>
@@ -322,7 +322,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  d.	Karena kondisi if tidak dapat menangani nilai x yang kurang dari 10.
+                  d.	Suhu panas.
                   </span>
                 </div>
               </div>
@@ -331,13 +331,13 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  e.	Karena tidak ada kesalahan, program akan berjalan dengan baik.
+                  e.	Suhu mendidih.
                   </span>
                 </div>
               </div>
               `
           ],
-          kunjawSoal: 4,
+          kunjawSoal: 0,
           UrlYoutube: "",
           type: "soal"
         },
@@ -352,71 +352,71 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Seorang polisi ingin membuah program untuk mendeteksi kecepatan dari sebuah kendaraan. Jika kecepatan mencapai 60 km/jam atau lebih, maka akan muncul peringatan bahwa kecepatan sudah melewati batas maksimal.<br/>
-                  Program if yang paling tepat terhadap narasi di atas adalah…
+                  Perhatikan pseudocode berikut:
+                  </span>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
+                  <img
+                    alt="Logo"
+                    src="/media/posttest/5webpo.png"
+                    style="height: 40%; width: 40%;"
+                  />
+                </div>
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  Pseudocode di atas belum tersusun dengan baik. Susunan pseudocode yang tepat adalah…
                   </span>
                 </div>
               </div>
               `,
           pilihanSoal: [
             `
-            <div style="font-family: Arial, sans-serif;">
-            <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-              <img
-                alt="Logo"
-                src="/media/posttest/7a.png"
-                style="height: 70%; width: 70%;"
-              />
-            </div>           
-          </div>
-          `,
-        `
-          <div style="font-family: Arial, sans-serif;">
-            <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-              <img
-                alt="Logo"
-                src="/media/posttest/7b.png"
-                style="height: 70%; width: 70%;"
-              />
-            </div>           
-          </div>
-          `,
-        `
-          <div style="font-family: Arial, sans-serif;">
-            <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-              <img
-                alt="Logo"
-                src="/media/posttest/7c.png"
-                style="height: 70%; width: 70%;"
-              />
-            </div>           
-          </div>
-          `,
-        `
-          <div style="font-family: Arial, sans-serif;">
-            <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-              <img
-                alt="Logo"
-                src="/media/posttest/7d.png"
-                style="height: 70%; width: 70%;"
-              />
-            </div>           
-          </div>
-          `,
-        `
-          <div style="font-family: Arial, sans-serif;">
-            <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-              <img
-                alt="Logo"
-                src="/media/posttest/7ee.png"
-                style="height: 70%; width: 70%;"
-              />
-            </div>           
-          </div>
-          `
-          
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  a.	1-4-3-2-6-5
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  b.	2-3-1-6-4-5
+                  </span>
+                </div>        
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  c.	3-1-2-4-6-5
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  d.	3-6-1-2-4-5
+                  </span>
+                </div>
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  e.	4-2-3-1-6-5
+                  </span>
+                </div>
+              </div>
+              `
           ],
-          kunjawSoal: 1,
+          kunjawSoal: 3,
           UrlYoutube: "",
           type: "soal"
         },
@@ -431,7 +431,19 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Permasalahan berikut yang dapat dimplementasi kedalam percabangan if-else, kecuali...
+                  Perhatikan program menghitung harga sewa studio musik:
+                  </span>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
+                  <img
+                    alt="Logo"
+                    src="/media/posttest/6webpo.png"
+                    style="height: 50%; width: 50%;"
+                  />
+                </div>
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  Jika sebuah band ingin menyewa studio selama 5 jam, maka output dari program di atas jika diinputkan 5 jam adalah…
                   </span>
                 </div>
               </div>
@@ -441,7 +453,7 @@ export const soalPosttest: DataMateri[] = [
           <div style="font-family: Arial, sans-serif;">
             <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
               <span style="font-size: 20px; text-align: justify;">
-              a.	Menentukan remedial atau tidaknya siswa dalam ujian, karena untuk menentukan remedial atau tidaknya siswa membutuhkan beberapa kali pengecekan kondisi.
+              a.	Harga sewa total: Rp 15000.00
               </span>
             </div>           
           </div>
@@ -450,7 +462,7 @@ export const soalPosttest: DataMateri[] = [
           <div style="font-family: Arial, sans-serif;">
             <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
               <span style="font-size: 20px; text-align: justify;">
-              b.	Menentukan keterlambatan absensi masuk, karena ada kebutuhan untuk menentukan dua kemungkinan kondisi: keterlambatan dan ketepatan waktu.
+              b.	Harga sewa total: Rp 25000.00
               </span>
             </div>        
           </div>
@@ -459,7 +471,7 @@ export const soalPosttest: DataMateri[] = [
           <div style="font-family: Arial, sans-serif;">
             <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
               <span style="font-size: 20px; text-align: justify;">
-              c.	Menentukan status kelulusan berdasarkan rata-rata nilai ujian, karena kondisi kelulusan memiliki dua kemungkinan, lulus atau tidak lulus berdasarkan rata-rata nilai ujian.
+              c.	Harga sewa total: Rp 40000.00
               </span>
             </div>           
           </div>
@@ -468,7 +480,7 @@ export const soalPosttest: DataMateri[] = [
           <div style="font-family: Arial, sans-serif;">
             <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
               <span style="font-size: 20px; text-align: justify;">
-              d.	Menentukan besarnya tunjangan keluarga berdasarkan status pernikahan, karena terdapat beberapa kemungkinan status pernikahan yang berbeda.
+              d.	Harga sewa total: Rp 90000.00
               </span>
             </div>
           </div>
@@ -477,7 +489,7 @@ export const soalPosttest: DataMateri[] = [
           <div style="font-family: Arial, sans-serif;">
             <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
               <span style="font-size: 20px; text-align: justify;">
-              e.	Menentukan jenis bunga yang sesuai dengan bulan kelahiran, karena diperlukan kondisi yang sangat banyak untuk menentukan jenis bungan yang sesuai dengan bulan.
+              e.	Harga sewa total: RP 105000.00
               </span>
             </div>
           </div>
@@ -504,171 +516,13 @@ export const soalPosttest: DataMateri[] = [
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/po7.png"
+                    src="/media/posttest/7webpo.png"
                     style="height: 70%; width: 70%;"
                   />
                 </div>  
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Susunan  yang paling tepat untuk program di atas adalah..
-                  </span>
-                </div>
-              </div>
-              `,
-          pilihanSoal: [
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  a.	3-1-4-2
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  b.	3-4-2-1
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  c.	2-3-1-4
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  d.	2-4-1-3
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  e.	1-3-2-4
-                  </span>
-                </div>           
-              </div>
-              `
-          ],
-          kunjawSoal: 0,
-          UrlYoutube: "",
-          type: "soal"
-        },
-        {
-          judulMateri: "8",
-          isiMateri: `
-                Pernahkah kalian ingin pergi ke sebuah tempat tertentu dengan menggunakan moda transportasi? Keputusan menggunakan sebuah moda transportasi untuk bepergian biasanya tergantung pada sebuah keadaan tertentu.Misalnya, apabila kondisi hujan, maka kalian akan lebih memilih menggunakan mobil daripada menggunakan sepeda motor, namun apabila cuaca sedang cerah dan jarak yang ditempuh adalah dekat, maka kalian akan memilih menggunakan sepeda motor.  
-                Komputer merupakan alat yang membantu banyak aktivitas manusia.Pada dasarnya, komputer menjalankan perintah dari manusia.Perintah - perintah tersebut dituangkan secara tertulis dalam sebuah aturan tertentu yang disebut sebagai kode program yang bertujuan untuk mengatur bagaimana komputer harus bertindak untuk menyelesaikan sebuah permasalahan tertentu.Hal ini termasuk juga dalam proses pengambilan keputusan, seperti halnya dalam contoh pemilihan moda transportasi di atas.  
-                `,
-          Image: "",
-          soal: `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan program berikut:<br/>
-                  </span>
-                </div>
-                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                  <img
-                    alt="Logo"
-                    src="/media/posttest/po88.png"
-                    style="height: 40%; width: 40%;"
-                  />
-                </div>  
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  <br/>Jika kita menginputkan jumlah uang Rp. 150.000 dan menginput total belanja = Rp. 20.000, maka output dari program tersebut adalah…
-                  </span>
-                </div>
-              </div>
-              `,
-          pilihanSoal: [
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  a.	20000
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  b.	80000
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  c.	100000
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  d.	130000
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  e.	150000
-                  </span>
-                </div>           
-              </div>
-              `
-          ],
-          kunjawSoal: 3,
-          UrlYoutube: "",
-          type: "soal"
-        },
-        {
-          judulMateri: "9",
-          isiMateri: `
-                Pernahkah kalian ingin pergi ke sebuah tempat tertentu dengan menggunakan moda transportasi? Keputusan menggunakan sebuah moda transportasi untuk bepergian biasanya tergantung pada sebuah keadaan tertentu.Misalnya, apabila kondisi hujan, maka kalian akan lebih memilih menggunakan mobil daripada menggunakan sepeda motor, namun apabila cuaca sedang cerah dan jarak yang ditempuh adalah dekat, maka kalian akan memilih menggunakan sepeda motor.  
-                Komputer merupakan alat yang membantu banyak aktivitas manusia.Pada dasarnya, komputer menjalankan perintah dari manusia.Perintah - perintah tersebut dituangkan secara tertulis dalam sebuah aturan tertentu yang disebut sebagai kode program yang bertujuan untuk mengatur bagaimana komputer harus bertindak untuk menyelesaikan sebuah permasalahan tertentu.Hal ini termasuk juga dalam proses pengambilan keputusan, seperti halnya dalam contoh pemilihan moda transportasi di atas.  
-                `,
-          Image: "",
-          soal: `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan program berikut:<br/>
-                  </span>
-                </div>
-                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                  <img
-                    alt="Logo"
-                    src="/media/posttest/po19.png"
-                    style="height: 60%; width: 60%;"
-                  />
-                </div>  
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  <br/>Pada program di atas terdapat kesalahan, pada line berapakah kesalahan tersebut?
+                  Pada program di atas terdapat kesalahan, pada line berapakah kesalahan tersebut?
                   </span>
                 </div>
               </div>
@@ -725,6 +579,164 @@ export const soalPosttest: DataMateri[] = [
           type: "soal"
         },
         {
+          judulMateri: "8",
+          isiMateri: `
+                Pernahkah kalian ingin pergi ke sebuah tempat tertentu dengan menggunakan moda transportasi? Keputusan menggunakan sebuah moda transportasi untuk bepergian biasanya tergantung pada sebuah keadaan tertentu.Misalnya, apabila kondisi hujan, maka kalian akan lebih memilih menggunakan mobil daripada menggunakan sepeda motor, namun apabila cuaca sedang cerah dan jarak yang ditempuh adalah dekat, maka kalian akan memilih menggunakan sepeda motor.  
+                Komputer merupakan alat yang membantu banyak aktivitas manusia.Pada dasarnya, komputer menjalankan perintah dari manusia.Perintah - perintah tersebut dituangkan secara tertulis dalam sebuah aturan tertentu yang disebut sebagai kode program yang bertujuan untuk mengatur bagaimana komputer harus bertindak untuk menyelesaikan sebuah permasalahan tertentu.Hal ini termasuk juga dalam proses pengambilan keputusan, seperti halnya dalam contoh pemilihan moda transportasi di atas.  
+                `,
+          Image: "",
+          soal: `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  Perhatikan pseudocode berikut:<br/>
+                  </span>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
+                  <img
+                    alt="Logo"
+                    src="/media/posttest/8webpo.png"
+                    style="height: 60%; width: 60%;"
+                  />
+                </div>  
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  Pseudocode di atas merupakan pseudocode untuk memeriksa kedatangan siswa. Tetapi susunan pseudocode di atas belum sesuai. Susunan pseudocode yang paling sesuai adalah…
+                  </span>
+                </div>
+              </div>
+              `,
+          pilihanSoal: [
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  a.	1-2-3-4-5
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  b.	2-3-1-5-4
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  c.	3-5-4-1-2
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  d.	2-4-1-5-3
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  e.	1-5-2-4-3
+                  </span>
+                </div>           
+              </div>
+              `
+          ],
+          kunjawSoal: 4,
+          UrlYoutube: "",
+          type: "soal"
+        },
+        {
+          judulMateri: "9",
+          isiMateri: `
+                Pernahkah kalian ingin pergi ke sebuah tempat tertentu dengan menggunakan moda transportasi? Keputusan menggunakan sebuah moda transportasi untuk bepergian biasanya tergantung pada sebuah keadaan tertentu.Misalnya, apabila kondisi hujan, maka kalian akan lebih memilih menggunakan mobil daripada menggunakan sepeda motor, namun apabila cuaca sedang cerah dan jarak yang ditempuh adalah dekat, maka kalian akan memilih menggunakan sepeda motor.  
+                Komputer merupakan alat yang membantu banyak aktivitas manusia.Pada dasarnya, komputer menjalankan perintah dari manusia.Perintah - perintah tersebut dituangkan secara tertulis dalam sebuah aturan tertentu yang disebut sebagai kode program yang bertujuan untuk mengatur bagaimana komputer harus bertindak untuk menyelesaikan sebuah permasalahan tertentu.Hal ini termasuk juga dalam proses pengambilan keputusan, seperti halnya dalam contoh pemilihan moda transportasi di atas.  
+                `,
+          Image: "",
+          soal: `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  Perhatikan program berikut:<br/>
+                  </span>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
+                  <img
+                    alt="Logo"
+                    src="/media/posttest/9webpo.png"
+                    style="height: 50%; width: 50%;"
+                  />
+                </div>  
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  Program di atas adalah program untuk menghitung jika kembalian lebih dari Rp30.000 maka ibu meminta untuk dibelikan gula. Tetapi saat dijalankan program tersebut mengalami error. Pada line berapakah yang mengakibatkan program tersebur error?
+                  </span>
+                </div>
+              </div>
+              `,
+          pilihanSoal: [
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  a.	Line 1 seharusnya di Line 2
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  b.	Line 1 seharusnya di Line 3
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  c.	Line 2 seharusnya di Line 3
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  d.	Line 3 seharusnya di Line 4
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  e.	Line 4 seharusnya di Line 2
+                  </span>
+                </div>           
+              </div>
+              `
+          ],
+          kunjawSoal: 4,
+          UrlYoutube: "",
+          type: "soal"
+        },
+        {
           judulMateri: "10",
           isiMateri: `
                 Pernahkah kalian ingin pergi ke sebuah tempat tertentu dengan menggunakan moda transportasi? Keputusan menggunakan sebuah moda transportasi untuk bepergian biasanya tergantung pada sebuah keadaan tertentu.Misalnya, apabila kondisi hujan, maka kalian akan lebih memilih menggunakan mobil daripada menggunakan sepeda motor, namun apabila cuaca sedang cerah dan jarak yang ditempuh adalah dekat, maka kalian akan memilih menggunakan sepeda motor.  
@@ -741,13 +753,92 @@ export const soalPosttest: DataMateri[] = [
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/po23.png"
+                    src="/media/posttest/10webpo.png"
                     style="height: 40%; width: 40%;"
                   />
                 </div>  
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Pernyataan yang sesuai dengan program di atas adalah…
+                  Dari program di atas, manakah pernyataan yang benar…
+                  </span>
+                </div>
+              </div>
+              `,
+          pilihanSoal: [
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  a.	Program tersebut menghitung Body Mass Index (BMI) seseorang. Karena program tersebut menggunakan rumus untuk mengukur BMI.
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  b.	Program tersebut menghitung total berat dan tinggi badan seseorang. Karena diperlukan inputan berat badan dan tinggi badan.
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  c.	Program tersebut menghitung rata-rata berat dan tinggi badan seseorang. Karena dari program tersebut menggunakna rumus untuk menghitung rata-rata berat dan tinggi badan.
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  d.	Program tersebut menghitung rasio berat dan tinggi badan seseorang. Karena program di atas menunjukkan perhitungan untuk menghitung rasio dan tinggi badan seseorang.
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  e.	Program tersebut menghitung persentase BMI seseorang. Karena output dari program tersebut beruma persentase.
+                  </span>
+                </div>           
+              </div>
+              `
+          ],
+          kunjawSoal: 0,
+          UrlYoutube: "",
+          type: "soal"
+        },
+        {
+          judulMateri: "11",
+          isiMateri: `
+                Pernahkah kalian ingin pergi ke sebuah tempat tertentu dengan menggunakan moda transportasi? Keputusan menggunakan sebuah moda transportasi untuk bepergian biasanya tergantung pada sebuah keadaan tertentu.Misalnya, apabila kondisi hujan, maka kalian akan lebih memilih menggunakan mobil daripada menggunakan sepeda motor, namun apabila cuaca sedang cerah dan jarak yang ditempuh adalah dekat, maka kalian akan memilih menggunakan sepeda motor.  
+                Komputer merupakan alat yang membantu banyak aktivitas manusia.Pada dasarnya, komputer menjalankan perintah dari manusia.Perintah - perintah tersebut dituangkan secara tertulis dalam sebuah aturan tertentu yang disebut sebagai kode program yang bertujuan untuk mengatur bagaimana komputer harus bertindak untuk menyelesaikan sebuah permasalahan tertentu.Hal ini termasuk juga dalam proses pengambilan keputusan, seperti halnya dalam contoh pemilihan moda transportasi di atas.  
+                `,
+          Image: "",
+          soal: `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  Perhatikan program berikut:
+                  </span>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
+                  <img
+                    alt="Logo"
+                    src="/media/posttest/10webpo.png"
+                    style="height: 40%; width: 40%;"
+                  />
+                </div>  
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  Pernyataan yang sesuai dengan program di atas adalah…
                   </span>
                 </div>
               </div>
@@ -799,12 +890,12 @@ export const soalPosttest: DataMateri[] = [
               </div>
               `
           ],
-          kunjawSoal: 1,
+          kunjawSoal: 0,
           UrlYoutube: "",
           type: "soal"
         },
         {
-          judulMateri: "11",
+          judulMateri: "12",
           isiMateri: `
                 Pernahkah kalian ingin pergi ke sebuah tempat tertentu dengan menggunakan moda transportasi? Keputusan menggunakan sebuah moda transportasi untuk bepergian biasanya tergantung pada sebuah keadaan tertentu.Misalnya, apabila kondisi hujan, maka kalian akan lebih memilih menggunakan mobil daripada menggunakan sepeda motor, namun apabila cuaca sedang cerah dan jarak yang ditempuh adalah dekat, maka kalian akan memilih menggunakan sepeda motor.  
                 Komputer merupakan alat yang membantu banyak aktivitas manusia.Pada dasarnya, komputer menjalankan perintah dari manusia.Perintah - perintah tersebut dituangkan secara tertulis dalam sebuah aturan tertentu yang disebut sebagai kode program yang bertujuan untuk mengatur bagaimana komputer harus bertindak untuk menyelesaikan sebuah permasalahan tertentu.Hal ini termasuk juga dalam proses pengambilan keputusan, seperti halnya dalam contoh pemilihan moda transportasi di atas.  
@@ -814,7 +905,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Seorang pelatih atletik memiliki persyaratan berikut untuk siswa yang ingin bergabung dengan tim atletiknya: <br/>
+                  Seorang pelatih atletik memiliki persyaratan berikut untuk siswa yang ingin bergabung dengan tim atletiknya:<br/>
                   •	Siswa harus memiliki tinggi badan minimal 160 cm. <br/>
                   •	Jika tinggi badan siswa kurang dari 160 cm, maka siswa harus memiliki berat badan minimal 50 kg. <br/>
                   Berdasarkan persyaratan di atas, jenis percabangan yang tepat untuk digunakan dalam program pengecekan kelayakan siswa adalah...
@@ -869,86 +960,7 @@ export const soalPosttest: DataMateri[] = [
               </div>
               `
           ],
-          kunjawSoal: 1,
-          UrlYoutube: "",
-          type: "soal"
-        },
-        {
-          judulMateri: "12",
-          isiMateri: `
-                Pernahkah kalian ingin pergi ke sebuah tempat tertentu dengan menggunakan moda transportasi? Keputusan menggunakan sebuah moda transportasi untuk bepergian biasanya tergantung pada sebuah keadaan tertentu.Misalnya, apabila kondisi hujan, maka kalian akan lebih memilih menggunakan mobil daripada menggunakan sepeda motor, namun apabila cuaca sedang cerah dan jarak yang ditempuh adalah dekat, maka kalian akan memilih menggunakan sepeda motor.  
-                Komputer merupakan alat yang membantu banyak aktivitas manusia.Pada dasarnya, komputer menjalankan perintah dari manusia.Perintah - perintah tersebut dituangkan secara tertulis dalam sebuah aturan tertentu yang disebut sebagai kode program yang bertujuan untuk mengatur bagaimana komputer harus bertindak untuk menyelesaikan sebuah permasalahan tertentu.Hal ini termasuk juga dalam proses pengambilan keputusan, seperti halnya dalam contoh pemilihan moda transportasi di atas.  
-                `,
-          Image: "",
-          soal: `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan program berikut!<br/>
-                  </span>
-                </div>
-                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                  <img
-                    alt="Logo"
-                    src="/media/posttest/po26.png"
-                    style="height: 70%; width: 70%;"
-                  />
-                </div>  
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  <br/>Dari program di atas, jika kita menginputkan nilai ujian = 80 dan nilai praktek = 65, maka output dari program tersebut adalah…
-                  </span>
-                </div>
-              </div>
-              `,
-          pilihanSoal: [
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  a.	Selamat! Anda memenuhi syarat untuk kursus lanjutan.
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  b.	Maaf, Anda belum memenuhi syarat untuk kursus lanjutan.
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  c.	Tidak ada output
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  d.	Program error
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  e.	Nilai ujian = 80 dan Nilai praktek = 65
-                  </span>
-                </div>           
-              </div>
-              `
-          ],
-          kunjawSoal: 1,
+          kunjawSoal: 2,
           UrlYoutube: "",
           type: "soal"
         },
@@ -975,7 +987,7 @@ export const soalPosttest: DataMateri[] = [
                 </div>  
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Pseudocode di atas belum memiliki susunan yang tepat. Susunan pseudocode yang tepat adalah...
+                  Pseudocode di atas belum memiliki susunan yang tepat. Susunan pseudocode yang tepat adalah...
                   </span>
                 </div>
               </div>
@@ -1042,19 +1054,19 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan pseudocode berikut:<br/>
+                  Perhatikan program berikut:<br/>
                   </span>
                 </div>
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/po30.png"
-                    style="height: 50%; width: 50%;"
+                    src="/media/posttest/14webpo.png"
+                    style="height: 40%; width: 40%;"
                   />
                 </div>  
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Terdapat kesalahan pada pseudocode di atas, kesalahan tersebut terdapat pada line…
+                  Dari program di atas, jika  kita menginputkan sudah memiliki pekerjaan dan penghasilan Rp. 400.000, maka output dari program tersebut adalah…
                   </span>
                 </div>
               </div>
@@ -1064,7 +1076,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  a.	Posisi Line 1 dan Line 3 terbalik
+                  a.	Penghasilan Anda mencukupi.
                   </span>
                 </div>           
               </div>
@@ -1073,7 +1085,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  b.	Posisi Line 2 dan Line 1 terbalik
+                  b.	Penghasilan Anda kurang.
                   </span>
                 </div>           
               </div>
@@ -1082,7 +1094,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  c.	Posisi Line 4 dan Line 6 terbalik
+                  c.	Anda belum memiliki pekerjaan.
                   </span>
                 </div>           
               </div>
@@ -1091,7 +1103,7 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  d.	Posisi Line 5 dan Line 7 terbalik
+                  d.	Input tidak valid.
                   </span>
                 </div>           
               </div>
@@ -1100,13 +1112,13 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  e.	Posisi Line 7 dan Line 4 terbalik 
+                  e.	Program error
                   </span>
                 </div>           
               </div>
               `
           ],
-          kunjawSoal: 3,
+          kunjawSoal: 1,
           UrlYoutube: "",
           type: "soal"
         },
@@ -1127,13 +1139,92 @@ export const soalPosttest: DataMateri[] = [
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/po31.png"
+                    src="/media/posttest/15webpo.png"
                     style="height: 50%; width: 50%;"
                   />
                 </div>  
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Pernyataan yang sesuai dengan program di atas adalah…
+                  Jika kita menginputkan bukan membership dari toko tersebut dan total pembelian Rp. 50.000, maka output dari program tersebut adalah…
+                  </span>
+                </div>
+              </div>
+              `,
+          pilihanSoal: [
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  a.	Total yang harus dibayar: Rp 50000.00
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  b.	Total yang harus dibayar: Rp 45000.00
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  c.	Total yang harus dibayar: Rp 47500.00
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  d.	Total yang harus dibayar: Rp 40000.00
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  e.	Tidak ada output
+                  </span>
+                </div>           
+              </div>
+              `
+          ],
+          kunjawSoal: 0,
+          UrlYoutube: "",
+          type: "soal"
+        },
+        {
+          judulMateri: "16",
+          isiMateri: `
+                Pernahkah kalian ingin pergi ke sebuah tempat tertentu dengan menggunakan moda transportasi? Keputusan menggunakan sebuah moda transportasi untuk bepergian biasanya tergantung pada sebuah keadaan tertentu.Misalnya, apabila kondisi hujan, maka kalian akan lebih memilih menggunakan mobil daripada menggunakan sepeda motor, namun apabila cuaca sedang cerah dan jarak yang ditempuh adalah dekat, maka kalian akan memilih menggunakan sepeda motor.  
+                Komputer merupakan alat yang membantu banyak aktivitas manusia.Pada dasarnya, komputer menjalankan perintah dari manusia.Perintah - perintah tersebut dituangkan secara tertulis dalam sebuah aturan tertentu yang disebut sebagai kode program yang bertujuan untuk mengatur bagaimana komputer harus bertindak untuk menyelesaikan sebuah permasalahan tertentu.Hal ini termasuk juga dalam proses pengambilan keputusan, seperti halnya dalam contoh pemilihan moda transportasi di atas.  
+                `,
+          Image: "",
+          soal: `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  Perhatikan program berikut:
+                  </span>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
+                  <img
+                    alt="Logo"
+                    src="/media/posttest/16webpo.png"
+                    style="height: 50%; width: 50%;"
+                  />
+                </div>  
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  Pernyataan yang sesuai dengan program di atas adalah…
                   </span>
                 </div>
               </div>
@@ -1179,80 +1270,13 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  e.	Apabila peringkat 5 dan apabila pengasilan 1500000 maka tidak mendapatkan beasiswa 
+                  e.	Apabila peringkat 5 dan apabila pengasilan 1500000 maka tidak mendapatkan beasiswa
                   </span>
                 </div>           
               </div>
               `
           ],
           kunjawSoal: 3,
-          UrlYoutube: "",
-          type: "soal"
-        },
-        {
-          judulMateri: "16",
-          isiMateri: `
-                Pernahkah kalian ingin pergi ke sebuah tempat tertentu dengan menggunakan moda transportasi? Keputusan menggunakan sebuah moda transportasi untuk bepergian biasanya tergantung pada sebuah keadaan tertentu.Misalnya, apabila kondisi hujan, maka kalian akan lebih memilih menggunakan mobil daripada menggunakan sepeda motor, namun apabila cuaca sedang cerah dan jarak yang ditempuh adalah dekat, maka kalian akan memilih menggunakan sepeda motor.  
-                Komputer merupakan alat yang membantu banyak aktivitas manusia.Pada dasarnya, komputer menjalankan perintah dari manusia.Perintah - perintah tersebut dituangkan secara tertulis dalam sebuah aturan tertentu yang disebut sebagai kode program yang bertujuan untuk mengatur bagaimana komputer harus bertindak untuk menyelesaikan sebuah permasalahan tertentu.Hal ini termasuk juga dalam proses pengambilan keputusan, seperti halnya dalam contoh pemilihan moda transportasi di atas.  
-                `,
-          Image: "",
-          soal: `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Dalam pengembangan perangkat lunak, kapan switch case paling tepat digunakan?<br/>
-                  </span>
-                </div>
-              </div>
-              `,
-          pilihanSoal: [
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  a.	Ketika hanya ada satu pilihan yang harus dievaluasi, karena switch case memungkinkan untuk memeriksa satu kondisi secara langsung.
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  b.	Ketika ada banyak pilihan dan setiap pilihan harus dievaluasi secara terpisah berdasarkan nilai variabel tertentu, karena switch case memungkinkan penanganan banyak kondisi dengan lebih bersih dan terstruktur dibandingkan dengan if-else.
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  c.	Ketika hanya ada dua pilihan, karena switch case kurang efisien dan lebih rumit dibandingkan dengan if-else untuk hanya dua kondisi.
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  d.	Ketika hanya ada beberapa pilihan yang mungkin, tetapi setiap pilihan harus mengevaluasi beberapa kondisi secara bersamaan, karena switch case tidak mendukung evaluasi beberapa kondisi secara bersamaan dengan baik.
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  e.	Tidak ada situasi di mana switch case cocok digunakan, karena pernyataan ini tidak benar, switch case sangat berguna dalam situasi tertentu.
-                  </span>
-                </div>           
-              </div>
-              `
-          ],
-          kunjawSoal: 1,
           UrlYoutube: "",
           type: "soal"
         },
@@ -1267,19 +1291,86 @@ export const soalPosttest: DataMateri[] = [
               <div style="font-family: Arial, sans-serif;">
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan program case berikut:<br/>
+                  Sebuah restoran ingin membuat program yang menampilkan menu makanan yang berbeda setiap harinya. Jika pelanggan menginputkan hari tertentu maka output yang dihasilkan adalah menu apa saja yang tersedia di hari tersebut. <br/>
+                  Berdasarkan kasus di atas, jenis percabangan apa yang paling tepat digunakan…
+                  </span>
+                </div>
+              `,
+          pilihanSoal: [
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  a.	If, karena hanya ada satu kondisi yang harus diperiksa.
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  b.	If-else, karena membutuhkan beberapa kondisi yang harus diperiksa.
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  c.	Nested-if, karena diperlukan pengecekan kondisi secara bertahap.
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  d.	Swich-case, karena diperlukan banyak pilihan yang harus dicek secara terpisah berdasarkan suatu variable.
+                  </span>
+                </div>           
+              </div>
+              `,
+            `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  e.	For, karena dibutuhkan perulangan pada saat program dibuat.
+                  </span>
+                </div>           
+              </div>
+              `
+          ],
+          kunjawSoal: 3,
+          UrlYoutube: "",
+          type: "soal"
+        },
+        {
+          judulMateri: "18",
+          isiMateri: `
+                Pernahkah kalian ingin pergi ke sebuah tempat tertentu dengan menggunakan moda transportasi? Keputusan menggunakan sebuah moda transportasi untuk bepergian biasanya tergantung pada sebuah keadaan tertentu.Misalnya, apabila kondisi hujan, maka kalian akan lebih memilih menggunakan mobil daripada menggunakan sepeda motor, namun apabila cuaca sedang cerah dan jarak yang ditempuh adalah dekat, maka kalian akan memilih menggunakan sepeda motor.  
+                Komputer merupakan alat yang membantu banyak aktivitas manusia.Pada dasarnya, komputer menjalankan perintah dari manusia.Perintah - perintah tersebut dituangkan secara tertulis dalam sebuah aturan tertentu yang disebut sebagai kode program yang bertujuan untuk mengatur bagaimana komputer harus bertindak untuk menyelesaikan sebuah permasalahan tertentu.Hal ini termasuk juga dalam proses pengambilan keputusan, seperti halnya dalam contoh pemilihan moda transportasi di atas.  
+                `,
+          Image: "",
+          soal: `
+              <div style="font-family: Arial, sans-serif;">
+                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
+                  <span style="font-size: 20px; text-align: justify;">
+                  Perhatikan program berikut!<br/>
                   </span>
                 </div>
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/po37.png"
-                    style="height: 40%; width: 40%;"
+                    src="/media/posttest/18webpo.png"
+                    style="height: 50%; width: 50%;"
                   />
                 </div>  
                 <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                   <span style="font-size: 20px; text-align: justify;">
-                  <br/>Dari program di atas, maka output yang tepat adalah…
+                  Dari program di atas, maka output yang tepat adalah…
                   </span>
                 </div>
               </div>
@@ -1336,85 +1427,6 @@ export const soalPosttest: DataMateri[] = [
           type: "soal"
         },
         {
-          judulMateri: "18",
-          isiMateri: `
-                Pernahkah kalian ingin pergi ke sebuah tempat tertentu dengan menggunakan moda transportasi? Keputusan menggunakan sebuah moda transportasi untuk bepergian biasanya tergantung pada sebuah keadaan tertentu.Misalnya, apabila kondisi hujan, maka kalian akan lebih memilih menggunakan mobil daripada menggunakan sepeda motor, namun apabila cuaca sedang cerah dan jarak yang ditempuh adalah dekat, maka kalian akan memilih menggunakan sepeda motor.  
-                Komputer merupakan alat yang membantu banyak aktivitas manusia.Pada dasarnya, komputer menjalankan perintah dari manusia.Perintah - perintah tersebut dituangkan secara tertulis dalam sebuah aturan tertentu yang disebut sebagai kode program yang bertujuan untuk mengatur bagaimana komputer harus bertindak untuk menyelesaikan sebuah permasalahan tertentu.Hal ini termasuk juga dalam proses pengambilan keputusan, seperti halnya dalam contoh pemilihan moda transportasi di atas.  
-                `,
-          Image: "",
-          soal: `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  Perhatikan program berikut!<br/>
-                  </span>
-                </div>
-                <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
-                  <img
-                    alt="Logo"
-                    src="/media/posttest/po38.png"
-                    style="height: 50%; width: 50%;"
-                  />
-                </div>  
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  <br/>Jika kita menginputkan operator = ‘-‘, menginputkan angka 5 dan 7, maka output dari program tersebut adalah…
-                  </span>
-                </div>
-              </div>
-              `,
-          pilihanSoal: [
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  a.	Hasil penjumlahan: 12.00
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  b.	Hasil pengurangan: -2.00
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  c.	Hasil perkalian: 5
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  d.	Tidak ada output
-                  </span>
-                </div>           
-              </div>
-              `,
-            `
-              <div style="font-family: Arial, sans-serif;">
-                <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
-                  <span style="font-size: 20px; text-align: justify;">
-                  e.	Program error
-                  </span>
-                </div>           
-              </div>
-              `
-          ],
-          kunjawSoal: 1,
-          UrlYoutube: "",
-          type: "soal"
-        },
-        {
           judulMateri: "19",
           isiMateri: `
                 Pernahkah kalian ingin pergi ke sebuah tempat tertentu dengan menggunakan moda transportasi? Keputusan menggunakan sebuah moda transportasi untuk bepergian biasanya tergantung pada sebuah keadaan tertentu.Misalnya, apabila kondisi hujan, maka kalian akan lebih memilih menggunakan mobil daripada menggunakan sepeda motor, namun apabila cuaca sedang cerah dan jarak yang ditempuh adalah dekat, maka kalian akan memilih menggunakan sepeda motor.  
@@ -1430,7 +1442,7 @@ export const soalPosttest: DataMateri[] = [
                 <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 20px;">
                   <img
                     alt="Logo"
-                    src="/media/posttest/po39.png"
+                    src="/media/posttest/19webpo.png"
                     style="height: 40%; width: 40%;"
                   />
                 </div>  
