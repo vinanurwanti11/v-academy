@@ -284,7 +284,7 @@ const IsiMateri: React.FC<Props> = ({
                               <div className='ps-8 pe-8'>
                                 <textarea
                                   className='form-control'
-                                  placeholder='Apa itu algoritma dan pemrograman?'
+                                  placeholder='Masukkan Jawaban ...'
                                   onChange={(e) => setNewPertanyaan(e.target.value)}
                                 />
                               </div>

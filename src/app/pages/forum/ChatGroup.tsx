@@ -294,7 +294,7 @@ const ChatGroup: FC = () => {
                               <div
                                 className='d-flex border border-secondary border-1 rounded p-2'
                                 style={{ alignItems: 'center', justifyContent: 'center', backgroundColor: '#4584AD', cursor: 'pointer', width: 250, marginBottom: -20 }}
-                                onClick={() => navigate("/hasil/evaluasi", { state: { ke: "1", type: "lkpd" } })}
+                                onClick={() => navigate("/catatan/siswa", { state: { ke: "1", type: "lkpd" } })}
                               >
                                 <span style={{ fontSize: '16px', alignSelf: 'center' }} className='text-white fw-bold'>Lihat Catatan Siswa</span>
                               </div>

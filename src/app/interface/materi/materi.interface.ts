@@ -92,6 +92,13 @@ export const materiOperator: DataMateri[] = [
                 <iframe width="800" height="500" src="https://www.youtube.com/embed/VkcM4M4FKf4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
 
+              <div style="text-align: justify; align-self:start; margin-top:20px; margin-bottom:20px">
+                <p style="font-size: 20px; align-self:start">Referensi:</p>
+                <ul style="font-size: 20px; align-self:start;">
+                  <li>Rosa A.S (2018). <em>Logika Algoritma dan Pemrograman Dasar</em>. Bandung: Modula</li>
+                </ul>
+              </div>
+
               <h1 style="font-size: 30px; align-self:start; margin-top:20px">Latihan Soal</h1>
 
               <span style="font-size: 20px; text-align: justify; align-self:start">
@@ -168,6 +175,13 @@ export const materiIfThen: DataMateri[] = [
 
               <div style="justify-content: center; align-items: center; margin-top:15px; margin-bottom:15px">
                 <iframe width="800" height="500" src="https://www.youtube.com/embed/RAwrY-RoV7Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+
+              <div style="text-align: justify; align-self:start; margin-top:20px; margin-bottom:20px">
+                <p style="font-size: 20px; align-self:start">Referensi:</p>
+                <ul style="font-size: 20px; align-self:start;">
+                  <li>Rosa A.S (2018). <em>Logika Algoritma dan Pemrograman Dasar</em>. Bandung: Modula</li>
+                </ul>
               </div>
 
               <h1 style="font-size: 30px; align-self:start; margin-top:20px">Latihan Soal</h1>
@@ -251,6 +265,13 @@ export const materiIfElse: DataMateri[] = [
 
               <div style="justify-content: center; align-items: center; margin-top:15px; margin-bottom:15px">
                 <iframe width="800" height="500" src="https://www.youtube.com/embed/yClNpWBY_B4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+
+              <div style="text-align: justify; align-self:start; margin-top:20px; margin-bottom:20px">
+                <p style="font-size: 20px; align-self:start">Referensi:</p>
+                <ul style="font-size: 20px; align-self:start;">
+                  <li>Rosa A.S (2018). <em>Logika Algoritma dan Pemrograman Dasar</em>. Bandung: Modula</li>
+                </ul>
               </div>
 
               <h1 style="font-size: 30px; align-self:start; margin-top:20px">Latihan Soal</h1>
@@ -337,6 +358,13 @@ export const materiCase: DataMateri[] = [
 
               <div style="justify-content: center; align-items: center; margin-top:15px; margin-bottom:15px">
                 <iframe width="800" height="500" src="https://www.youtube.com/embed/nsZIBO5GQaE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+
+              <div style="text-align: justify; align-self:start; margin-top:20px; margin-bottom:20px">
+                <p style="font-size: 20px; align-self:start">Referensi:</p>
+                <ul style="font-size: 20px; align-self:start;">
+                  <li>Rosa A.S (2018). <em>Logika Algoritma dan Pemrograman Dasar</em>. Bandung: Modula</li>
+                </ul>
               </div>
 
               <h1 style="font-size: 30px; align-self:start; margin-top:20px">Latihan Soal</h1>

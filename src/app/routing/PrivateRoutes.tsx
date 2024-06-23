@@ -18,6 +18,8 @@ import EvaluasiFile from '../pages/evaluasi/EvaluasiFile'
 import { AbsensiSiswa } from '../pages/absensi/AbsensiSiswa'
 import EvaluasiFileSiswa from '../pages/evaluasi/EvaluasiFileSiswa'
 import HasilSiswa from '../pages/evaluasi/listHasilSiswa/hasilSiswa'
+import HasilSoal from '../pages/evaluasi/components/HasilSoal'
+import HasilCatatanSiswa from '../pages/evaluasi/listHasilSiswa/hasilCatatanSiswa'
 
 const PrivateRoutes = () => {
   const UsersPage = lazy(() => import('../modules/apps/user-management/UsersPage'))
@@ -31,12 +33,18 @@ const PrivateRoutes = () => {
         <Route path='dashboard' element={<DashboardWrapper />} />
         <Route path='/evaluasi' element={<Evaluasi />} />
 
+        <Route path='/hasil/evaluasi/page' element={
+          <PaginationProvider>
+            <HasilSoal />
+          </PaginationProvider>
+        } />
+
         <Route path='/evaluasi/soal' element={
           <PaginationProvider>
             <DetailEvaluasi />
           </PaginationProvider>
         } />
-        
+
         <Route path='/evaluasi/lkpd' element={<Lkpd />} />
         <Route path='/evaluasi/file' element={<EvaluasiFile />} />
         <Route path='/evaluasi/siswa/:id' element={<EvaluasiFileSiswa />} />
@@ -44,6 +52,7 @@ const PrivateRoutes = () => {
         <Route path='/group' element={<ChatGroup />} />
         <Route path='/absensi/siswa' element={<AbsensiSiswa className={''} />} />
         <Route path='/hasil/evaluasi' element={<HasilSiswa />} />
+        <Route path='/catatan/siswa' element={<HasilCatatanSiswa />} />
 
         <Route path='/materi' element={
           <IsMateriProvider>

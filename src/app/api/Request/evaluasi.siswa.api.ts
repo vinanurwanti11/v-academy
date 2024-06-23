@@ -18,3 +18,12 @@ export const getEvaluasiByUUID = async (path: string, uid: string): Promise<Body
 
   return data
 }
+
+export const getEvaluasiByTypeEvaluasi = async (path: string): Promise<BodySendEvaluasi[]> => {
+  const { data } = await BaseApi().request<BodySendEvaluasi[]>({
+    url: `evaluasi/${path}.json?auth=${authKey}`,
+    method: 'GET',
+  })
+
+  return data
+}
