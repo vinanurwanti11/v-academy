@@ -62,7 +62,7 @@ const EvaluasiFile: FC = () => {
           </div>
         ) : (
           <div className='d-flex flex-column flex-lg-row rounded pt-2 shadow-sm p-2' style={{ justifyContent: 'center', alignContent: 'center' }}>
-            <iframe width="100%" height="620" src={`https://dzik.my.id:9001/p/${noAbsen}`} title="Forum Diskusi" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; camera https://dzik.my.id:9001; microphone https://dzik.my.id:9001" allowFullScreen></iframe>
+            <iframe width="100%" height="620" src={`https://etherpad.wikimedia.org/p/${noAbsen}`} title="Forum Diskusi" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; camera https://etherpad.wikimedia.org; microphone https://etherpad.wikimedia.org" allowFullScreen></iframe>
           </div >
         )
       }

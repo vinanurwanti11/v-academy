@@ -313,7 +313,7 @@ const ChatGroup: FC = () => {
             <div className={`card ${page === "ajarkoding" ? "col-xl-12" : "col-xl-8"} rounded shadow-sm p-2`}
             // style={{ width: '25%', height: '180px', cursor: 'pointer' }}
             >
-              <iframe width="100%" height="620" src={`https://dzik.my.id:9001/p/${page === "ajarkoding" ? `${page}` : `kel${page}`}`} title="Forum Diskusi" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; camera https://dzik.my.id:9001; microphone https://dzik.my.id:9001" allowFullScreen></iframe>
+              <iframe width="100%" height="620" src={`https://etherpad.wikimedia.org/p/${page === "ajarkoding" ? `${page}` : `kel${page}`}`} title="Forum Diskusi" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; camera https://etherpad.wikimedia.org; microphone https://etherpad.wikimedia.org" allowFullScreen></iframe>
             </div>
           </div >
 

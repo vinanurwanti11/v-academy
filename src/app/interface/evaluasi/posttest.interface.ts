@@ -890,7 +890,7 @@ export const soalPosttest: DataMateri[] = [
               </div>
               `
           ],
-          kunjawSoal: 0,
+          kunjawSoal: 1,
           UrlYoutube: "",
           type: "soal"
         },
