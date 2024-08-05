@@ -12,6 +12,7 @@ export interface ProfileSiswaTypeResponse {
 export interface CreateProfileSiswaType {
   name: string
   nomor_absen: string
+  password?: string
   email: string
   imageProfile: string
   type: string

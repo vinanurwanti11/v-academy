@@ -29,8 +29,6 @@ const registerSchema = Yup.object().shape({
     .required('Password tidak boleh kosong'),
 })
 
-
-
 /*
   Formik+YUP+Typescript:
   https://jaredpalmer.com/formik/docs/tutorial#getfieldprops
@@ -62,6 +60,7 @@ export function Registration() {
           const bodyProfile: CreateProfileSiswaType = {
             name: values.fullname,
             nomor_absen: values.absen,
+            password: values.password,
             email: values.email,
             imageProfile: image,
             kelompok: "1",
