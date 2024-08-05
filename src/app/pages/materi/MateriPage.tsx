@@ -421,9 +421,9 @@ const MateriPage = () => {
                                                 <span className='text-dark fw-bold fs-4'>
                                                   {e.fullname} <span className='text-primary fw-bold fs-4'>{profile?.email === e.email && profile.type.toLowerCase() === "siswa" ? "(kamu)" : ""}</span>
                                                 </span>
-                                                <span className='text-muted fw-semibold text-muted d-block fs-5'>
+                                                {/* <span className='text-muted fw-semibold text-muted d-block fs-5'>
                                                   {e.email}
-                                                </span>
+                                                </span> */}
                                               </div>
                                             </div>
                                           </td>

@@ -115,9 +115,9 @@ const HasilSiswa = () => {
                                           <span className='text-dark fw-bold fs-4 text-hover-primary'>
                                             {e.name}
                                           </span>
-                                          <span className='text-muted fw-semibold text-muted d-block fs-5'>
+                                          {/* <span className='text-muted fw-semibold text-muted d-block fs-5'>
                                             {e.email}
-                                          </span>
+                                          </span> */}
                                         </div>
                                       </div>
                                     </td>
