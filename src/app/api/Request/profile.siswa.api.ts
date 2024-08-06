@@ -12,14 +12,13 @@ export const getProfileSiswa = async (uid: string): Promise<CreateProfileSiswaTy
 
 export const createProfileSiswa = async (uid: string, props: CreateProfileSiswaType): Promise<any> => {
   const { data } = await BaseApi().request<any>({
-    url: `users/siswa/${uid}.json?auth=${authKey}`,
+    url: `users/siswa${uid}.json?auth=${authKey}`,
     method: 'POST',
     data: props
-  })
+  });
 
   return data
 }
-
 
 export const getAllSiswa = async (): Promise<CreateProfileSiswaType[][]> => {
   const { data } = await BaseApi().request<CreateProfileSiswaType[][]>({

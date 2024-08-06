@@ -1,8 +1,7 @@
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth"
+import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-import { getMessaging } from "firebase/messaging"
+import { getMessaging } from "firebase/messaging";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBP_1svh1CvOlcZUcpEezTLdJEYZLElFKk",
@@ -15,7 +14,6 @@ const firebaseConfig = {
   measurementId: "G-XFQD3YGBX5"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const authFirebase = getAuth(app);
 const db = getFirestore(app);

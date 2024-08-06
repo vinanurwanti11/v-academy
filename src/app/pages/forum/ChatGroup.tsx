@@ -96,7 +96,7 @@ const ChatGroup: FC = () => {
         buttonsStyling: false
       })
       swalWithBootstrapButtons.fire({
-        title: `Yakin untuk hapus catatan?`,
+        title: `Yakin untuk hapus jawaban?`,
         icon: 'warning',
         showCancelButton: true,
         cancelButtonText: 'Belum deh',
@@ -116,7 +116,7 @@ const ChatGroup: FC = () => {
               handleAddPertanyaan(body)
               if (i + 1 === output.length && resDelete === null) {
                 swalSuccess.fire({
-                  title: `Catatan Berhasil Dihapus`,
+                  title: `Jawaban Berhasil Dihapus`,
                   icon: 'success',
                   confirmButtonText: 'Dismiss',
                 }).then(async (result) => {
@@ -128,8 +128,8 @@ const ChatGroup: FC = () => {
             });
           } else {
             swalSuccess.fire({
-              title: `Pertanyaan Berhasil Terjawab, Kalian Keren 🏆`,
-              icon: 'success',
+              title: `Tidak dapat menghapus jawaban!`,
+              icon: 'error',
               confirmButtonText: 'Dismiss',
             }).then(async (result) => {
               if (result.dismiss || result.isConfirmed) {
@@ -236,7 +236,7 @@ const ChatGroup: FC = () => {
                           <div className='border border-secondary border-1 rounded p-2 mb-3' key={i} style={{ width: "100%" }}>
                             <div className='d-flex flex-lg-row' style={{ justifyContent: 'space-between', marginBottom: '-20px' }}>
                               <div>
-                                <span className='text-gray-800 fw-bold' style={{ fontSize: '18px' }}>Catatan ({page === "ajarkoding" ? `Kelompok ${e.pertanyaan.fullname}` : e.pertanyaan.fullname})</span>
+                                <span className='text-gray-800 fw-bold' style={{ fontSize: '18px' }}>Jawaban ({page === "ajarkoding" ? `Kelompok ${e.pertanyaan.fullname}` : e.pertanyaan.fullname})</span>
                               </div>
                               {
                                 page !== "ajarkoding" ?
@@ -275,7 +275,7 @@ const ChatGroup: FC = () => {
                         )
                       }) :
                         <div className='border border-secondary border-1 rounded p-5 mb-3' style={{ width: "100%" }}>
-                          <span style={{ fontSize: '20px' }} className='text-dark'>Tidak ada catatan!</span>
+                          <span style={{ fontSize: '20px' }} className='text-dark'>Tidak ada jawaban!</span>
                         </div>
                     }
                     {
