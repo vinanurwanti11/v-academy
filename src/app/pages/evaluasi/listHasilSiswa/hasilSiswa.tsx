@@ -36,21 +36,22 @@ const HasilSiswa = () => {
         const res = await getEvaluasiByTypeEvaluasi(type)
         if (res !== null) {
           const hasilEvaluasiObject = Object.entries(res);
-          console.log();
           for (let i = 0; i < hasilEvaluasiObject.length; i++) {
             const profileSiswa = await getProfileSiswa(hasilEvaluasiObject[i][0])
-            const profileSiswaObject = Object.entries(profileSiswa);
-            const bodyForListEvaluasi: HasilEvaluasiSiswaType = {
-              name: profileSiswaObject[0][1].name,
-              nomor_absen: profileSiswaObject[0][1].nomor_absen,
-              email: profileSiswaObject[0][1].email,
-              imageProfile: profileSiswaObject[0][1].imageProfile,
-              type: profileSiswaObject[0][1].type,
-              kelompok: profileSiswaObject[0][1].kelompok,
-              poin: Object.entries(hasilEvaluasiObject[i][1])[0][1].poin,
-              uuid: hasilEvaluasiObject[i][0]
+            if (profileSiswa) {
+              const profileSiswaObject = Object.entries(profileSiswa);
+              const bodyForListEvaluasi: HasilEvaluasiSiswaType = {
+                name: profileSiswaObject[0][1].name,
+                nomor_absen: profileSiswaObject[0][1].nomor_absen,
+                email: profileSiswaObject[0][1].email,
+                imageProfile: profileSiswaObject[0][1].imageProfile,
+                type: profileSiswaObject[0][1].type,
+                kelompok: profileSiswaObject[0][1].kelompok,
+                poin: Object.entries(hasilEvaluasiObject[i][1])[0][1].poin,
+                uuid: hasilEvaluasiObject[i][0]
+              }
+              listHasilEvaluasi.push(bodyForListEvaluasi)
             }
-            listHasilEvaluasi.push(bodyForListEvaluasi)
           }
         }
         setLoading(false)
@@ -96,7 +97,7 @@ const HasilSiswa = () => {
                       {
                         listHasilEvaluasi && listHasilEvaluasi.map((e, i) => {
                           return (
-                            <tr>
+                            <tr key={i}>
                               {
                                 e.type.toLowerCase() !== "guru" && (
                                   <>
