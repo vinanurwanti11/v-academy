@@ -28,3 +28,14 @@ export const getAllSiswa = async (): Promise<CreateProfileSiswaType[][]> => {
 
   return data;
 };
+
+
+export const updateKelompokByUD = async (uid: string, id: string, kelompok: string): Promise<CreateProfileSiswaType> => {
+  const { data } = await BaseApi().request<CreateProfileSiswaType>({
+    url: `users/siswa/${uid}/${id}.json?auth=${authKey}`,
+    method: 'PATCH',
+    data: { kelompok }
+  })
+
+  return data
+}

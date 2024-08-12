@@ -218,7 +218,7 @@ const ChatGroup: FC = () => {
   const handleGetIsOpen = async () => {
     try {
       const isOpen = await getIsOpen("diskusi")
-      if (!isOpen) {
+      if (!isOpen && profile?.type.toLowerCase() === "siswa") {
         const swalSuccess = Swal.mixin({
           customClass: {
             confirmButton: 'btn btn-danger',

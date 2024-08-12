@@ -21,7 +21,7 @@ const MateriPage = () => {
   const auth = getAuth()
   const [uuid, setUuid] = useState<string | undefined>("")
   const [detailMateri] = useState<DetailMateriState[]>([])
-  const [isLoading, setLoading] = useState<boolean>(true)
+  const [isLoading, setLoading] = useState<boolean>(false)
   const [profile, setProfile] = useState<CreateProfileSiswaType>()
   const { setIsMateri } = useIsMateri()
   const [listPeringkat, setListPeringkat] = useState<CreatePeringkatType[]>([])

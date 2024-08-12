@@ -18,7 +18,7 @@ const DetailMateri = () => {
   const auth = getAuth()
   const [idMateri, setIdMateri] = useState<string>("")
   const [uuid, setUuid] = useState<string | undefined>("")
-  const [isLoading, setIsLoading] = useState<boolean>(true)
+  const [isLoading, setIsLoading] = useState<boolean>(false)
   const [rangkuman, setRangkuman] = useState<string>("")
   const [resRangkuman, setResRangkuman] = useState<string>("")
   const [hasilSoal, setHasilSoal] = useState<HasilSoalType[]>([])
