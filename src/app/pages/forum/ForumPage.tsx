@@ -393,7 +393,6 @@ const Forum = () => {
                             <tr className='fw-bold text-dark'>
                               {/* <th className='min-w-30px'>No</th> */}
                               <th className='min-w-150px'>Nama</th>
-                              <th className='min-w-150px'>Email</th>
                               <th className='min-w-140px'>Nomor Absen</th>
                               <th className='min-w-120px'>Kelompok</th>
                               <th className='min-w-120px'>Action</th>
@@ -426,16 +425,8 @@ const Forum = () => {
                                                 <span className='text-dark fw-bold fs-4'>
                                                   {e.name}
                                                 </span>
-                                                {/* <span className='text-muted fw-semibold text-muted d-block fs-5'>
-                                                  {e.email}
-                                                </span> */}
                                               </div>
                                             </div>
-                                          </td>
-                                          <td>
-                                            <span className='text-muted fw-bold d-block fs-4'>
-                                              {e.email}
-                                            </span>
                                           </td>
                                           <td>
                                             <span className='text-dark fw-bold d-block fs-4'>
