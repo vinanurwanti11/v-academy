@@ -14,14 +14,14 @@ import Swal from 'sweetalert2'
 import { getAllSiswa, getProfileSiswa } from '../../api/Request/profile.siswa.api'
 import { CreateProfileSiswaType } from '../../interface/profile.siswa.interface'
 import { CreatePeringkatType } from '../../interface/peringkat.interface'
-import { getAllPeringkatSiswa } from '../../api/Request/peringkat.siswa.api'
+import { getAllPeringkatSiswa, getDetailPeringkatSiswaByUID, updateProgresByUD } from '../../api/Request/peringkat.siswa.api'
 
 const MateriPage = () => {
   const navigate = useNavigate()
   const auth = getAuth()
   const [uuid, setUuid] = useState<string | undefined>("")
   const [detailMateri] = useState<DetailMateriState[]>([])
-  const [isLoading, setLoading] = useState<boolean>(false)
+  const [isLoading, setLoading] = useState<boolean>(true)
   const [profile, setProfile] = useState<CreateProfileSiswaType>()
   const { setIsMateri } = useIsMateri()
   const [listPeringkat, setListPeringkat] = useState<CreatePeringkatType[]>([])
@@ -106,7 +106,11 @@ const MateriPage = () => {
                 tanggalMulai: formattedDate
               }
               const res = await createDetailMateriByUID(uuid, body)
-              if (res) {
+              const getIdPoin = await getDetailPeringkatSiswaByUID(uuid)
+              const la = Object.entries(getIdPoin)
+              let progressMateri = la[0][1].progressMateri
+              const resUpdateProgress = await updateProgresByUD(uuid, la[0][0], progressMateri + 1, "On Progress")
+              if (res && resUpdateProgress) {
                 setLoading(false)
                 setDataMateri(materi)
                 setIsMateri(true)
@@ -149,7 +153,12 @@ const MateriPage = () => {
               tanggalMulai: formattedDate
             }
             const res = await createDetailMateriByUID(uuid, body)
-            if (res) {
+
+            const getIdPoin = await getDetailPeringkatSiswaByUID(uuid)
+            const la = Object.entries(getIdPoin)
+            let progressMateri = la[0][1].progressMateri
+            const resUpdateProgress = await updateProgresByUD(uuid, la[0][0], progressMateri + 1, "On Progress")
+            if (res && resUpdateProgress) {
               setLoading(false)
               setDataMateri(materi)
               setIsMateri(true)
@@ -190,7 +199,8 @@ const MateriPage = () => {
               poin: ha[0][1].poin,
               image_profile: ha[0][1].image_profile,
               type: ha[0][1].type,
-              progressMateri: ha[0][1].progressMateri
+              progressMateri: ha[0][1].progressMateri,
+              status: ha[0][1].status
             };
             return body;
           })
@@ -394,9 +404,11 @@ const MateriPage = () => {
                           {/* begin::Table head */}
                           <thead>
                             <tr className='fw-bold text-muted'>
+                              {/* <th className='min-w-30px'>No</th> */}
                               <th className='min-w-150px'>Nama</th>
                               <th className='min-w-140px'>Nomor Absen</th>
                               <th className='min-w-120px'>Progres Materi</th>
+                              <th className='min-w-120px'>Status</th>
                               {/* <th className='min-w-120px'>Poin</th> */}
                             </tr>
                           </thead>
@@ -412,6 +424,11 @@ const MateriPage = () => {
                                         <></>
                                         :
                                         <tr key={i}>
+                                          {/* <td>
+                                            <span className='text-dark fw-bold d-block fs-4'>
+                                              {i}
+                                            </span>
+                                          </td> */}
                                           <td>
                                             <div className='d-flex align-items-center'>
                                               <div className='symbol symbol-45px me-5'>
@@ -435,6 +452,13 @@ const MateriPage = () => {
                                           <td>
                                             <span className='text-dark fw-bold d-block fs-4'>
                                               {e.progressMateri}/4
+                                            </span>
+                                          </td>
+                                          <td>
+                                            <span className={`badge 
+                                            ${e.status === "Selesai" ? "badge-light-success" : e.status === "On Progress" ? "badge-light-warning" : "badge-light-danger"}
+                                            `}>
+                                              {e.status}
                                             </span>
                                           </td>
                                           {/* <td className='text-end'>

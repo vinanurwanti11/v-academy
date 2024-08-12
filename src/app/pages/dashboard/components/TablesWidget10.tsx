@@ -51,7 +51,8 @@ const TablesWidget10: React.FC<Props> = ({ className, title }) => {
               poin: ha[0][1].poin,
               image_profile: ha[0][1].image_profile,
               type: ha[0][1].type,
-              progressMateri: ha[0][1].progressMateri
+              progressMateri: ha[0][1].progressMateri,
+              status: ha[0][1].status
             };
             return body;
           })
@@ -73,7 +74,8 @@ const TablesWidget10: React.FC<Props> = ({ className, title }) => {
               poin: ga[0][1].poin,
               image_profile: ga[0][1].image_profile,
               type: ga[0][1].type,
-              progressMateri: ga[0][1].progressMateri
+              progressMateri: ga[0][1].progressMateri,
+              status: ga[0][1].status
 
             };
             return body;

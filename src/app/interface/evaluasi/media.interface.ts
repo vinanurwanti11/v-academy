@@ -116,7 +116,7 @@ export const penilaianMedia: DataMateri[] = [
                 <div style="font-family: Arial, sans-serif;">
                   <div style="display: flex; flex-direction: column; justify-content: center; margin-bottom: 20px;">
                     <span style="font-size: 20px; text-align: justify;">
-                    Media pembelajaran ini membuat saya lebih efektif Dalam
+                    Media pembelajaran ini membuat saya lebih efektif dalam Belajar
                     </span>
                   </div>       
                 </div>

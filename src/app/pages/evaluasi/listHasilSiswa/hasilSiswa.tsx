@@ -78,6 +78,8 @@ const HasilSiswa = () => {
                 className='logo-default h-25px mb-2'
               />
               <span className='text-gray-900 text-hover-primary' style={{ fontSize: '16px', fontWeight: 'bold' }}>Kembali</span>
+
+
             </div>
 
             <div className='card-body'>
@@ -89,7 +91,7 @@ const HasilSiswa = () => {
                       <tr className='fw-bold text-muted'>
                         <th className='min-w-100px'>Nama</th>
                         <th className='min-w-100px'>Nomor Absen</th>
-                        <th className='p-0 min-w-50px'>{`${type === 'pretest' || type === 'posttest' ? "Poin" : "Status"}`}</th>
+                        <th className='min-w-50px'>{`${type === 'pretest' || type === 'posttest' ? "Jawaban Benar" : "Status"}`}</th>
                       </tr>
                     </thead>
 
@@ -129,7 +131,7 @@ const HasilSiswa = () => {
                                     </td>
                                     <td>
                                       <span className='text-dark fw-bold d-block fs-4'>
-                                        <span className={`${type === 'pretest' || type === '' ? e.poin : 'badge badge-light-success'}`}>{`${type === 'pretest' || type === 'posttest' ? e.poin : "Selesai"}`}</span>
+                                        <span className={`${type === 'pretest' || type === 'posttest' ? e.poin : 'badge badge-light-success'}`}>{`${type === 'pretest' || type === 'posttest' ? e.poin : "Selesai"}`}</span>
                                       </span>
                                     </td>
                                   </>

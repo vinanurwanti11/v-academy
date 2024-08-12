@@ -23,7 +23,7 @@ const HasilSoal = () => {
   const [finalHasilSoal, setFinalHasilSoal] = useState<HasilSoalType[]>([])
   const [uuid, setUuid] = useState<string | undefined>("")
   const auth = getAuth()
-  const [loading, setLoading] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(true)
   const [profile, setProfile] = useState<CreateProfileSiswaType>()
 
   useEffect(() => {
@@ -40,6 +40,17 @@ const HasilSoal = () => {
       }
     })
   }, [uuid])
+
+  const handleGetProfile = async (uid: string | undefined) => {
+    setLoading(true)
+    if (uid) {
+      const getIdPoin = await getProfileSiswa(uid)
+      const la = Object.entries(getIdPoin)
+      console.log(la);
+
+      setProfile(la[0][1])
+    }
+  }
 
   useEffect(() => {
     // @ts-ignore
@@ -125,15 +136,6 @@ const HasilSoal = () => {
           }
         }
       }
-    }
-  }
-
-  const handleGetProfile = async (uid: string | undefined) => {
-    setLoading(true)
-    if (uid) {
-      const getIdPoin = await getProfileSiswa(uid)
-      const la = Object.entries(getIdPoin)
-      setProfile(la[0][1])
     }
   }
 

@@ -14,7 +14,7 @@ const EvaluasiFileSiswa: FC = () => {
   const [page, setPage] = useState<string>("")
   const [noAbsen, setNoAbsen] = useState<string>("")
   const [absen, setAbsen] = useState<string>("")
-  const [loading, setLoading] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(true)
   const { id } = useParams();
 
   useEffect(() => {

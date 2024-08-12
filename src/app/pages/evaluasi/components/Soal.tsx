@@ -5,12 +5,14 @@ import { usePagination } from '../../materi/context/materiProvider'
 import { soalPosttest } from '../../../interface/evaluasi/posttest.interface'
 import { soalLogic } from '../../../interface/evaluasi/logical.interface'
 import { penilaianMedia } from '../../../interface/evaluasi/media.interface'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { HasilSoalType } from '../../../interface/materi/materi.interface'
 import Lottie from 'lottie-react'
 import animLoading from '../../../../_molekul/assets/loading/animLoading.json'
 import { getProfileSiswa } from '../../../api/Request/profile.siswa.api'
 import { CreateProfileSiswaType } from '../../../interface/profile.siswa.interface'
+import { getAllIsOpen, getIsOpen } from '../../../api/Request/isopen.api'
+import Swal from 'sweetalert2'
 
 type Props = {
   className: string,
@@ -31,6 +33,7 @@ const Soal: React.FC<Props> = ({
 }) => {
   const [materi, setMateri] = useState<DataMateri[]>(soalPretest)
   const page = usePagination()
+  const navigate = useNavigate()
   const [materiParent, setMateriParent] = useState<string>("")
   // @ts-ignore
   const location = useLocation<data>()
@@ -76,7 +79,6 @@ const Soal: React.FC<Props> = ({
 
 
   const handleRadioChange = (index: number, value: HTMLInputElement["value"]) => {
-    console.log(value);
 
     if (index >= 0 && value) {
       setSelectedOptions(value)

@@ -39,11 +39,11 @@ export const updatePoinByUD = async (uid: string, id: string, poin: number): Pro
   return data
 }
 
-export const updateProgresByUD = async (uid: string, id: string, progressMateri: number): Promise<CreatePeringkatType> => {
+export const updateProgresByUD = async (uid: string, id: string, progressMateri: number, status: string): Promise<CreatePeringkatType> => {
   const { data } = await BaseApi().request<CreatePeringkatType>({
     url: `peringkat/${uid}/${id}.json?auth=${authKey}`,
     method: 'PATCH',
-    data: { progressMateri }
+    data: { progressMateri, status }
   })
 
   return data

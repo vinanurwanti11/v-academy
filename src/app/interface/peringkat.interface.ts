@@ -8,6 +8,7 @@ export interface CreatePeringkatType {
   image_profile: string
   type: string
   progressMateri: number
+  status?: string
 }
 
 export interface ProgressMateri {

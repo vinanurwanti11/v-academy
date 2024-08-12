@@ -3,19 +3,22 @@ import { Soal } from './components/Soal'
 import { Footer } from './components/Footer'
 import { usePagination } from '../materi/context/materiProvider'
 import { DataMateri, soalPretest } from '../../interface/evaluasi/pretest.interface'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { soalPosttest } from '../../interface/evaluasi/posttest.interface'
 import { soalLogic } from '../../interface/evaluasi/logical.interface'
 import { penilaianMedia } from '../../interface/evaluasi/media.interface'
-import { BodySendEvaluasi, HasilEvaluasiType, HasilSoalType } from '../../interface/materi/materi.interface'
+import { HasilSoalType } from '../../interface/materi/materi.interface'
 import { getEvaluasiByUUID } from '../../api/Request/evaluasi.siswa.api'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import Lottie from 'lottie-react'
 import animLoading from '../../../_molekul/assets/loading/animLoading.json'
+import Swal from 'sweetalert2'
+import { getAllIsOpen } from '../../api/Request/isopen.api'
 
 const DetailEvaluasi = () => {
   const [materi, setMateri] = useState<DataMateri[]>(soalPretest)
   const page = usePagination()
+  const navigate = useNavigate()
   const [materiParent, setMateriParent] = useState<string>("")
   // @ts-ignore
   const location = useLocation<data>()
@@ -23,7 +26,7 @@ const DetailEvaluasi = () => {
   const [finalHasilSoal, setFinalHasilSoal] = useState<HasilSoalType[]>([])
   const [uuid, setUuid] = useState<string | undefined>("")
   const auth = getAuth()
-  const [loading, setLoading] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(true)
 
 
   useEffect(() => {
@@ -38,6 +41,10 @@ const DetailEvaluasi = () => {
       }
     })
   }, [uuid])
+
+  useEffect(() => {
+    handleGetIsOpen()
+  }, [])
 
   useEffect(() => {
     // @ts-ignore
@@ -71,6 +78,88 @@ const DetailEvaluasi = () => {
       setLoading(false)
     }
   }
+
+  const handleGetIsOpen = async () => {
+
+    let title: string = ''
+
+    //@ts-ignore
+    if (location.state.materiParent === "pretest") {
+      title = `Mohon Maaf\nEvalusi Pre-test belum di buka oleh guru`
+      //@ts-ignore
+    } else if (location.state.materiParent === "posttest") {
+      title = `Mohon Maaf\nEvalusi Post-test belum di buka oleh guru`
+      //@ts-ignore
+    } else if (location.state.materiParent === "penilaianMedia") {
+      title = `Mohon Maaf\nPenilaian Media belum di buka oleh guru`
+    }
+
+    try {
+      const isOpen = await getAllIsOpen()
+      console.log(materiParent);
+
+      //@ts-ignore
+      if (location.state.materiParent === 'pretest' && !isOpen.pretest) {
+        const swalSuccess = Swal.mixin({
+          customClass: {
+            confirmButton: 'btn btn-danger',
+          },
+          buttonsStyling: false
+        })
+        swalSuccess.fire({
+          title: `${title}`,
+          icon: 'error',
+          confirmButtonText: 'Dismiss',
+        }).then(async (result) => {
+          if (result.dismiss || result.isConfirmed) {
+            navigate('/evaluasi')
+            window.location.reload()
+          }
+        })
+      }
+      //@ts-ignore
+      else if (location.state.materiParent === 'posttest' && !isOpen.posttest) {
+        const swalSuccess = Swal.mixin({
+          customClass: {
+            confirmButton: 'btn btn-danger',
+          },
+          buttonsStyling: false
+        })
+        swalSuccess.fire({
+          title: `${title}`,
+          icon: 'error',
+          confirmButtonText: 'Dismiss',
+        }).then(async (result) => {
+          if (result.dismiss || result.isConfirmed) {
+            navigate('/evaluasi')
+            window.location.reload()
+          }
+        })
+      }
+      //@ts-ignore
+      else if (location.state.materiParent === 'penilaianMedia' && !isOpen.penilaianMedia) {
+        const swalSuccess = Swal.mixin({
+          customClass: {
+            confirmButton: 'btn btn-danger',
+          },
+          buttonsStyling: false
+        })
+        swalSuccess.fire({
+          title: `${title}`,
+          icon: 'error',
+          confirmButtonText: 'Dismiss',
+        }).then(async (result) => {
+          if (result.dismiss || result.isConfirmed) {
+            navigate('/evaluasi')
+            window.location.reload()
+          }
+        })
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
 
 
   return (

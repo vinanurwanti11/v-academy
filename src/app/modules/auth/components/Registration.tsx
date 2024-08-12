@@ -74,7 +74,8 @@ export function Registration() {
             poin: 0,
             image_profile: image,
             type: "siswa",
-            progressMateri: 0
+            progressMateri: 0,
+            status: "Belum Mulai"
           }
           const postPeringkatSiswa = await createPeringkatByUID(ress.user.uid, bodyPringkat)
           const body: AuthModel = {

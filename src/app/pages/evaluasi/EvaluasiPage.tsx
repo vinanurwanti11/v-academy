@@ -10,13 +10,14 @@ import { isEvaluasi } from '../../api/Request/materi.siswa.api'
 import Swal from 'sweetalert2'
 import { getEvaluasiByUUID } from '../../api/Request/evaluasi.siswa.api'
 import { penilaianMedia } from '../../interface/evaluasi/media.interface'
+import { getAllIsOpen, updateIsOpenDiskusi, updateIsOpenMedia, updateIsOpenPosttest, updateIsOpenPretest } from '../../api/Request/isopen.api'
 
 const Evaluasi = () => {
   const navigate = useNavigate()
   const auth = getAuth()
   const [uuid, setUuid] = useState<string>()
   const [profileSiswa, setProfileSiswa] = useState<CreateProfileSiswaType>()
-  const [loading, setLoading] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(true)
   const [listPeringkat, setListPeringkat] = useState<CreateProfileSiswaType[]>([])
   const [status1, setStatus1] = useState<boolean>(false)
   const [poinPretest, setPoinPretest] = useState<number>(0)
@@ -25,8 +26,12 @@ const Evaluasi = () => {
   const [status3, setStatus3] = useState<boolean>(false)
   const [status4, setStatus4] = useState<boolean>(false)
   const [status5, setStatus5] = useState<boolean>(false)
+  const [isOpenPretest, setIsOpenPretest] = useState<boolean>(false)
+  const [isOpenPosttest, setIsOpenPosttest] = useState<boolean>(false)
+  const [isOpenMedia, setIsOpenMedia] = useState<boolean>(false)
 
   useEffect(() => {
+    handleGetIsOpen()
     onAuthStateChanged(auth, e => {
       if (e?.uid) {
         setUuid(e.uid)
@@ -56,6 +61,17 @@ const Evaluasi = () => {
     } catch (error) {
       console.error(error);
       setLoading(false)
+    }
+  }
+
+  const handleGetIsOpen = async () => {
+    try {
+      const isOpen = await getAllIsOpen()
+      setIsOpenPretest(isOpen.pretest)
+      setIsOpenPosttest(isOpen.posttest)
+      setIsOpenMedia(isOpen.penilaianMedia)
+    } catch (err) {
+      console.error(err);
     }
   }
 
@@ -171,6 +187,88 @@ const Evaluasi = () => {
       })
   }
 
+  const handleBukaTutup = async (type?: string) => {
+    let title: string = ''
+
+    if (type === 'pretest') {
+      title = `${isOpenPretest ? 'Tutup' : 'Buka'} Evaluasi Pre-test?`
+    } else if (type === 'posttest') {
+      title = `${isOpenPosttest ? 'Tutup' : 'Buka'} Evaluasi Post-test?`
+    } else if (type === 'media') {
+      title = `${isOpenPosttest ? 'Tutup' : 'Buka'} Penilaian Media`
+    }
+
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-white'
+      },
+      buttonsStyling: false
+    })
+    const swalSuccess = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+      },
+      buttonsStyling: false
+    })
+    swalWithBootstrapButtons.fire({
+      title: `${title}`,
+      icon: 'info',
+      showCancelButton: true,
+      cancelButtonText: 'Batalkan',
+      confirmButtonText: 'Ya!',
+      reverseButtons: true,
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          let resUpdate: boolean = false
+          if (type === 'pretest') {
+            resUpdate = await updateIsOpenPretest(!isOpenPretest)
+            setIsOpenPretest(resUpdate)
+          } else if (type === 'posttest') {
+            resUpdate = await updateIsOpenPosttest(!isOpenPosttest)
+            setIsOpenPosttest(resUpdate)
+          } else if (type === 'media') {
+            resUpdate = await updateIsOpenMedia(!isOpenMedia)
+            setIsOpenMedia(resUpdate)
+          }
+
+          let titleResult: string = ''
+
+          if (type === 'pretest') {
+            //@ts-ignore
+            title = `Evaluasi Pre-test berhasil di${resUpdate.pretest ? 'buka' : 'tutup'}`
+          } else if (type === 'posttest') {
+            //@ts-ignore
+            title = `Evaluasi Post-test berhasil di${resUpdate.posttest ? 'buka' : 'tutup'}`
+          } else if (type === 'media') {
+            //@ts-ignore
+            title = `Penilaian media berhasil di${resUpdate.penilaianMedia ? 'buka' : 'tutup'}`
+          }
+
+          if (resUpdate) {
+            swalSuccess.fire({
+              title: `${title}`,
+              icon: 'success',
+              confirmButtonText: 'Dismiss',
+            }).then(async (result) => {
+              if (result.isConfirmed) {
+                window.location.reload();
+                resUpdate = false
+              } else if (result.isDismissed) {
+                window.location.reload();
+                resUpdate = false
+              }
+            })
+          }
+
+        } catch (err) {
+          console.error(err);
+        }
+      }
+    })
+  }
+
   return (
     <>
       {
@@ -181,57 +279,34 @@ const Evaluasi = () => {
             <Lottie style={{ width: '55%', height: '55%' }} animationData={animLoading} />
           </div>
         ) : (
-
           <div className="d-flex row">
             {
               profileSiswa?.type.toLowerCase() === "siswa"
                 ?
                 <>
-                  {/* <h1 className='mb-10 ms-20' style={{ fontSize: '30px' }}>Evaluasi Harian</h1>
-                  <div className="d-flex row" style={{ justifyContent: 'center' }}>
-                    <div className="card col-sm-4 p-0 rounded shadow-sm"
-                      // onClick={() =>
-                      //   // handleNavigate('/evaluasi/lkpd', 'r.59bd020134faab4ae5fac989f158c6af?showControls', '1')
-                      //   // navigate('/evaluasi/lkpd', { state: { page: "r.59bd020134faab4ae5fac989f158c6af?showControls", ke: "1" } })}
-                      // }
-                      style={{ width: '30%', height: '200px', cursor: 'pointer' }}>
-                      <div className="card-body p-0">
-                        <div className='d-flex rounded-top ' style={{ backgroundColor: '#E108B1', height: '60%', justifyContent: 'center' }}>
-                          <div className='me-5'>
-                            <img style={{ width: "120px" }} src={toAbsoluteUrl('/media/illustrations/light/SVG/__Annual Report.svg')} alt='' />
-                          </div>
-                        </div>
-                        <div className='p-5'>
-                          <h3>Evaluasi Pertemuan 1</h3>
-                          <span className='badge badge-light-success'>Selesai</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="card col-sm-4 p-0 rounded shadow-sm ms-10 me-10"
-                      onClick={() => handleNavigate('/evaluasi/lkpd', 'r.0e7760b9b82d6338a9bf3c774f56384f', '2')}
-                      style={{ width: '30%', height: '200px', cursor: 'pointer' }}>
-                      <div className="card-body p-0">
-                        <div className='d-flex rounded-top ' style={{ backgroundColor: '#08E138', height: '60%', justifyContent: 'center' }}>
-                          <div className='me-5'>
-                            <img style={{ width: "120px" }} src={toAbsoluteUrl('/media/illustrations/light/SVG/__goods.svg')} alt='' />
-                          </div>
-                        </div>
-                        <div className='p-5'>
-                          <h3>Evaluasi Pertemuan 2</h3>
-                        </div>
-                      </div>
-                    </div>
-                  </div> */}
-
                   <div className=''>
                     <h1 className='mb-10 ms-20' style={{ fontSize: '30px' }}>Evaluasi Soal</h1>
                     <div className="d-flex row mt-10" style={{ justifyContent: 'center' }}>
                       <div className="card col-sm-4 p-0 rounded shadow-sm me-5" onClick={() => {
-                        if (!status1) {
-                          navigate('/evaluasi/soal', { state: { materiParent: "pretest" } })
+                        if (isOpenPretest) {
+                          if (!status1) {
+                            navigate('/evaluasi/soal', { state: { materiParent: "pretest" } })
+                          } else {
+                            navigate('/hasil/evaluasi/page', { state: { materiParent: "pretest" } })
+                            localStorage.setItem('hasReloaded', 'false')
+                          }
                         } else {
-                          navigate('/hasil/evaluasi/page', { state: { materiParent: "pretest" } })
-                          localStorage.setItem('hasReloaded', 'false')
+                          const swalSuccess = Swal.mixin({
+                            customClass: {
+                              confirmButton: 'btn btn-danger',
+                            },
+                            buttonsStyling: false
+                          })
+                          swalSuccess.fire({
+                            title: `Mohon Maaf\nEvalusi Pre-test belum di buka oleh guru`,
+                            icon: 'error',
+                            confirmButtonText: 'Dismiss',
+                          })
                         }
                       }} style={{ width: '25%', height: '200px', cursor: 'pointer' }}>
                         <div className="card-body p-0">
@@ -241,26 +316,42 @@ const Evaluasi = () => {
                             </div>
                           </div>
                           <div className='p-5'>
-                            <h3>Pre-Test</h3>
-                            {
-                              poinPretest ?
-                                <div className='d-flex flex-row' style={{ justifyContent: 'space-between' }}>
+                            <div>
+                              <h3>Pre-Test</h3>
+                              {
+                                poinPretest ?
+                                  <div className='d-flex flex-row' style={{ justifyContent: 'space-between' }}>
+                                    <span className={`badge ${status1 ? "badge-light-success" : "badge-light-danger"}`}>{status1 ? "Selesai" : "Belum Mulai"}</span>
+                                    <h3>Poin : <span className='badge-light-success'>{poinPretest}/20</span></h3>
+                                  </div>
+                                  :
                                   <span className={`badge ${status1 ? "badge-light-success" : "badge-light-danger"}`}>{status1 ? "Selesai" : "Belum Mulai"}</span>
-                                  <h3>Poin : <span className='badge-light-success'>{poinPretest}/20</span></h3>
-                                </div>
-                                :
-                                <span className={`badge ${status1 ? "badge-light-success" : "badge-light-danger"}`}>{status1 ? "Selesai" : "Belum Mulai"}</span>
-                            }
+                              }
+                            </div>
                           </div>
                         </div>
                       </div>
 
                       <div className="card col-sm-4 p-0 border rounded shadow-sm" onClick={() => {
-                        if (!status2) {
-                          navigate('/evaluasi/soal', { state: { materiParent: "posttest" } })
+                        if (isOpenPosttest) {
+                          if (!status2) {
+                            navigate('/evaluasi/soal', { state: { materiParent: "posttest" } })
+                          } else {
+                            navigate('/hasil/evaluasi/page', { state: { materiParent: "posttest" } })
+                            localStorage.setItem('hasReloaded', 'false')
+                          }
                         } else {
-                          navigate('/hasil/evaluasi/page', { state: { materiParent: "posttest" } })
-                          localStorage.setItem('hasReloaded', 'false')
+                          const swalSuccess = Swal.mixin({
+                            customClass: {
+                              confirmButton: 'btn btn-danger',
+                            },
+                            buttonsStyling: false
+                          })
+                          swalSuccess.fire({
+                            title: `Mohon Maaf\nEvalusi Post-test belum di buka oleh guru`,
+                            icon: 'error',
+                            confirmButtonText: 'Dismiss',
+                          })
                         }
                       }} style={{ width: '25%', height: '200px', cursor: 'pointer' }}>
                         <div className="card-body p-0">
@@ -283,57 +374,29 @@ const Evaluasi = () => {
                           </div>
                         </div>
                       </div>
-
-                      {/* <div className="card col-sm-4 p-0 rounded shadow-sm ms-5" onClick={() => {
-                        if (!status3) {
-                          navigate('/evaluasi/soal', { state: { materiParent: "preLogic" } })
-                        } else {
-                          navigate('/hasil/evaluasi/page', { state: { materiParent: "preLogic" } })
-                          localStorage.setItem('hasReloaded', 'false')
-                        }
-                      }} style={{ width: '25%', height: '200px', cursor: 'pointer' }}>
-                        <div className="card-body p-0">
-                          <div className='d-flex rounded-top ' style={{ backgroundColor: '#E10856', height: '60%', justifyContent: 'center' }}>
-                            <div className='me-5'>
-                              <img style={{ width: "120px" }} src={toAbsoluteUrl('/media/illustrations/light/SVG/__to add.svg')} alt='' />
-                            </div>
-                          </div>
-                          <div className='p-5'>
-                            <h3>Pre Logic</h3>
-                            <span className={`badge ${status3 ? "badge-light-success" : "badge-light-danger"}`}>{status3 ? "Selesai" : "Belum Mulai"}</span>
-                          </div>
-                        </div>
-                      </div> */}
                     </div>
 
                     <div className="d-flex row mt-10" style={{ justifyContent: 'center' }}>
-                      {/* <div className="card col-sm-4 p-0 rounded shadow-sm me-5" onClick={() => {
-                        if (!status4) {
-                          navigate('/evaluasi/soal', { state: { materiParent: "postLogic" } })
-                        } else {
-                          navigate('/hasil/evaluasi/page', { state: { materiParent: "postLogic" } })
-                          localStorage.setItem('hasReloaded', 'false')
-                        }
-                      }} style={{ width: '25%', height: '200px', cursor: 'pointer' }}>
-                        <div className="card-body p-0">
-                          <div className='d-flex rounded-top ' style={{ backgroundColor: '#E108B1', height: '60%', justifyContent: 'center' }}>
-                            <div className='me-5'>
-                              <img style={{ width: "120px" }} src={toAbsoluteUrl('/media/illustrations/light/SVG/__Annual Report.svg')} alt='' />
-                            </div>
-                          </div>
-                          <div className='p-5'>
-                            <h3>Post Logic</h3>
-                            <span className={`badge ${status4 ? "badge-light-success" : "badge-light-danger"}`}>{status4 ? "Selesai" : "Belum Mulai"}</span>
-                          </div>
-                        </div>
-                      </div> */}
-
                       <div className="card col-sm-4 p-0 rounded shadow-sm ms-5" onClick={() => {
-                        if (!status5) {
-                          navigate('/evaluasi/soal', { state: { materiParent: "penilaianMedia" } })
+                        if (isOpenMedia) {
+                          if (!status5) {
+                            navigate('/evaluasi/soal', { state: { materiParent: "penilaianMedia" } })
+                          } else {
+                            navigate('/hasil/evaluasi/page', { state: { materiParent: "penilaianMedia" } })
+                            localStorage.setItem('hasReloaded', 'false')
+                          }
                         } else {
-                          navigate('/hasil/evaluasi/page', { state: { materiParent: "penilaianMedia" } })
-                          localStorage.setItem('hasReloaded', 'false')
+                          const swalSuccess = Swal.mixin({
+                            customClass: {
+                              confirmButton: 'btn btn-danger',
+                            },
+                            buttonsStyling: false
+                          })
+                          swalSuccess.fire({
+                            title: `Mohon Maaf\nPenilaian Media belum di buka oleh guru`,
+                            icon: 'error',
+                            confirmButtonText: 'Dismiss',
+                          })
                         }
                       }} style={{ width: '25%', height: '200px', cursor: 'pointer' }}>
                         <div className="card-body p-0">
@@ -353,114 +416,109 @@ const Evaluasi = () => {
                 </>
                 :
                 <>
-                  {/* <h1 className='mb-10' style={{ fontSize: '30px' }}>Hasil Evaluasi Siswa</h1>
-                  <div className="d-flex row" style={{ justifyContent: 'center' }}>
-                    <div className="card col-sm-4 p-0 rounded shadow-sm"
-                      onClick={() =>
-                        navigate("/hasil/evaluasi", { state: { ke: "1", type: "lkpd" } })
-                        // navigate('/evaluasi/lkpd', { state: { page: "r.59bd020134faab4ae5fac989f158c6af?showControls", ke: "1" } })}
-                      }
-                      style={{ width: '30%', height: '200px', cursor: 'pointer' }}>
-                      <div className="card-body p-0">
-                        <div className='d-flex rounded-top ' style={{ backgroundColor: '#E108B1', height: '60%', justifyContent: 'center' }}>
-                          <div className='me-5'>
-                            <img style={{ width: "120px" }} src={toAbsoluteUrl('/media/illustrations/light/SVG/__Annual Report.svg')} alt='' />
-                          </div>
-                        </div>
-                        <div className='p-5'>
-                          <h3>Evaluasi Pertemuan 1</h3>
-                          <span className='badge badge-light-info'>Lihat Nilai Siswa -{'>'}</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="card col-sm-4 p-0 rounded shadow-sm ms-10 me-10"
-                      onClick={() => navigate("/hasil/evaluasi", { state: { ke: "2", type: "lkpd" } })}
-                      style={{ width: '30%', height: '200px', cursor: 'pointer' }}>
-                      <div className="card-body p-0">
-                        <div className='d-flex rounded-top ' style={{ backgroundColor: '#08E138', height: '60%', justifyContent: 'center' }}>
-                          <div className='me-5'>
-                            <img style={{ width: "120px" }} src={toAbsoluteUrl('/media/illustrations/light/SVG/__goods.svg')} alt='' />
-                          </div>
-                        </div>
-                        <div className='p-5'>
-                          <h3>Evaluasi Pertemuan 2</h3>
-                          <span className='badge badge-light-info'>Lihat Nilai Siswa -{'>'}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div> */}
-
-
                   <div className=''>
                     <h1 className='mb-10' style={{ fontSize: '30px' }}>Evaluasi Soal</h1>
                     <div className="d-flex row mt-10" style={{ justifyContent: 'center' }}>
-                      <div className="card col-sm-4 p-0 rounded shadow-sm me-5" onClick={() => navigate("/hasil/evaluasi", { state: { ke: 1, type: "pretest" } })} style={{ width: '25%', height: '200px', cursor: 'pointer' }}>
+                      <div className="card col-sm-4 p-0 rounded shadow-sm me-5" style={{ width: '25%', height: '200px' }}>
                         <div className="card-body p-0">
-                          <div className='d-flex rounded-top ' style={{ backgroundColor: '#E1D808', height: '60%', justifyContent: 'center' }}>
+                          <div className='d-flex rounded-top ' onClick={() => navigate("/hasil/evaluasi", { state: { ke: 1, type: "pretest" } })} style={{ backgroundColor: '#E1D808', height: '60%', justifyContent: 'center', cursor: 'pointer' }}>
                             <div className='me-5'>
                               <img style={{ width: "120px" }} src={toAbsoluteUrl('/media/illustrations/light/SVG/__telescope.svg')} alt='' />
                             </div>
                           </div>
-                          <div className='p-5'>
-                            <h3>Pre-Test</h3>
-                            <span className='badge badge-light-info'>Lihat Nilai Siswa -{'>'}</span>
+                          <div className='d-flex p-5 justify-content-between align-items-center' style={{ width: '100%' }}>
+                            <div>
+                              <h3>Pre-Test</h3>
+                              <span className='badge badge-light-info'>Lihat Nilai Siswa -{'>'}</span>
+                            </div>
+                            <div>
+                              {
+                                profileSiswa?.type.toLowerCase() !== "siswa" ?
+                                  <div className=''>
+                                    <button
+                                      className={`btn ${isOpenPretest ? 'btn-danger' : 'btn-primary'} fw-bold`}
+                                      style={{ cursor: 'pointer' }}
+                                      onClick={() => {
+                                        handleBukaTutup('pretest')
+                                      }}
+                                    >
+                                      {isOpenPretest ? 'Tutup Pre-test' : 'Buka Pre-test'}
+                                    </button>
+                                  </div>
+                                  :
+                                  <></>
+                              }
+                            </div>
                           </div>
                         </div>
                       </div>
 
-                      <div className="card col-sm-4 p-0 border rounded shadow-sm" onClick={() => navigate("/hasil/evaluasi", { state: { ke: 1, type: "posttest" } })} style={{ width: '25%', height: '200px', cursor: 'pointer' }}>
+                      <div className="card col-sm-4 p-0 border rounded shadow-sm" style={{ width: '25%', height: '200px' }}>
                         <div className="card-body p-0">
-                          <div className='d-flex rounded-top ' style={{ backgroundColor: '#0893E1', height: '60%', justifyContent: 'center' }}>
+                          <div className='d-flex rounded-top ' onClick={() => navigate("/hasil/evaluasi", { state: { ke: 1, type: "posttest" } })} style={{ backgroundColor: '#0893E1', height: '60%', justifyContent: 'center', cursor: 'pointer' }}>
                             <div className='me-5'>
                               <img style={{ width: "120px" }} src={toAbsoluteUrl('/media/illustrations/light/SVG/__moneybox.svg')} alt='' />
                             </div>
                           </div>
-                          <div className='p-5'>
-                            <h3>Post-Test</h3>
-                            <span className='badge badge-light-info'>Lihat Nilai Siswa -{'>'}</span>
+                          <div className='d-flex p-5 justify-content-between align-items-center' style={{ width: '100%' }}>
+                            <div >
+                              <h3>Post-Test</h3>
+                              <span className='badge badge-light-info'>Lihat Nilai Siswa -{'>'}</span>
+                            </div>
+                            <div>
+                              {
+                                profileSiswa?.type.toLowerCase() !== "siswa" ?
+                                  <div className=''>
+                                    <button
+                                      className={`btn ${isOpenPosttest ? 'btn-danger' : 'btn-primary'} fw-bold`}
+                                      style={{ cursor: 'pointer' }}
+                                      onClick={() => {
+                                        handleBukaTutup('posttest')
+                                      }}
+                                    >
+                                      {isOpenPosttest ? 'Tutup Post-test' : 'Buka Post-test'}
+                                    </button>
+                                  </div>
+                                  :
+                                  <></>
+                              }
+                            </div>
                           </div>
                         </div>
                       </div>
-
-                      {/* <div className="card col-sm-4 p-0 rounded shadow-sm ms-5" onClick={() => navigate("/hasil/evaluasi", { state: { ke: 1, type: "preLogic" } })} style={{ width: '25%', height: '200px', cursor: 'pointer' }}>
-                        <div className="card-body p-0">
-                          <div className='d-flex rounded-top ' style={{ backgroundColor: '#E10856', height: '60%', justifyContent: 'center' }}>
-                            <div className='me-5'>
-                              <img style={{ width: "120px" }} src={toAbsoluteUrl('/media/illustrations/light/SVG/__to add.svg')} alt='' />
-                            </div>
-                          </div>
-                          <div className='p-5'>
-                            <h3>Pre Logic</h3>
-                            <span className='badge badge-light-info'>Lihat Nilai Siswa -{'>'}</span>
-                          </div>
-                        </div>
-                      </div> */}
                     </div>
 
                     <div className="d-flex row mt-10" style={{ justifyContent: 'center' }}>
-                      {/* <div className="card col-sm-4 p-0 rounded shadow-sm me-5" onClick={() => navigate("/hasil/evaluasi", { state: { ke: 1, type: "postLogic" } })} style={{ width: '25%', height: '200px', cursor: 'pointer' }}>
+                      <div className="card col-sm-4 p-0 rounded shadow-sm ms-5" style={{ width: '25%', height: '200px' }}>
                         <div className="card-body p-0">
-                          <div className='d-flex rounded-top ' style={{ backgroundColor: '#E108B1', height: '60%', justifyContent: 'center' }}>
-                            <div className='me-5'>
-                              <img style={{ width: "120px" }} src={toAbsoluteUrl('/media/illustrations/light/SVG/__Annual Report.svg')} alt='' />
-                            </div>
-                          </div>
-                          <div className='p-5'>
-                            <h3>Post Logic</h3>
-                            <span className='badge badge-light-info'>Lihat Nilai Siswa -{'>'}</span>
-                          </div>
-                        </div>
-                      </div> */}
-                      <div className="card col-sm-4 p-0 rounded shadow-sm ms-5" onClick={() => navigate("/hasil/evaluasi", { state: { ke: 1, type: "penilaianMedia" } })} style={{ width: '25%', height: '200px', cursor: 'pointer' }}>
-                        <div className="card-body p-0">
-                          <div className='d-flex rounded-top ' style={{ backgroundColor: '#08E138', height: '60%', justifyContent: 'center' }}>
+                          <div className='d-flex rounded-top ' onClick={() => navigate("/hasil/evaluasi", { state: { ke: 1, type: "penilaianMedia" } })} style={{ backgroundColor: '#08E138', height: '60%', justifyContent: 'center', cursor: 'pointer' }}>
                             <div className='me-5'>
                               <img style={{ width: "120px" }} src={toAbsoluteUrl('/media/illustrations/light/SVG/__goods.svg')} alt='' />
                             </div>
                           </div>
-                          <div className='p-5'>
-                            <h3>Penilaian Media</h3>
-                            <span className='badge badge-light-info'>Lihat Nilai Siswa -{'>'}</span>
+                          <div className='d-flex p-5 justify-content-between align-items-center' style={{ width: '100%' }}>
+                            <div>
+                              <h3>Penilaian Media</h3>
+                              <span className='badge badge-light-info'>Lihat Nilai Siswa -{'>'}</span>
+                            </div>
+                            <div>
+                              {
+                                profileSiswa?.type.toLowerCase() !== "siswa" ?
+                                  <div className=''>
+                                    <button
+                                      className={`btn ${isOpenMedia ? 'btn-danger' : 'btn-primary'} fw-bold`}
+                                      style={{ cursor: 'pointer' }}
+                                      onClick={() => {
+                                        handleBukaTutup('media')
+                                      }}
+                                    >
+                                      {isOpenMedia ? 'Tutup Media' : 'Buka Media'}
+                                    </button>
+                                  </div>
+                                  :
+                                  <></>
+                              }
+                            </div>
                           </div>
                         </div>
                       </div>

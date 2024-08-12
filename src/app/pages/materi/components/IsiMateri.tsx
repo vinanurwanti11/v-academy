@@ -202,7 +202,7 @@ const IsiMateri: React.FC<Props> = ({
             const getIdPoin = await getDetailPeringkatSiswaByUID(uuid)
             const la = Object.entries(getIdPoin)
             let progressMateri = la[0][1].progressMateri
-            const resUpdateProgress = await updateProgresByUD(uuid, la[0][0], progressMateri + 1)
+            const resUpdateProgress = await updateProgresByUD(uuid, la[0][0], progressMateri, "Selesai")
             if (resSendPertanyaan) {
               swalSuccess.fire({
                 title: `Jawaban Berhasil Dikirim`,

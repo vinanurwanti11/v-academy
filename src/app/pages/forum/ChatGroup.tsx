@@ -10,6 +10,7 @@ import { toAbsoluteUrl } from '../../../_molekul/helpers'
 import Swal from 'sweetalert2'
 import { getProfileSiswa } from '../../api/Request/profile.siswa.api'
 import { CreateProfileSiswaType } from '../../interface/profile.siswa.interface'
+import { getIsOpen } from '../../api/Request/isopen.api'
 
 const ChatGroup: FC = () => {
   const auth = getAuth()
@@ -20,10 +21,11 @@ const ChatGroup: FC = () => {
   // @ts-ignore
   const location = useLocation<data>()
   const [page, setPage] = useState<string>("")
-  const [loading, setLoading] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(true)
 
   useEffect(() => {
     setLoading(true)
+    handleGetIsOpen()
     // @ts-ignore
     setPage(location.state.page)
     handleGetPertanyaan(page)
@@ -210,6 +212,33 @@ const ChatGroup: FC = () => {
         }
       }
     })
+  }
+
+
+  const handleGetIsOpen = async () => {
+    try {
+      const isOpen = await getIsOpen("diskusi")
+      if (!isOpen) {
+        const swalSuccess = Swal.mixin({
+          customClass: {
+            confirmButton: 'btn btn-danger',
+          },
+          buttonsStyling: false
+        })
+        swalSuccess.fire({
+          title: `Mohon Maaf\nRoom diskusi belum di buka oleh guru`,
+          icon: 'error',
+          confirmButtonText: 'Dismiss',
+        }).then(async (result) => {
+          if (result.dismiss || result.isConfirmed) {
+            navigate('/forum')
+            window.location.reload()
+          }
+        })
+      }
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   return (
